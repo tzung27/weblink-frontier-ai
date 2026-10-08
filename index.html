@@ -361,7 +361,10 @@ h3.blk span{font-family:var(--f-mono);font-size:12px;font-weight:600;letter-spac
 .wo .tbl th,.wo .tbl td{padding:8px 8px}
 .wo-files{margin-top:14px}
 @media (max-width:860px){.wo-grid{grid-template-columns:minmax(0,1fr)}.pv{position:static}.roi-kpi{grid-template-columns:repeat(2,minmax(0,1fr))}.op-ph,.op-roi{grid-template-columns:minmax(0,1fr)}.wo .fgrid{grid-template-columns:minmax(0,1fr)}}
-.pubnote{border:1px solid var(--line);border-left:6px solid var(--signal);background:var(--signal-soft);border-radius:10px;padding:10px 14px;font-size:14px;margin:0 0 18px}
+.pubnote{border:1px solid var(--line);border-left:6px solid var(--signal);background:var(--signal-soft);border-radius:10px;padding:12px 16px;font-size:14px;margin:0 0 18px}
+.pubnote p{margin:0 0 10px;max-width:none}
+.pubacts{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pubmsg{font-size:13px;font-weight:600;color:var(--ok)}
 @media (max-width:980px){
   .wrap,.top-in{padding-inline:16px}
   .brand span{display:none}
@@ -385,7 +388,7 @@ h3.blk span{font-family:var(--f-mono);font-size:12px;font-weight:600;letter-spac
 
 <header class="top"><div class="top-in"><div class="brand"><i></i><span>Weblink × AI CoE</span></div><nav class="tabs" role="tablist" aria-label="分頁"><button class="tab" role="tab" id="tab-top" data-t="top" data-c="teal" aria-controls="top" aria-selected="false">總覽</button><button class="tab" role="tab" id="tab-brief" data-t="brief" data-c="blue" aria-controls="brief" aria-selected="false">活動說明</button><button class="tab" role="tab" id="tab-strategy" data-t="strategy" data-c="violet" aria-controls="strategy" aria-selected="false">策略定位</button><button class="tab" role="tab" id="tab-biz" data-t="biz" data-c="amber" aria-controls="biz" aria-selected="false">業務規劃</button><button class="tab" role="tab" id="tab-tech" data-t="tech" data-c="green" aria-controls="tech" aria-selected="false">技術規劃</button><button class="tab" role="tab" id="tab-cases" data-t="cases" data-c="rose" aria-controls="cases" aria-selected="false">產業案例</button><button class="tab" role="tab" id="tab-roadmap" data-t="roadmap" data-c="cyan" aria-controls="roadmap" aria-selected="false">路線圖與 KPI</button><button class="tab" role="tab" id="tab-workshops" data-t="workshops" data-c="amber" aria-controls="workshops" aria-selected="false">實作 Workshop</button><button class="tab" role="tab" id="tab-ws1" data-t="ws1" data-c="blue" aria-controls="ws1" aria-selected="false">Workshop 1</button><button class="tab" role="tab" id="tab-next" data-t="next" data-c="teal" aria-controls="next" aria-selected="false">下一步</button></nav></div></header>
 <div class="wrap">
-<div class="pubnote" role="note">公開展示版：已移除 Microsoft 內部數據與展碁內部工作表。Workshop 1 工作表可以試填與試算，但內容不會儲存。客戶名稱、定價與目標數字均為教學示範。</div>
+<div class="pubnote" role="note"><p>公開展示版：已移除 Microsoft 內部數據與展碁內部工作表。客戶名稱、定價與目標數字均為教學示範。Workshop 1 工作表填寫後按「儲存」，資料會保存在<b>這台電腦的這個瀏覽器</b>中，不會上傳到任何伺服器；換電腦或清除瀏覽資料前，請先匯出備份。</p><div class="pubacts"><button type="button" class="btn" id="ldbExport">匯出備份</button><label class="btn" for="ldbImport" tabindex="0" id="ldbImportLab">匯入備份</label><input type="file" id="ldbImport" accept=".json,application/json" hidden><button type="button" class="btn dng" id="ldbClear">清除本機資料</button><span class="pubmsg" id="ldbMsg" aria-live="polite"></span></div></div>
 <main>
 <!-- ================= HERO ================= -->
 <section id="top" class="panel" data-c="teal" role="tabpanel" aria-labelledby="tab-top">
@@ -930,6 +933,53 @@ h3.blk span{font-family:var(--f-mono);font-size:12px;font-weight:600;letter-spac
 
 <script>
 (function(){
+  var KEY='weblink-frontier-public-v1',subs=[];
+  function load(){try{var d=JSON.parse(localStorage.getItem(KEY)||'{}');return d&&typeof d==='object'?d:{}}catch(e){return {}}}
+  function save(d){localStorage.setItem(KEY,JSON.stringify(d))}
+  function emit(){subs.slice().forEach(function(f){try{f()}catch(e){}})}
+  function snap(id,data){return {id:id,exists:!!data,data:function(){return data},metadata:{fromCache:false,hasPendingWrites:false}}}
+  function write(path,fn){return new Promise(function(res,rej){try{var d=load();d[path]=fn(d[path]);save(d);res();setTimeout(emit,0)}catch(e){rej({code:'quota_exceeded',message:String(e)})}})}
+  function sub(f){subs.push(f);setTimeout(f,0);return function(){var i=subs.indexOf(f);if(i>=0)subs.splice(i,1)}}
+  function doc(path){var id=path.split('/').pop();return {id:id,path:path,
+    get:function(){return Promise.resolve(snap(id,load()[path]))},
+    set:function(v){return write(path,function(){return JSON.parse(JSON.stringify(v))})},
+    update:function(v){return write(path,function(o){if(!o)throw new Error('missing');var n=JSON.parse(JSON.stringify(o));Object.keys(v).forEach(function(k){n[k]=JSON.parse(JSON.stringify(v[k]))});return n})},
+    delete:function(){return write(path,function(){return undefined})},
+    onSnapshot:function(next){return sub(function(){next(snap(id,load()[path]))})}}}
+  function collection(c){return {path:c,doc:function(id){return doc(c+'/'+id)},
+    onSnapshot:function(next){return sub(function(){var d=load(),docs=Object.keys(d).filter(function(k){var p=k.split('/');return p.length===2&&p[0]===c&&d[k]}).map(function(k){return snap(k.split('/')[1],d[k])});next({docs:docs,size:docs.length,empty:!docs.length})})}}}
+  window.addEventListener('storage',function(e){if(e.key===KEY)emit()});
+  window.__LDB={doc:doc,collection:collection,load:load,
+    replace:function(d){save(d);emit()},clear:function(){try{localStorage.removeItem(KEY)}catch(e){}emit()}};
+  try{localStorage.setItem(KEY+'-t','1');localStorage.removeItem(KEY+'-t')}catch(e){window.__LDB=null}
+
+  // 匯出／匯入／清除
+  function msg(t,err){var m=document.getElementById('ldbMsg');if(!m)return;m.textContent=t;m.style.color=err?'var(--rose)':'var(--ok)';setTimeout(function(){if(m.textContent===t)m.textContent=''},6000)}
+  document.addEventListener('DOMContentLoaded',function(){
+    var ex=document.getElementById('ldbExport'),im=document.getElementById('ldbImport'),lab=document.getElementById('ldbImportLab'),cl=document.getElementById('ldbClear');
+    if(!window.__LDB){[ex,lab,cl].forEach(function(b){if(b)b.hidden=true});msg('這個瀏覽器不允許本機儲存，填寫內容無法保存。',true);return}
+    ex.addEventListener('click',function(){
+      var d=window.__LDB.load(),n=Object.keys(d).length;if(!n){msg('目前沒有已儲存的資料',true);return}
+      var blob=new Blob([JSON.stringify({app:'weblink-frontier-public',version:1,exportedAt:new Date().toISOString(),data:d},null,2)],{type:'application/json'});
+      var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='weblink-workshop1-'+new Date().toISOString().slice(0,10)+'.json';
+      document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},1000);msg('已匯出 '+n+' 筆資料');
+    });
+    lab.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();im.click()}});
+    im.addEventListener('change',function(){
+      var f=im.files[0];im.value='';if(!f)return;
+      f.text().then(function(t){var j=JSON.parse(t);if(!j||j.app!=='weblink-frontier-public'||typeof j.data!=='object')throw new Error('format');
+        window.__LDB.replace(j.data);msg('已匯入 '+Object.keys(j.data).length+' 筆資料');})
+      .catch(function(){msg('匯入失敗：請選擇本網頁匯出的備份檔（.json）',true)});
+    });
+    cl.addEventListener('click',function(){
+      if(cl.dataset.armed!=='1'){cl.dataset.armed='1';cl.textContent='確定清除？';setTimeout(function(){cl.dataset.armed='';cl.textContent='清除本機資料'},4000);return}
+      cl.dataset.armed='';cl.textContent='清除本機資料';window.__LDB.clear();msg('已清除本機資料');
+    });
+  });
+})();
+</script>
+<script>
+(function(){
   // ================= 共用工具 =================
   var OK_TYPES={pdf:'application/pdf',png:'image/png',jpg:'image/jpeg',jpeg:'image/jpeg',gif:'image/gif',webp:'image/webp',csv:'text/csv',md:'text/markdown',json:'application/json',txt:'text/plain'};
   var STATUS=['未開始','進行中','完成','延後'];
@@ -951,7 +1001,7 @@ h3.blk span{font-family:var(--f-mono);font-size:12px;font-weight:600;letter-spac
   var CONN=null;
   function connect(){
     if(CONN)return CONN;
-    if(!window.claude||!window.claude.use){CONN=Promise.resolve({db:null,reason:'local'});return CONN}
+    if(!window.claude||!window.claude.use){CONN=Promise.resolve({db:window.__LDB||null,reason:'local',assets:null,user:null,uid:null,readOnly:false,local:true});return CONN}
     CONN=Promise.all([claude.use('db'),claude.use('assets'),claude.use('user')]).then(function(r){
       var db=r[0],assets=r[1],user=r[2];
       if(!db)return {db:null,reason:'nodb',user:user};
@@ -961,7 +1011,8 @@ h3.blk span{font-family:var(--f-mono);font-size:12px;font-weight:600;letter-spac
     return CONN;
   }
   function noticeText(c){
-    if(!c.db)return c.reason==='local'?'公開展示版：可以試填與試算，但內容不會儲存。':'目前無法連接共用資料（可能尚未登入或沒有權限），填寫內容無法儲存。';
+    if(c.local&&c.db)return '資料儲存在這台電腦的這個瀏覽器中（不會上傳）。附件上傳僅限內部版。換電腦前請用頁面上方的「匯出備份」。';
+    if(!c.db)return c.reason==='local'?'這個瀏覽器不允許本機儲存，填寫內容無法保存。':'目前無法連接共用資料（可能尚未登入或沒有權限），填寫內容無法儲存。';
     if(c.readOnly)return '你目前只有檢視權限，可以看到內容但無法填寫或上傳。';
     if(!c.assets)return '目前無法上傳附件（需要編輯權限），仍可填寫文字欄位。';
     return '';
@@ -1372,7 +1423,7 @@ h3.blk span{font-family:var(--f-mono);font-size:12px;font-weight:600;letter-spac
   }
 
   offerForm=W.OutputForm({host:'wo-offer',collection:'ws1_outputs',doc:'offer',title:'One-page Offer',fields:OFF_F,example:OFF_EX,render:renderOFF,
-    intro:'左邊填寫，右邊即時預覽。「預期效益」會自動帶入下方 ROI 試算的基準情境。'});
+    intro:'左邊填寫，右邊即時預覽；按「儲存」保存在本機瀏覽器。「預期效益」會自動帶入下方 ROI 試算的基準情境。'});
   W.OutputForm({host:'wo-pov',collection:'ws1_outputs',doc:'pov',title:'PoV 計畫',fields:POV_F,example:POV_EX,render:renderPOV,
     intro:'定義 PoV 的目標、週程、範圍與驗收標準；預覽會依開始日自動排出每週日期。'});
   W.OutputForm({host:'wo-roi',collection:'ws1_outputs',doc:'roi',title:'ROI 試算',fields:ROI_F,example:ROI_EX,render:renderROI,

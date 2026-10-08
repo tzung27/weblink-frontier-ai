@@ -1,0 +1,1435 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+</head>
+<body>
+<title>展碁 Frontier AI 經銷商藍圖</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;900&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: 上方固定分頁列 + 單欄內容；每個分頁獨立顯示並有自己的主題色 */
+:root{
+  --bg:#F3F6F7; --surface:#FFFFFF; --ink:#14212E; --muted:#56656F; --line:#D5DEE2;
+  --accent:#00707F; --accent-soft:#DCEFF0; --signal:#B4620A; --signal-soft:#FBEBD8;
+  --ok:#3D6E14; --ok-soft:#E5F0DA; --violet:#4F3A9A; --violet-soft:#ECE8F8;
+  --code:#1C2731; --code-ink:#E4ECF2;
+  --blue:#1F5FAD; --blue-soft:#E3EDFA; --rose:#B0335A; --rose-soft:#FAE3EA; --cyan:#0A7EA4; --cyan-soft:#DDF1F8;
+  --q-tone:#08131B; --q-p1:100%; --q-p2:68%; --q-ink:#FFFFFF; --hl:#FFD43B; --hl-soft:#FFE36E;
+  --hero-a:#00707F; --hero-b:#0B2A4A; --on-hero:#FFFFFF; --on-hero-muted:#C9E4E8;
+  --f-display:"Noto Serif TC","Songti TC",serif;
+  --f-body:"Noto Sans TC","Microsoft JhengHei","PingFang TC",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",Consolas,ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F171D; --surface:#16222A; --ink:#E3EAEE; --muted:#9AAAB4; --line:#2B3A44;
+  --accent:#4FC3CF; --accent-soft:#143A40; --signal:#F0A657; --signal-soft:#3A2A16;
+  --ok:#9CCB6C; --ok-soft:#1F3315; --violet:#B6A6F0; --violet-soft:#2A2445;
+  --blue:#7FB0F0; --blue-soft:#17283F; --rose:#F08DAA; --rose-soft:#3A1A25; --cyan:#62C6E8; --cyan-soft:#12313C;
+  --q-tone:#0F171D; --q-p1:55%; --q-p2:28%; --q-ink:#F6FAFC; --hl:#FFCC33; --hl-soft:#8A6D00;
+  --hero-a:#0B4F5A; --hero-b:#0C1C2A; --on-hero:#F2F8FA; --on-hero-muted:#A9C8CE;
+  --code:#0A1116; --code-ink:#D8E3EA; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F171D; --surface:#16222A; --ink:#E3EAEE; --muted:#9AAAB4; --line:#2B3A44;
+  --accent:#4FC3CF; --accent-soft:#143A40; --signal:#F0A657; --signal-soft:#3A2A16;
+  --ok:#9CCB6C; --ok-soft:#1F3315; --violet:#B6A6F0; --violet-soft:#2A2445;
+  --blue:#7FB0F0; --blue-soft:#17283F; --rose:#F08DAA; --rose-soft:#3A1A25; --cyan:#62C6E8; --cyan-soft:#12313C;
+  --q-tone:#0F171D; --q-p1:55%; --q-p2:28%; --q-ink:#F6FAFC; --hl:#FFCC33; --hl-soft:#8A6D00;
+  --hero-a:#0B4F5A; --hero-b:#0C1C2A; --on-hero:#F2F8FA; --on-hero-muted:#A9C8CE;
+  --code:#0A1116; --code-ink:#D8E3EA; color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.75;margin:0}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
+.top-in{max-width:1180px;margin:0 auto;padding-inline:24px;display:flex;align-items:center;gap:18px}
+.brand{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);font-weight:600;white-space:nowrap;display:flex;align-items:center;gap:8px}
+.brand i{width:12px;height:12px;border-radius:3px;background:linear-gradient(135deg,var(--hero-a),var(--signal));display:inline-block}
+.tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:thin;min-width:0;flex:1}
+.tab{appearance:none;border:0;background:none;font:inherit;font-size:14px;padding:14px 12px 11px;color:var(--muted);border-bottom:3px solid transparent;white-space:nowrap;cursor:pointer;display:flex;align-items:center;gap:7px}
+.tab::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--tc)}
+.tab:hover{color:var(--ink);background:color-mix(in srgb,var(--tc) 8%,transparent)}
+.tab[aria-selected="true"]{color:var(--ink);font-weight:700;border-bottom-color:var(--tc);background:color-mix(in srgb,var(--tc) 12%,transparent)}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:24px;padding-block:28px 72px}
+main{min-width:0}
+section.panel{padding:0}
+[data-c="teal"]{--tc:var(--accent)} [data-c="blue"]{--tc:var(--blue)} [data-c="violet"]{--tc:var(--violet)}
+[data-c="amber"]{--tc:var(--signal)} [data-c="green"]{--tc:var(--ok)} [data-c="rose"]{--tc:var(--rose)} [data-c="cyan"]{--tc:var(--cyan)}
+section[data-c="blue"]{--accent:var(--blue);--accent-soft:var(--blue-soft)}
+section[data-c="violet"]{--accent:var(--violet);--accent-soft:var(--violet-soft)}
+section[data-c="amber"]{--accent:var(--signal);--accent-soft:var(--signal-soft)}
+section[data-c="green"]{--accent:var(--ok);--accent-soft:var(--ok-soft)}
+section[data-c="rose"]{--accent:var(--rose);--accent-soft:var(--rose-soft)}
+section[data-c="cyan"]{--accent:var(--cyan);--accent-soft:var(--cyan-soft)}
+.phead{background:linear-gradient(120deg,var(--accent-soft) 0%,color-mix(in srgb,var(--accent-soft) 35%,var(--surface)) 75%);border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));border-left:6px solid var(--accent);border-radius:12px;padding:22px 26px;margin-bottom:24px}
+.phead .eyebrow{margin-bottom:4px}
+.phead h2{margin:0;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:-8px 0 20px}
+.chips a{font-size:13px;text-decoration:none;padding:5px 12px;border-radius:99px;background:var(--surface);border:1px solid color-mix(in srgb,var(--accent) 35%,var(--line));color:var(--accent)}
+.chips a:hover{background:var(--accent-soft)}
+.pager{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:40px;padding-top:20px;border-top:1px solid var(--line)}
+.pager button{appearance:none;font:inherit;font-size:14px;cursor:pointer;padding:10px 16px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.pager button.next{background:var(--accent);border-color:var(--accent);color:var(--surface);font-weight:700}
+.panel#top .quote{margin:24px 0 0}
+.go{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:24px}
+.go a{display:block;text-decoration:none;color:var(--ink);background:color-mix(in srgb,var(--tc) 9%,var(--surface));border:1px solid color-mix(in srgb,var(--tc) 30%,var(--line));border-top:4px solid var(--tc);border-radius:10px;padding:14px 16px;min-width:0}
+.go a b{display:block;color:var(--tc);font-size:15px}
+.go a span{font-size:13px;color:var(--muted);line-height:1.55;display:block;margin-top:4px}
+.go a:hover{background:color-mix(in srgb,var(--tc) 16%,var(--surface))}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.3;margin:0}
+h1{font-size:clamp(2rem,4.4vw,3.1rem);font-weight:900}
+h2{font-size:clamp(1.5rem,2.6vw,2rem);font-weight:900;margin-bottom:8px}
+h3{font-size:1.2rem;font-weight:600;margin:28px 0 10px}
+p{margin:0 0 14px;max-width:68ch}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;display:block}
+.lead{font-size:1.1rem;color:var(--muted);max-width:62ch}
+.hero{display:grid;gap:16px;padding:36px 34px;border-radius:16px;color:var(--on-hero);background:radial-gradient(circle at 92% 8%,color-mix(in srgb,var(--signal) 55%,transparent) 0,transparent 38%),linear-gradient(135deg,var(--hero-a),var(--hero-b))}
+.hero h1{color:var(--on-hero)} .hero .eyebrow{color:var(--on-hero-muted)} .hero .lead{color:var(--on-hero-muted)}
+.hero .meta{font-family:var(--f-mono);font-size:12.5px;color:var(--on-hero-muted)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden;margin-top:8px}
+.stat{padding:16px 18px;border-right:1px solid var(--line);min-width:0}
+.stat:last-child{border-right:0}
+.stat{border-top:4px solid var(--sc)} .stat:nth-child(1){--sc:var(--accent)} .stat:nth-child(2){--sc:var(--signal)} .stat:nth-child(3){--sc:var(--rose)} .stat:nth-child(4){--sc:var(--violet)}
+.stat b{display:block;font-family:var(--f-mono);font-size:1.6rem;font-weight:600;color:var(--sc);font-variant-numeric:tabular-nums;line-height:1.3}
+.stat span{font-size:13px;color:var(--muted);line-height:1.5;display:block}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.card{background:color-mix(in srgb,var(--accent) 4%,var(--surface));border:1px solid color-mix(in srgb,var(--accent) 18%,var(--line));border-top:3px solid var(--accent);border-radius:10px;padding:18px 20px;min-width:0}
+.card h4{color:var(--accent)}
+.card h4{margin:0 0 6px;font-size:1rem}
+.card p,.card li{font-size:14.5px}
+.card ul{margin:6px 0 0;padding-left:20px}
+.tag{display:inline-block;font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;padding:2px 8px;border-radius:99px;background:var(--accent-soft);color:var(--accent);margin-right:6px;vertical-align:middle}
+.tag.sig{background:var(--signal-soft);color:var(--signal)}
+.tag.ok{background:var(--ok-soft);color:var(--ok)}
+.tag.vi{background:var(--violet-soft);color:var(--violet)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface);margin:12px 0 18px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:620px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12.5px;letter-spacing:.04em;color:var(--ink);font-weight:700;background:var(--accent-soft);border-bottom:2px solid var(--accent)}
+tr:last-child td{border-bottom:0}
+td.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.note{font-size:13px;color:var(--muted)}
+/* bar chart */
+.bars{display:grid;gap:8px;margin:12px 0}
+.bar{display:grid;grid-template-columns:150px minmax(0,1fr) 64px;gap:10px;align-items:center;font-size:14px}
+.bar .track{height:14px;background:var(--accent-soft);border-radius:3px;position:relative}
+.bar .fill{position:absolute;inset:0 auto 0 0;background:var(--accent);border-radius:3px}
+.bar .v{font-family:var(--f-mono);font-variant-numeric:tabular-nums;text-align:right;font-size:13px}
+.bar.avg .fill{background:var(--signal)}
+.bar.avg{font-weight:700}
+/* flow */
+.flow{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:10px;margin:14px 0;counter-reset:fl}
+.flow > div{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:8px;padding:12px 14px;font-size:14px;min-width:0;position:relative}
+.flow > div b{display:block;font-size:15px;margin-bottom:2px}
+.flow > div::before{counter-increment:fl;content:counter(fl,decimal-leading-zero);font-family:var(--f-mono);font-size:11px;color:var(--muted)}
+.flow.sig > div{border-top-color:var(--signal)}
+/* venn */
+.venn{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:24px;align-items:center}
+.venn svg{width:100%;max-width:360px;height:auto;display:block;margin:auto}
+.venn text{font-family:var(--f-body)}
+/* timeline */
+.tl{list-style:none;margin:16px 0;padding:0;border-left:2px solid var(--line);display:grid;gap:14px}
+.tl li{position:relative;padding-left:22px}
+.tl li::before{content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--accent)}
+.tl li.ms::before{background:var(--signal);border-color:var(--signal)}
+.tl .d{font-family:var(--f-mono);font-size:13px;color:var(--accent);font-weight:600}
+.tl li.ms .d{color:var(--signal)}
+/* workshops */
+.ws{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--wc);border-radius:12px;padding:22px 24px;margin:18px 0}
+.ws.w1{--wc:var(--blue)} .ws.w2{--wc:var(--signal)} .ws.w3{--wc:var(--violet)}
+.ws h3{color:var(--wc)} .ws .steps li::before{color:var(--wc)}
+.ws header{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline;justify-content:space-between;margin-bottom:8px}
+.ws h3{margin:0}
+.ws .file{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);word-break:break-all}
+.steps{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px;counter-reset:st}
+.steps li{display:grid;grid-template-columns:72px minmax(0,1fr);gap:12px;font-size:14.5px;padding-top:8px;border-top:1px dashed var(--line)}
+.steps li::before{counter-increment:st;content:"Step " counter(st);font-family:var(--f-mono);font-size:12px;color:var(--accent);font-weight:600;padding-top:2px}
+.steps li b{display:block}
+.chain{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:12px 0;font-size:14px}
+.chain span{background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 30%,var(--line));padding:6px 12px;border-radius:99px}
+.chain i{font-style:normal;color:var(--muted)}
+.callout{border-left:4px solid var(--signal);background:var(--signal-soft);padding:12px 16px;border-radius:0 8px 8px 0;font-size:14.5px;margin:16px 0;max-width:80ch}
+.callout.t{border-color:var(--accent);background:var(--accent-soft)}
+code{font-family:var(--f-mono);font-size:.9em;background:var(--accent-soft);padding:1px 5px;border-radius:4px}
+footer{margin-top:40px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+
+.quote{position:relative;margin:0 0 26px;padding:18px 24px 16px 64px;border-radius:12px;background:var(--surface);border:1px solid color-mix(in srgb,var(--accent) 22%,var(--line));max-width:900px}
+.quote::before{content:"\201C";position:absolute;left:16px;top:-4px;font-family:var(--f-display);font-size:68px;line-height:1;color:var(--accent);opacity:.85}
+.quote p{font-family:var(--f-display);font-weight:600;font-size:clamp(1.1rem,2vw,1.35rem);line-height:1.6;margin:0;color:var(--ink);max-width:none;text-wrap:balance}
+.quote cite{display:block;margin-top:8px;font-style:normal;font-size:13px;color:var(--muted)}
+.quote cite::before{content:"— "}
+@media (max-width:640px){.quote{padding:16px 16px 14px 48px}.quote::before{font-size:52px;left:10px}}
+.view{margin-top:32px;border-radius:12px;background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 10%,var(--surface)),var(--surface) 70%);border:1px solid color-mix(in srgb,var(--accent) 30%,var(--line));padding:20px 24px;display:grid;grid-template-columns:150px minmax(0,1fr);gap:20px}
+.view .vl{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;color:var(--accent);font-weight:600;text-transform:uppercase;border-right:2px solid color-mix(in srgb,var(--accent) 35%,transparent);padding-right:16px}
+.view .vl b{display:block;font-family:var(--f-display);font-size:1.15rem;letter-spacing:0;text-transform:none;color:var(--ink);margin-top:4px}
+.view p{font-size:15px;margin:0 0 10px}
+.view ul{margin:0;padding-left:20px;font-size:14.5px;display:grid;gap:4px}
+@media (max-width:640px){.view{grid-template-columns:minmax(0,1fr);gap:10px;padding:18px}.view .vl{border-right:0;padding-right:0;border-bottom:2px solid color-mix(in srgb,var(--accent) 35%,transparent);padding-bottom:8px}}
+.quote.sm{margin:4px 0 18px;padding:12px 18px 10px 48px;border-left:4px solid var(--accent);border-radius:0 10px 10px 0;background:color-mix(in srgb,var(--accent) 6%,var(--surface))}
+.quote.sm::before{font-size:46px;left:10px;top:-2px}
+.quote.sm p{font-size:clamp(1rem,1.6vw,1.12rem)}
+.quote.sm cite{margin-top:4px;font-size:12.5px}
+.ws .quote.sm{--accent:var(--wc)}
+/* 金句螢光筆強調 */
+.quote{background:linear-gradient(120deg,var(--accent-soft),color-mix(in srgb,var(--accent-soft) 40%,var(--surface)));border:1px solid color-mix(in srgb,var(--accent) 40%,var(--line));border-left:6px solid var(--accent);box-shadow:0 6px 18px -12px color-mix(in srgb,var(--accent) 70%,transparent)}
+.quote p{display:inline;font-weight:900;background-image:linear-gradient(transparent 56%,color-mix(in srgb,var(--signal) 38%,transparent) 56%,color-mix(in srgb,var(--signal) 38%,transparent) 92%,transparent 92%);-webkit-box-decoration-break:clone;box-decoration-break:clone;padding:0 2px}
+.quote cite{color:var(--accent);font-weight:600}
+.quote.sm{border-left-width:5px}
+.quote.sm p{font-weight:700}
+/* 金句醒目版 */
+.quote:not(.sm){background:linear-gradient(135deg,color-mix(in srgb,var(--accent) var(--q-p1),var(--q-tone)),color-mix(in srgb,var(--accent) var(--q-p2),var(--q-tone)));border:0;border-left:8px solid var(--hl);box-shadow:0 14px 30px -16px color-mix(in srgb,var(--accent) 80%,transparent);padding:24px 28px 20px 74px}
+.quote:not(.sm)::before{color:var(--hl);opacity:1;font-size:80px;left:18px;top:-6px}
+.quote:not(.sm) p{color:var(--q-ink);font-size:clamp(1.2rem,2.3vw,1.55rem);background-image:linear-gradient(transparent 80%,var(--hl) 80%,var(--hl) 94%,transparent 94%)}
+.quote:not(.sm) cite{color:var(--q-ink);opacity:.88}
+.quote.sm{background:color-mix(in srgb,var(--accent) 12%,var(--surface));border:1px solid color-mix(in srgb,var(--accent) 45%,var(--line));border-left:6px solid var(--accent)}
+.quote.sm::before{color:var(--accent);opacity:1}
+.quote.sm p,section[data-c="amber"] .quote.sm p,.ws.w2 .quote.sm p{background-image:linear-gradient(transparent 48%,var(--hl-soft) 48%,var(--hl-soft) 95%,transparent 95%)}
+@media (max-width:640px){.quote:not(.sm){padding:20px 18px 16px 54px}.quote:not(.sm)::before{font-size:60px;left:10px}}
+.dg{margin:16px 0 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:12px 14px 6px}
+.dg figcaption{font-size:13px;color:var(--muted);margin-bottom:6px}
+.dg figcaption b{color:var(--ink);font-size:14px}
+.dg-scroll{overflow-x:auto}
+.dg svg{display:block;width:100%;min-width:760px;height:auto}
+.dg svg text{font-family:var(--f-body)}
+.dg .dt{font-size:14px;font-weight:700;text-anchor:middle}
+.dg .ds{font-size:11.5px;text-anchor:middle}
+.dg .dn{font-family:var(--f-mono);font-size:10.5px;font-weight:600}
+.dg .dl{font-size:11.5px;text-anchor:middle;fill:var(--muted);paint-order:stroke;stroke:var(--surface);stroke-width:4px}
+.dg .dg-l{font-size:12px;font-weight:700}
+.dg .dg-h{font-size:12px;font-weight:700;text-anchor:middle;fill:var(--muted);letter-spacing:.1em}
+.dg .da{stroke:var(--muted);stroke-width:1.6}
+.ws .dgs{display:grid;gap:4px;margin-top:12px}
+.talk{margin:0 0 20px;border:1px solid color-mix(in srgb,var(--accent) 40%,var(--line));border-radius:12px;background:var(--surface);overflow:hidden}
+.talk>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:14px;font-weight:700;color:var(--accent);background:color-mix(in srgb,var(--accent) 8%,var(--surface))}
+.talk>summary::-webkit-details-marker{display:none}
+.talk>summary::before{content:"▸";font-size:12px;transition:transform .15s}
+.talk[open]>summary::before{transform:rotate(90deg)}
+.talk>summary span{font-weight:400;color:var(--muted);font-size:12.5px}
+.talk>summary:hover{background:color-mix(in srgb,var(--accent) 14%,var(--surface))}
+.talk-body{padding:14px 18px 16px;display:grid;gap:14px}
+.talk-body .dg{margin:0}
+.talk-body h5{margin:0 0 6px;font-size:13px;letter-spacing:.06em;color:var(--muted)}
+.talk-body ol{margin:0;padding-left:22px;display:grid;gap:6px;font-size:15px}
+.talk-body ol li::marker{color:var(--accent);font-family:var(--f-mono);font-weight:600}
+.fnotice{border:1px solid var(--signal);background:var(--signal-soft);border-radius:10px;padding:10px 14px;font-size:14px;margin:0 0 14px}
+.fsum{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) minmax(0,2fr);gap:10px;margin:8px 0 10px}
+.fsum>div{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--ok);border-radius:10px;padding:10px 14px;min-width:0}
+.fsum>div:nth-child(2){border-top-color:var(--signal)}
+.fsum>div.bad{border-top-color:var(--rose)}
+.fsum>div.nx{border-top-color:var(--blue)}
+.fsum b{display:block;font-family:var(--f-mono);font-size:1.5rem;font-variant-numeric:tabular-nums;line-height:1.3}
+.fsum .nx b{font-size:1.05rem;font-family:var(--f-body)}
+.fsum span{font-size:12.5px;color:var(--muted)}
+.fbar{height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin-bottom:14px}
+.fbar-in{height:100%;width:0;background:linear-gradient(90deg,var(--ok),var(--cyan));transition:width .3s}
+.ffilter{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.ffilter button{appearance:none;font:inherit;font-size:13px;padding:5px 14px;border-radius:99px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.ffilter button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface);font-weight:700}
+.mslist{display:grid;gap:10px}
+.ms{background:var(--surface);border:1px solid var(--line);border-left:6px solid var(--muted);border-radius:10px;overflow:hidden}
+.ms[data-st="進行中"]{border-left-color:var(--signal)}
+.ms[data-st="完成"]{border-left-color:var(--ok)}
+.ms[data-st="延後"]{border-left-color:var(--violet)}
+.ms.late{border-left-color:var(--rose);box-shadow:0 0 0 1px color-mix(in srgb,var(--rose) 40%,transparent)}
+.ms>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:118px minmax(0,1fr) auto;gap:12px;align-items:center;padding:12px 16px}
+.ms>summary::-webkit-details-marker{display:none}
+.ms>summary:hover{background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+.ms .md{font-family:var(--f-mono);font-size:13px;font-weight:600;color:var(--accent);line-height:1.3}
+.ms .md small{display:block;font-family:var(--f-body);font-weight:400;color:var(--muted);font-size:12px}
+.ms .mt{font-weight:700;font-size:15px;line-height:1.45}
+.ms .mi{display:flex;gap:6px;align-items:center;flex-wrap:wrap;justify-content:flex-end;font-size:12px;color:var(--muted)}
+.chip{display:inline-block;font-size:12px;padding:2px 9px;border-radius:99px;background:var(--bg);border:1px solid var(--line);color:var(--ink);white-space:nowrap}
+.chip.st-進行中{background:var(--signal-soft);border-color:var(--signal);color:var(--signal)}
+.chip.st-完成{background:var(--ok-soft);border-color:var(--ok);color:var(--ok)}
+.chip.st-延後{background:var(--violet-soft);border-color:var(--violet);color:var(--violet)}
+.chip.lt{background:var(--rose-soft);border-color:var(--rose);color:var(--rose);font-weight:700}
+.ms-body{padding:4px 16px 16px;border-top:1px dashed var(--line);display:grid;gap:14px}
+.fgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px}
+.fgrid .wide{grid-column:1/-1}
+.fld{display:grid;gap:4px;min-width:0}
+.fld label{font-size:12.5px;color:var(--muted);font-weight:600}
+.fld input,.fld select,.fld textarea{font:inherit;font-size:14px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;width:100%;min-width:0}
+.fld textarea{min-height:84px;resize:vertical;line-height:1.6}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:2px solid var(--accent);outline-offset:0;border-color:var(--accent)}
+.files{display:grid;gap:6px}
+.files h6{margin:0;font-size:12.5px;color:var(--muted)}
+.files ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.files li{display:flex;gap:10px;align-items:center;justify-content:space-between;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:13.5px;min-width:0}
+.files li a{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.files li small{color:var(--muted);white-space:nowrap}
+.files .empty{font-size:13px;color:var(--muted)}
+.btn{appearance:none;font:inherit;font-size:13.5px;padding:7px 14px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;white-space:nowrap}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--surface);font-weight:700}
+.btn.dng{color:var(--rose);border-color:color-mix(in srgb,var(--rose) 50%,var(--line))}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.upl{display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap}
+.upl input[type=file]{position:absolute;width:1px;height:1px;opacity:0}
+.mfoot{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--line)}
+.mfoot .who{font-size:12.5px;color:var(--muted)}
+.mfoot .msg{font-size:13px;font-weight:600}
+.mfoot .msg.ok{color:var(--ok)} .mfoot .msg.err{color:var(--rose)}
+@media (max-width:760px){.fsum{grid-template-columns:repeat(3,minmax(0,1fr))}.fsum .nx{grid-column:1/-1}.fgrid{grid-template-columns:minmax(0,1fr)}.ms>summary{grid-template-columns:minmax(0,1fr)}.ms .mi{justify-content:flex-start}}
+.gantt{margin:0 0 22px;background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:12px;padding:14px 16px 10px}
+.gantt figcaption{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;margin-bottom:8px}
+.gantt figcaption b{font-size:16px}
+.gantt figcaption span{font-size:12.5px;color:var(--muted)}
+.gantt-scroll{overflow-x:auto}
+.gantt-scroll svg{display:block;width:100%;min-width:900px;height:auto}
+.gantt-scroll svg text{font-family:var(--f-body)}
+.gt-q0{fill:var(--blue-soft)} .gt-q1{fill:var(--cyan-soft)} .gt-q2{fill:var(--violet-soft)}
+.gt-ql{font-size:13px;font-weight:700;fill:var(--ink);text-anchor:middle}
+.gt-ml{font-size:11.5px;fill:var(--muted);text-anchor:middle}
+.gt-mline{stroke:var(--line);stroke-width:1}
+.gt-row{fill:transparent}
+.gt-r:hover .gt-row{fill:color-mix(in srgb,var(--accent) 8%,transparent)}
+.gt-r{cursor:pointer}
+.gt-r:focus-visible{outline:none}
+.gt-r:focus-visible .gt-row{fill:color-mix(in srgb,var(--accent) 14%,transparent);stroke:var(--accent)}
+.gt-lab{font-size:12.5px;fill:var(--ink)}
+.gt-dt{font-family:var(--f-mono);font-size:11px;fill:var(--muted)}
+.gt-bar{rx:5px;stroke-width:1.5}
+.gt-未開始{fill:var(--bg);stroke:var(--muted)}
+.gt-進行中{fill:var(--signal);stroke:var(--signal)}
+.gt-完成{fill:var(--ok);stroke:var(--ok)}
+.gt-延後{fill:var(--violet);stroke:var(--violet)}
+.gt-late{stroke:var(--rose);stroke-width:3;stroke-dasharray:4 2}
+.gt-end{font-size:11px;fill:var(--muted)}
+.gt-today{stroke:var(--rose);stroke-width:2}
+.gt-todayl{font-size:11px;font-weight:700;fill:var(--rose);text-anchor:middle}
+.glegend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--muted);margin-top:8px}
+.glegend span{display:inline-flex;align-items:center;gap:6px}
+.glegend i{display:inline-block;width:18px;height:10px;border-radius:3px;border:1.5px solid}
+.gl-todo{background:var(--bg);border-color:var(--muted)!important}
+.gl-doing{background:var(--signal);border-color:var(--signal)!important}
+.gl-done{background:var(--ok);border-color:var(--ok)!important}
+.gl-hold{background:var(--violet);border-color:var(--violet)!important}
+.gl-late{background:transparent;border:2px dashed var(--rose)!important}
+.gl-today{width:2px!important;height:14px!important;border:0!important;background:var(--rose)}
+abbr.term{display:inline;border-bottom:1.5px dotted var(--accent);cursor:help;text-decoration:none;font:inherit;color:inherit}
+.hero abbr.term,.quote:not(.sm) abbr.term,.stat abbr.term{border-bottom-color:currentColor}
+.term:focus-visible{outline:2px solid var(--accent);outline-offset:1px;border-radius:2px}
+#termTip{position:fixed;z-index:100;max-width:320px;padding:10px 12px;border-radius:8px;background:var(--ink);color:var(--bg);font-size:13px;line-height:1.6;box-shadow:0 8px 24px -8px rgba(0,0,0,.45);pointer-events:none;opacity:0;transition:opacity .12s}
+#termTip.on{opacity:1}
+#termTip b{display:block;font-size:12px;letter-spacing:.04em;opacity:.8;margin-bottom:2px}
+@media (prefers-reduced-motion:reduce){#termTip{transition:none}}
+h3.blk{display:flex;align-items:center;gap:10px;margin:30px 0 12px;font-size:1.25rem}
+h3.blk span{font-family:var(--f-mono);font-size:12px;font-weight:600;letter-spacing:.08em;padding:3px 10px;border-radius:99px;background:var(--accent);color:var(--surface)}
+.ms .hint{font-size:13.5px;background:var(--accent-soft);border-radius:8px;padding:8px 12px;margin-top:12px}
+.wo{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--wc,var(--accent));border-radius:12px;padding:18px 20px;margin:0 0 18px;scroll-margin-top:70px}
+#wo-offer{--wc:var(--blue)} #wo-pov{--wc:var(--violet)} #wo-roi{--wc:var(--ok)}
+.wo-h{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:space-between;margin-bottom:12px}
+.wo-h h4{margin:0;font-size:1.15rem;color:var(--wc)}
+.wo-h .acts{display:flex;gap:8px;flex-wrap:wrap}
+.wo-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:start}
+.wo-grid>*{min-width:0}
+.wo .fgrid{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:0}
+.pv{border:1px solid var(--line);border-radius:10px;background:var(--bg);padding:16px 18px;font-size:14px;line-height:1.65;position:sticky;top:70px}
+.pv h5{margin:0 0 4px;font-size:12px;letter-spacing:.08em;color:var(--muted)}
+.op-title{font-family:var(--f-display);font-size:1.3rem;font-weight:900;margin:0;color:var(--ink);line-height:1.35}
+.op-cust{color:var(--muted);font-size:13px;margin:2px 0 12px}
+.op-sec{margin:10px 0 0}
+.op-sec b{display:block;font-size:12.5px;color:var(--wc);letter-spacing:.04em}
+.op-sec p{margin:0;white-space:pre-line}
+.op-ph{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:6px}
+.op-ph>div{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--wc);border-radius:8px;padding:8px 10px;font-size:12.5px;min-width:0}
+.op-ph>div b{display:block;font-size:13px;color:var(--ink)}
+.op-roi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:6px}
+.op-roi div{background:var(--ok-soft);border-radius:8px;padding:8px 10px;min-width:0}
+.op-roi b{display:block;font-family:var(--f-mono);font-size:1.1rem;color:var(--ok)}
+.op-roi span{font-size:12px;color:var(--muted)}
+.pw{display:grid;gap:6px;margin-top:6px}
+.pw div{display:grid;grid-template-columns:92px minmax(0,1fr);gap:10px;align-items:start;font-size:13px}
+.pw div i{font-style:normal;font-family:var(--f-mono);font-size:12px;background:var(--violet);color:var(--surface);border-radius:6px;padding:3px 6px;text-align:center}
+.roi-kpi{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:4px 0 14px}
+.roi-kpi div{background:var(--ok-soft);border-radius:10px;padding:10px 12px;min-width:0}
+.roi-kpi b{display:block;font-family:var(--f-mono);font-size:1.15rem;overflow-wrap:anywhere;color:var(--ok);font-variant-numeric:tabular-nums}
+.roi-kpi span{font-size:12px;color:var(--muted)}
+.roi-bars{display:grid;gap:8px;margin:10px 0 0}
+.roi-bars .rb{display:grid;grid-template-columns:60px minmax(0,1fr) 70px;gap:10px;align-items:center;font-size:13px}
+.roi-bars .tr{height:14px;background:var(--line);border-radius:3px;position:relative;overflow:hidden}
+.roi-bars .fi{position:absolute;top:0;bottom:0;left:50%;background:var(--ok)}
+.roi-bars .fi.neg{background:var(--rose)}
+.roi-bars .ax{position:absolute;left:50%;top:-2px;bottom:-2px;width:1px;background:var(--muted)}
+.roi-bars .v{font-family:var(--f-mono);text-align:right}
+.wo .tbl table{min-width:560px;font-size:13px}
+.wo .tbl th,.wo .tbl td{padding:8px 8px}
+.wo-files{margin-top:14px}
+@media (max-width:860px){.wo-grid{grid-template-columns:minmax(0,1fr)}.pv{position:static}.roi-kpi{grid-template-columns:repeat(2,minmax(0,1fr))}.op-ph,.op-roi{grid-template-columns:minmax(0,1fr)}.wo .fgrid{grid-template-columns:minmax(0,1fr)}}
+.pubnote{border:1px solid var(--line);border-left:6px solid var(--signal);background:var(--signal-soft);border-radius:10px;padding:10px 14px;font-size:14px;margin:0 0 18px}
+@media (max-width:980px){
+  .wrap,.top-in{padding-inline:16px}
+  .brand span{display:none}
+  .go{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid3{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media (max-width:640px){
+  body{font-size:15px}
+  .stats{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .grid2,.grid3,.venn,.go{grid-template-columns:minmax(0,1fr)}
+  .hero{padding:26px 20px}
+  .phead{padding:18px}
+  .flow{grid-auto-flow:row}
+  .bar{grid-template-columns:96px minmax(0,1fr) 52px;font-size:13px}
+  .steps li{grid-template-columns:minmax(0,1fr);gap:2px}
+}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+<header class="top"><div class="top-in"><div class="brand"><i></i><span>Weblink × AI CoE</span></div><nav class="tabs" role="tablist" aria-label="分頁"><button class="tab" role="tab" id="tab-top" data-t="top" data-c="teal" aria-controls="top" aria-selected="false">總覽</button><button class="tab" role="tab" id="tab-brief" data-t="brief" data-c="blue" aria-controls="brief" aria-selected="false">活動說明</button><button class="tab" role="tab" id="tab-strategy" data-t="strategy" data-c="violet" aria-controls="strategy" aria-selected="false">策略定位</button><button class="tab" role="tab" id="tab-biz" data-t="biz" data-c="amber" aria-controls="biz" aria-selected="false">業務規劃</button><button class="tab" role="tab" id="tab-tech" data-t="tech" data-c="green" aria-controls="tech" aria-selected="false">技術規劃</button><button class="tab" role="tab" id="tab-cases" data-t="cases" data-c="rose" aria-controls="cases" aria-selected="false">產業案例</button><button class="tab" role="tab" id="tab-roadmap" data-t="roadmap" data-c="cyan" aria-controls="roadmap" aria-selected="false">路線圖與 KPI</button><button class="tab" role="tab" id="tab-workshops" data-t="workshops" data-c="amber" aria-controls="workshops" aria-selected="false">實作 Workshop</button><button class="tab" role="tab" id="tab-ws1" data-t="ws1" data-c="blue" aria-controls="ws1" aria-selected="false">Workshop 1</button><button class="tab" role="tab" id="tab-next" data-t="next" data-c="teal" aria-controls="next" aria-selected="false">下一步</button></nav></div></header>
+<div class="wrap">
+<div class="pubnote" role="note">公開展示版：已移除 Microsoft 內部數據與展碁內部工作表。Workshop 1 工作表可以試填與試算，但內容不會儲存。客戶名稱、定價與目標數字均為教學示範。</div>
+<main>
+<!-- ================= HERO ================= -->
+<section id="top" class="panel" data-c="teal" role="tabpanel" aria-labelledby="tab-top">
+<details class="talk"><summary>本頁架構圖與講稿<span>點擊展開・5 點</span></summary><div class="talk-body"><figure class="dg"><figcaption><b>總覽・架構圖</b></figcaption><div class="dg-scroll"><svg viewBox="0 0 960 280" role="img" aria-label="整體運作架構：Microsoft、展碁、經銷商、客戶" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><rect x="20" y="30" width="194" height="96" rx="9" style="fill:var(--blue);stroke:var(--blue);stroke-width:1.6"/><text x="117.0" y="67.0" class="dt" style="fill:var(--surface)">Microsoft Asia AI CoE</text><text x="117.0" y="84.0" class="ds" style="fill:var(--surface)">傾向資料・Live Maker</text><text x="117.0" y="99.0" class="ds" style="fill:var(--surface)">Hack to Build・資助計畫</text><rect x="262" y="30" width="194" height="96" rx="9" style="fill:var(--cyan);stroke:var(--cyan);stroke-width:1.6"/><text x="359.0" y="67.0" class="dt" style="fill:var(--surface)">展碁 AI CoE</text><text x="359.0" y="84.0" class="ds" style="fill:var(--surface)">資料媒合・能力工廠</text><text x="359.0" y="99.0" class="ds" style="fill:var(--surface)">Offer 加速</text><rect x="504" y="30" width="194" height="96" rx="9" style="fill:var(--signal);stroke:var(--signal);stroke-width:1.6"/><text x="601.0" y="67.0" class="dt" style="fill:var(--surface)">經銷商</text><text x="601.0" y="84.0" class="ds" style="fill:var(--surface)">T1 共創・T2 示範</text><text x="601.0" y="99.0" class="ds" style="fill:var(--surface)">T3 啟蒙</text><rect x="746" y="30" width="194" height="96" rx="9" style="fill:var(--ok);stroke:var(--ok);stroke-width:1.6"/><text x="843.0" y="67.0" class="dt" style="fill:var(--surface)">SMB 客戶</text><text x="843.0" y="84.0" class="ds" style="fill:var(--surface)">Frontier Agentic Offer</text><text x="843.0" y="99.0" class="ds" style="fill:var(--surface)">PoV → MVP → 代管</text><line x1="215" y1="78" x2="261" y2="78" class="da" marker-end="url(#ah)"/><line x1="457" y1="78" x2="503" y2="78" class="da" marker-end="url(#ah)"/><line x1="699" y1="78" x2="745" y2="78" class="da" marker-end="url(#ah)"/><path d="M843,127 L843,160 L117,160 L117,127" class="da" style="fill:none" stroke-dasharray="5 4" marker-end="url(#ah)"/><text x="480" y="154" class="dl">客戶案例與需求回饋，持續修正名單、教材與 Offer</text><rect x="20" y="190" width="194" height="56" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="117.0" y="215.0" class="dt" style="fill:var(--ink)">既有客戶</text><text x="117.0" y="232.0" class="ds" style="fill:var(--muted)">擴大 Azure 用量</text><rect x="262" y="190" width="194" height="56" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="359.0" y="215.0" class="dt" style="fill:var(--ink)">GitHub Copilot</text><text x="359.0" y="232.0" class="ds" style="fill:var(--muted)">授權與服務</text><rect x="504" y="190" width="194" height="56" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="601.0" y="215.0" class="dt" style="fill:var(--ink)">Foundry ACR</text><text x="601.0" y="232.0" class="ds" style="fill:var(--muted)">持續用量</text><rect x="746" y="190" width="194" height="56" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="843.0" y="215.0" class="dt" style="fill:var(--ink)">代管月費</text><text x="843.0" y="232.0" class="ds" style="fill:var(--muted)">經常性收入</text><text x="480" y="270" class="dl">成果指標</text></svg></div></figure><div><h5>講稿</h5><ol><li>開場：今天要談的是 Microsoft 10/6 發表的 Frontier Distributor 計畫，以及展碁要怎麼接。</li><li>一句話：經銷商要從「幫客戶裝技術」轉成「用 AI 幫客戶做生意」，代理商是帶整個通路轉型的關鍵。</li><li>看架構圖：Microsoft 提供資料與計畫，展碁負責媒合、培育與加速，經銷商交付，客戶買的是 Offer。</li><li>四個重點先記住：IT 支出只佔營收約 5.7%、轉向商業價值機會約放大 20 倍、經銷商四步旅程、三場 Live Maker。</li><li>這個網頁分成 9 頁：先說明活動，再談展碁的策略、業務、技術、案例、路線圖，最後是 Workshop 與下一步。</li></ol></div></div></details>
+<div class="hero">
+  <span class="eyebrow">Asia AI CoE · Frontier Distributor Launch · 2026-10-06</span>
+  <h1>展碁 Frontier AI 經銷商藍圖</h1>
+  <p class="lead">把 Microsoft Asia AI CoE 的 Frontier Distributor 計畫，轉成展碁國際（Weblink International Inc.）可以執行的業務與技術規劃。本頁先說明活動內容，再提出展碁的做法、案例構想，以及帶領經銷商與客戶動手做的三個 Workshop。</p>
+  <div class="meta">資料來源：Asia AI CoE Distis Kickoff 簡報（23 頁）與 2026-10-06 會議逐字稿 · 整理日期 2026-10-08</div>
+  <div class="stats" role="list">
+    <div class="stat" role="listitem"><b>5.7%</b><span>企業平均 IT 支出佔營收比例</span></div>
+    <div class="stat" role="listitem"><b>4 步</b><span>經銷商旅程：Show → Develop → Deploy → Discover</span></div>
+    <div class="stat" role="listitem"><b>~20×</b><span>從「IT 預算」轉向「商業價值」後放大的機會</span></div>
+    <div class="stat" role="listitem"><b>3 場</b><span>Live Maker：10/21、11/18、12/16</span></div>
+  </div>
+</div>
+  <figure class="quote"><p>如果你不跟客戶談 AI，一定有別人在談，而且不一定是另一家經銷商。</p><cite>Dean，Asia AI CoE Partner Solution Architect（發表會發言，意譯）</cite></figure>
+  <div class="go"><a href="#brief" data-c="blue"><b>活動說明</b><span>發表會重點：機會、GitHub Copilot、Disti Plan、GTM 與資助</span></a><a href="#strategy" data-c="violet"><b>策略定位</b><span>展碁的三個角色與在地化差異</span></a><a href="#biz" data-c="amber"><b>業務規劃</b><span>經銷商分級、業務點子與銷售對話轉換</span></a><a href="#tech" data-c="green"><b>技術規劃</b><span>Customer Zero、AI Lab、範本庫與治理服務</span></a><a href="#cases" data-c="rose"><b>產業案例</b><span>五個產業的示範方案構想</span></a><a href="#roadmap" data-c="cyan"><b>路線圖與 KPI</b><span>FY27 Q2 到 Q4 時程與計分卡</span></a><a href="#workshops" data-c="amber"><b>實作 Workshop</b><span>三個 Workshop 的 Step by Step 摘要</span></a><a href="#next" data-c="teal"><b>下一步</b><span>本週與本月要做的事</span></a><a href="#ws1" data-c="blue"><b>Workshop 1 工作表</b><span>任務時程、Offer、PoV 與 ROI 試算</span></a></div>
+
+  <aside class="view" aria-label="展碁規劃觀點"><div class="vl">Weblink View<b>展碁規劃觀點</b></div><div><p>這份藍圖的核心判斷：展碁要從「授權與雲端代理」升級為「經銷商 AI 能力的培育者」。接下來 90 天最優先的是三件事：</p><ul><li>向 Microsoft 取得傾向資料與儀表板，確認第一批目標客戶</li><li>挑出 5–8 家 T1 經銷商，提名 Hack to Build</li><li>用三個 Workshop 做出第一個可以複製到其他經銷商的 Offer</li></ul></div></aside>
+</section>
+
+<!-- ================= 一、活動說明 ================= -->
+<section id="brief" class="panel" data-c="blue" role="tabpanel" aria-labelledby="tab-brief">
+<details class="talk"><summary>本頁架構圖與講稿<span>點擊展開・6 點</span></summary><div class="talk-body"><figure class="dg"><figcaption><b>活動說明・架構圖</b></figcaption><div class="dg-scroll"><svg viewBox="0 0 960 316" role="img" aria-label="活動重點：機會、經銷商旅程、GTM 四階段" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><rect x="20" y="30" width="200" height="70" rx="9" style="fill:var(--blue);stroke:var(--blue);stroke-width:1.6"/><text x="120.0" y="62.0" class="dt" style="fill:var(--surface)">SMB 市場</text><text x="120.0" y="79.0" class="ds" style="fill:var(--surface)">雲端與 AI 機會</text><rect x="260" y="30" width="200" height="70" rx="9" style="fill:var(--blue);stroke:var(--blue);stroke-width:1.6"/><text x="360.0" y="62.0" class="dt" style="fill:var(--surface)">既有客戶</text><text x="360.0" y="79.0" class="ds" style="fill:var(--surface)">經銷商既有客戶機會</text><rect x="500" y="22" width="210" height="40" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="605.0" y="47.0" class="dt" style="fill:var(--ink)">A 已能共建的夥伴</text><rect x="500" y="70" width="210" height="40" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="605.0" y="95.0" class="dt" style="fill:var(--ink)">B 需要培育的夥伴</text><line x1="221" y1="65" x2="259" y2="65" class="da" marker-end="url(#ah)"/><text x="240.0" y="56" class="dl">聚焦</text><line x1="461" y1="55" x2="499" y2="42" class="da" marker-end="url(#ah)"/><line x1="461" y1="75" x2="499" y2="90" class="da" marker-end="url(#ah)"/><rect x="750" y="30" width="190" height="70" rx="9" style="fill:var(--rose);stroke:var(--rose);stroke-width:1.6"/><text x="845.0" y="62.0" class="dt" style="fill:var(--surface)">~20×</text><text x="845.0" y="79.0" class="ds" style="fill:var(--surface)">從 IT 預算轉向營收</text><text x="20" y="140" class="dg-l" style="fill:var(--muted)">經銷商四階段旅程</text><rect x="20" y="150" width="210" height="56" rx="9" style="fill:var(--cyan-soft);stroke:var(--cyan);stroke-width:1.6"/><text x="125.0" y="175.0" class="dt" style="fill:var(--ink)">Show 展示</text><text x="125.0" y="192.0" class="ds" style="fill:var(--muted)">展示新可能</text><line x1="231" y1="178" x2="254" y2="178" class="da" marker-end="url(#ah)"/><rect x="255" y="150" width="210" height="56" rx="9" style="fill:var(--cyan-soft);stroke:var(--cyan);stroke-width:1.6"/><text x="360.0" y="175.0" class="dt" style="fill:var(--ink)">Develop 開發</text><text x="360.0" y="192.0" class="ds" style="fill:var(--muted)">快速對齊價值</text><line x1="466" y1="178" x2="489" y2="178" class="da" marker-end="url(#ah)"/><rect x="490" y="150" width="210" height="56" rx="9" style="fill:var(--cyan-soft);stroke:var(--cyan);stroke-width:1.6"/><text x="595.0" y="175.0" class="dt" style="fill:var(--ink)">Deploy 部署</text><text x="595.0" y="192.0" class="ds" style="fill:var(--muted)">上線實現價值</text><line x1="701" y1="178" x2="724" y2="178" class="da" marker-end="url(#ah)"/><rect x="725" y="150" width="210" height="56" rx="9" style="fill:var(--cyan-soft);stroke:var(--cyan);stroke-width:1.6"/><text x="830.0" y="175.0" class="dt" style="fill:var(--ink)">Discover 擴展</text><text x="830.0" y="192.0" class="ds" style="fill:var(--muted)">找下一個商機</text><text x="20" y="236" class="dg-l" style="fill:var(--muted)">GTM 四階段與資源</text><rect x="20" y="246" width="210" height="56" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="125.0" y="271.0" class="dt" style="fill:var(--ink)">建立 Pipeline</text><text x="125.0" y="288.0" class="ds" style="fill:var(--muted)">PMC Pro・Co-op・RACE Day</text><line x1="231" y1="274" x2="254" y2="274" class="da" marker-end="url(#ah)"/><rect x="255" y="246" width="210" height="56" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="360.0" y="271.0" class="dt" style="fill:var(--ink)">設計方案</text><text x="360.0" y="288.0" class="ds" style="fill:var(--muted)">售前評估與 PoV</text><line x1="466" y1="274" x2="489" y2="274" class="da" marker-end="url(#ah)"/><rect x="490" y="246" width="210" height="56" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="595.0" y="271.0" class="dt" style="fill:var(--ink)">贏得交易</text><text x="595.0" y="288.0" class="ds" style="fill:var(--muted)">CSP 激勵</text><line x1="701" y1="274" x2="724" y2="274" class="da" marker-end="url(#ah)"/><rect x="725" y="246" width="210" height="56" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="830.0" y="271.0" class="dt" style="fill:var(--ink)">推動用量</text><text x="830.0" y="288.0" class="ds" style="fill:var(--muted)">售後部署資助</text></svg></div></figure><div><h5>講稿</h5><ol><li>先講機會：從經銷商的既有客戶起步，再擴大到整個 SMB 市場。</li><li>Microsoft 把經銷商分成兩群：已能共建的夥伴，以及需要投資培育的夥伴。</li><li>關鍵觀念：企業 IT 支出只佔營收約 5.7%，改談營運與營收，機會放大約 20 倍。</li><li>GitHub Copilot 是經銷商最容易上手的第一筆 AI 生意：每客戶約 $10.4K ARR、16–25% 毛利。</li><li>經銷商要走 Show → Develop → Deploy → Discover 四步，Microsoft 用 GTM 四階段的資源支援每一步。</li><li>時程重點：10/21、11/18、12/16 三場 Live Maker，11/5 Hack to Build 啟動，需要代理商提名。</li></ol></div></div></details>
+  <div class="phead"><span class="eyebrow">Part 1</span><h2>一、活動重點說明</h2></div>
+  <figure class="quote"><p>把對話從 IT 預算轉成整體營收，機會放大約 20 倍。</p><cite>Asia AI CoE Frontier Distributor Launch 重點</cite></figure>
+  <div class="chips"><a href="#b-opp">機會的重新定義</a><a href="#b-ghc">GitHub Copilot</a><a href="#b-journey">四階段旅程</a><a href="#b-plan">Disti Plan</a><a href="#b-gtm">GTM 框架與資助</a><a href="#b-hack">Hack to Build</a></div>
+  <p>這場 45 分鐘的線上發表會由 Microsoft Asia AI CoE 的 Dean（Partner Solution Architect）、Valentina（Partner Solution Sales）與合作夥伴行銷團隊主講。核心訊息只有一句：經銷商要從「幫客戶裝技術」轉成「用 AI 幫客戶做生意」，而代理商（Distributor）是把整個經銷商通路帶上這條路的關鍵。</p>
+
+  <h3 id="b-opp">1. 機會的重新定義：從 IT 預算到整體營收</h3>
+  <figure class="quote sm"><p>客戶花在 IT 的只有營收的 5.7%，其餘 94% 才是真正的舞台。</p><cite>簡報〈IT Spend by Industry〉整理</cite></figure>
+  <p>企業平均只把約 5.7% 的營收花在 IT。如果經銷商只談技術導入，能爭取的只有這一小塊；如果改談「用技術改善業務」，可觸及的是其餘 94% 的營運活動。講者估計，換成商業顧問的角度，機會約放大 20 倍。</p>
+  <div class="card">
+    <h4>各產業 IT 支出佔營收比例（簡報第 5 頁）</h4>
+    <div class="bars" aria-label="各產業 IT 支出佔營收比例">
+      <div class="bar"><span>科技與軟體</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="v">20%</span></div>
+      <div class="bar"><span>金融服務</span><div class="track"><div class="fill" style="width:42.5%"></div></div><span class="v">8.5%</span></div>
+      <div class="bar"><span>醫療</span><div class="track"><div class="fill" style="width:37.5%"></div></div><span class="v">7.5%</span></div>
+      <div class="bar"><span>電信</span><div class="track"><div class="fill" style="width:37.5%"></div></div><span class="v">7.5%</span></div>
+      <div class="bar avg"><span>整體平均</span><div class="track"><div class="fill" style="width:28.5%"></div></div><span class="v">5.7%</span></div>
+      <div class="bar"><span>專業服務</span><div class="track"><div class="fill" style="width:27.5%"></div></div><span class="v">5.5%</span></div>
+      <div class="bar"><span>媒體娛樂</span><div class="track"><div class="fill" style="width:27.5%"></div></div><span class="v">5.5%</span></div>
+      <div class="bar"><span>零售與電商</span><div class="track"><div class="fill" style="width:22.5%"></div></div><span class="v">4.5%</span></div>
+      <div class="bar"><span>教育</span><div class="track"><div class="fill" style="width:22.5%"></div></div><span class="v">4.5%</span></div>
+      <div class="bar"><span>政府與公部門</span><div class="track"><div class="fill" style="width:21.5%"></div></div><span class="v">4.3%</span></div>
+      <div class="bar"><span>物流運輸</span><div class="track"><div class="fill" style="width:20%"></div></div><span class="v">4%</span></div>
+      <div class="bar"><span>製造</span><div class="track"><div class="fill" style="width:17.5%"></div></div><span class="v">3.5%</span></div>
+      <div class="bar"><span>非營利</span><div class="track"><div class="fill" style="width:15%"></div></div><span class="v">3%</span></div>
+    </div>
+    <p class="note">台灣經銷商最常服務的製造業 IT 支出只有約 3.5%。這代表製造業客戶最不適合只談 IT 預算，最適合談「流程與營收」。</p>
+  </div>
+
+  <h3>經銷商分群</h3>
+  <p>Microsoft 依準備度把經銷商分成兩群：已能和 Microsoft 共同建構 AI Offer 的夥伴，以及需要投資培育、重新裝備的夥伴。後者數量較多，潛在機會也較大，正是代理商可以著力的地方。Microsoft 會透過 PDM 與各代理商逐一討論名單與資料。</p>
+
+  <h3 id="b-ghc">2. GitHub Copilot：每家經銷商都能成為軟體開發商</h3>
+  <figure class="quote sm"><p>每一個 AI 服務案，都從開發者開始。</p><cite>簡報〈Why Now〉</cite></figure>
+  <p>講者指出，目前自認能做軟體開發的經銷商不到一成，但 AI 已大幅降低開發門檻。GitHub 的 Agentic DevOps 框架則確保 AI 寫出的程式有品質與治理。這讓「建構方案」成為每家經銷商都能做的事。</p>
+  <div class="grid3">
+    <div class="card"><span class="tag">ARR</span><h4 style="margin-top:8px">$10.4K / 客戶 / 年</h4><p>平均每個 SMB GitHub Copilot 客戶的年經常性收入</p></div>
+    <div class="card"><span class="tag">毛利</span><h4 style="margin-top:8px">16–25% 轉售毛利</h4><p>夥伴附加服務可讓授權收入再提升 +33%</p></div>
+    <div class="card"><span class="tag">服務</span><h4 style="margin-top:8px">約 5.5 倍服務收入</h4><p>沒有 AI 交付習慣的夥伴，續約時容易被取代</p></div>
+  </div>
+  <div class="callout t"><b>代理商的第一步：</b>提名第一批經銷商參加 CY26 年底前（FY27 Q2）的線上與現場 Live Maker 工作坊，再透過 Disti Plan 追蹤賦能、使用量與客戶啟用。<br><b>經銷商的第一步：</b>本季讓交付團隊完成一場 Live Maker 工作坊，把做出來的成果包裝成固定範圍的 GitHub Copilot Starter 服務，賣給前幾大客戶。</div>
+
+  <h3 id="b-journey">3. 經銷商要走的四階段旅程</h3>
+  <figure class="quote sm"><p>做客戶會因此感謝你的新事情。</p><cite>簡報〈Do new things with customers〉意譯</cite></figure>
+  <p>Microsoft 希望經銷商跳出舒適圈、做客戶會因此感謝他們的新事情、更重視商業價值，並且從自己開始轉型（Customer Zero）。具體路徑分成四步：</p>
+  <div class="flow">
+    <div><b>Show 展示</b>用 AI 為客戶展示業務上的新可能</div>
+    <div><b>Develop 開發</b>依客戶需求快速開發，對齊價值</div>
+    <div><b>Deploy 部署</b>上線到正式環境，與客戶一起實現價值</div>
+    <div><b>Discover 擴展</b>和客戶找出下一個商機，複製到其他客戶</div>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>Live Maker 工作坊</th><th>日期</th><th>主題</th><th>報名</th></tr></thead>
+    <tbody>
+      <tr><td>第 1 場</td><td class="num">2026-10-21</td><td>Crafting a Customer Engagement：設計客戶互動</td><td><code>aka.ms/AICOE/OCT2026</code></td></tr>
+      <tr><td>第 2 場</td><td class="num">2026-11-18</td><td>Building the solution with GitHub Copilot：用 GitHub Copilot 建構方案</td><td><code>aka.ms/AICOE/NOV2026</code></td></tr>
+      <tr><td>第 3 場</td><td class="num">2026-12-16</td><td>Deploying on the foundation with Foundry：在 Foundry 上部署</td><td><code>aka.ms/AICOE/DEC2026</code></td></tr>
+    </tbody>
+  </table></div>
+  <p>代理商可以選擇：A）邀請經銷商參加；B）第一次和 Microsoft 一起深度辦理；C）做出有自身特色的變化版；D）以上全部。Microsoft 最希望的是 D。</p>
+
+  <h3 id="b-plan">4. Disti Plan 與資料驅動的目標鎖定</h3>
+  <figure class="quote sm"><p>資料不取代你對客戶的了解，它給你一個清楚的假設：做什麼、找誰。</p><cite>Valentina，Asia AI CoE（發表會發言，意譯）</cite></figure>
+  <p>Valentina 說明的執行方式：用資料找出夥伴能力、客戶意向與市場機會三者重疊之處，挑出「優先經銷商梯隊」，再提供白手套式（White Glove）的能力培育，讓經銷商結業時手上有一個能直接上市的 Offer。</p>
+  <div class="flow sig">
+    <div><b>Propensity Data</b>客戶傾向資料</div>
+    <div><b>White Glove Skilling</b>代理商主辦，Microsoft 協助</div>
+    <div><b>客戶研究與互動</b>從業務問題切入</div>
+    <div><b>GitHub Copilot 建構</b>培養開發能力</div>
+    <div><b>Foundry 交付</b>可擴展的 Agent 方案</div>
+    <div><b>Frontier Agentic Offer</b>可重複販售的 Offer</div>
+  </div>
+  <div class="venn">
+    <svg viewBox="0 0 360 300" role="img" aria-label="夥伴能力、客戶意向、市場機會三者重疊即為優先經銷商">
+      <circle cx="130" cy="115" r="88" fill="var(--accent)" fill-opacity=".16" stroke="var(--accent)" stroke-width="1.5"/>
+      <circle cx="230" cy="115" r="88" fill="var(--signal)" fill-opacity=".16" stroke="var(--signal)" stroke-width="1.5"/>
+      <circle cx="180" cy="195" r="88" fill="var(--violet)" fill-opacity=".16" stroke="var(--violet)" stroke-width="1.5"/>
+      <text x="92" y="88" font-size="14" font-weight="700" fill="var(--ink)" text-anchor="middle">夥伴能力</text>
+      <text x="92" y="106" font-size="11" fill="var(--muted)" text-anchor="middle">專業認證、客戶組合</text>
+      <text x="268" y="88" font-size="14" font-weight="700" fill="var(--ink)" text-anchor="middle">客戶意向</text>
+      <text x="268" y="106" font-size="11" fill="var(--muted)" text-anchor="middle">訊號、用量、下一工作負載</text>
+      <text x="180" y="262" font-size="14" font-weight="700" fill="var(--ink)" text-anchor="middle">市場機會</text>
+      <text x="180" y="279" font-size="11" fill="var(--muted)" text-anchor="middle">產業、可觸及市場</text>
+      <text x="180" y="148" font-size="13" font-weight="700" fill="var(--ink)" text-anchor="middle">優先</text>
+      <text x="180" y="165" font-size="13" font-weight="700" fill="var(--ink)" text-anchor="middle">經銷商</text>
+    </svg>
+    <div>
+      <p><b>重疊之後的三步：</b></p>
+      <ol style="margin:0;padding-left:20px;font-size:15px">
+        <li>驗證意向：用 propensity 資料挑出第一批驗證客戶</li>
+        <li>定義 Offer：有明確客戶問題、互動模式、交付物與預期成果</li>
+        <li>約定下一步：啟用 Microsoft 計畫、技術支援與銷售資源加速</li>
+      </ol>
+      <p class="note" style="margin-top:10px">資料是假設的起點，不取代經銷商對客戶的了解。Microsoft 已建好儀表板，會透過 PDM 與每家代理商逐一討論。</p>
+    </div>
+  </div>
+  <p>簡報附了一個範例 Offer：<b>12 週「AI-Ready Data Platform & Agent Transformation」</b>，分成 Discover、Design、Prioritise、Build 四段，商業路徑是「固定價格評估 → 基礎建置 → 代管資料與 AI 營運」，目標成果包括報表產出加快 50%、資料工程工作量減少 25%、找出 10 個以上優先 AI 用例。講者也提醒這只是通用範本，經銷商深入客戶後應做出更貼近特定問題的 Offer。</p>
+
+  <h3 id="b-gtm">5. FY27 Cloud & AI Platform GTM 框架</h3>
+  <figure class="quote sm"><p>我們的工作不只是產生名單，而是讓夥伴從頭到尾都能贏。</p><cite>合作夥伴行銷團隊（發表會發言，意譯）</cite></figure>
+  <p>行銷團隊把 SMB 對話分成兩條主線：<b>Frontier</b>（用 AI 建立競爭優勢：Copilot Studio、GitHub、Foundry、Marketplace）與 <b>Core</b>（資料現代化：SQL Server 現代化、Fabric）。建議代理商把活動規劃對齊這兩條線，並把 AI 與資料現代化的對話串在一起。</p>
+  <div class="tbl"><table>
+    <thead><tr><th>階段</th><th>行銷與 GTM 資產</th><th>夥伴投資</th><th>經銷商啟用資源</th><th>KPI</th></tr></thead>
+    <tbody>
+      <tr><td><b>1 建立 Pipeline</b><br><span class="note">Listen & Consult</span></td><td>PMC Pro 行銷活動（統一資料平台、資料庫現代化）</td><td>Frontier Spark（TPM + Co-op 資助）、Data & AI Practice Build</td><td>Azure AI RACE Day、GTM Factory</td><td>Leads、MQL、10 倍活動 ROI</td></tr>
+      <tr><td><b>2 設計方案</b><br><span class="note">Inspire & Design</span></td><td>Pitch deck、Discovery 問題、Demo、技術工作坊</td><td>Frontier Accelerate 售前：評估 + PoV</td><td>xIAD 工作坊、AI Envisioning 與 AI Discovery Cards（Asia AI CoE）</td><td>新增 Pipeline、啟用夥伴數</td></tr>
+      <tr><td><b>3 贏得交易</b><br><span class="note">Empower & Achieve</span></td><td>Solution Accelerators、Accelerate for Agents</td><td>CSP 激勵與 CSP 折扣</td><td>Azure Cloud Accelerate Factory（銷售與技術資源）</td><td>新營收、新 Azure 客戶</td></tr>
+      <tr><td><b>4 推動用量</b><br><span class="note">Realize & Optimize</span></td><td>Well-Architected、Azure Verified Modules、AI Landing Zones</td><td>Frontier Accelerate 售後部署資助、DB 轉換獎金</td><td>Azure Cloud Accelerate Factory</td><td>Foundry、GitHub、DB、Fabric ACR</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">基礎條件：Cloud Ascent 傾向名單（Act Now / Evaluate）、成為 Customer Zero、取得 AI Apps / Analytics / DB Migration 等 Designation、加入 Skilling Hub 與 Asia AI CoE 社群。所有激勵依夥伴資格而定，可能變動。</p>
+
+  <h3>Frontier Accelerate for Azure</h3>
+  <p>Microsoft 對合格夥伴提供依專案規模分級的售前評估與售後部署資助。適用資格與金額依計畫公告，請洽 Microsoft PDM 或展碁 AI CoE。</p>
+
+  <h3 id="b-hack">6. Hack to Build 與後續步驟</h3>
+  <figure class="quote sm"><p>夥伴需要一個安全的地方，把點子真正做出來。</p><cite>Dean，Asia AI CoE（發表會發言，意譯）</cite></figure>
+  <p>Asia AI Frontier CoE Hack to Build 2026 是邀請制、為期約 3 個月的夥伴創新計畫，對象是 Priority Managed 夥伴與<b>由代理商提名</b>的經銷商。參加者帶著一個客戶點子或想上市的構想，在含 GitHub Copilot、Microsoft Foundry、Fabric 的環境中實際做出來，結束時要有一個可上市的 Frontier Offer。</p>
+  <div class="grid2">
+    <div class="card">
+      <h4>Microsoft 對提名的建議</h4>
+      <ul>
+        <li>沒有硬性先備條件，由代理商判斷；不一定要證照齊全</li>
+        <li>要有好點子、有意願投資技術能力</li>
+        <li>團隊組成要多元：要有懂工具的技術人員，也要有讓構想務實的業務人員</li>
+        <li>主要以 Foundry 建構；Copilot Studio 可用，但目標是不侷限於 M365 的 Agent 方案</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>會後的下一步</h4>
+      <ul>
+        <li>PDM 會安排與每家受管代理商的會議</li>
+        <li>AI CoE Disti 團隊會帶來傾向資料與儀表板</li>
+        <li>由代理商定義自己的「AI 經銷商建構 CoE」</li>
+        <li>加入 LinkedIn 社群 <code>aka.ms/AsiaAICoE/community</code>（需審核）</li>
+      </ul>
+    </div>
+  </div>
+
+  <aside class="view" aria-label="展碁規劃觀點"><div class="vl">Weblink View<b>展碁規劃觀點</b></div><div><p>最大的機會來自經銷商的既有客戶，而展碁本來就有這些客戶關係，差別只在要不要投入培育。對展碁的意涵：</p><ul><li>台灣主力客群是製造業，IT 支出只佔營收約 3.5%，最需要從營運問題切入，而不是從預算切入</li><li>Microsoft 的資源很多但分散在 GTM 四個階段，誰能幫經銷商整合，誰就掌握主導權</li><li>Live Maker 與 Hack to Build 是現成的課程與環境，展碁只需要做在地化與陪跑</li></ul></div></aside>
+</section>
+
+<!-- ================= 二、策略定位 ================= -->
+<section id="strategy" class="panel" data-c="violet" role="tabpanel" aria-labelledby="tab-strategy">
+<details class="talk"><summary>本頁架構圖與講稿<span>點擊展開・5 點</span></summary><div class="talk-body"><figure class="dg"><figcaption><b>策略定位・架構圖</b></figcaption><div class="dg-scroll"><svg viewBox="0 0 960 296" role="img" aria-label="策略定位：輸入、展碁三角色、產出" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><rect x="20" y="40" width="190" height="60" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="115.0" y="67.0" class="dt" style="fill:var(--ink)">Microsoft 傾向資料</text><text x="115.0" y="84.0" class="ds" style="fill:var(--muted)">propensity・儀表板</text><rect x="20" y="120" width="190" height="60" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="115.0" y="147.0" class="dt" style="fill:var(--ink)">展碁交易資料</text><text x="115.0" y="164.0" class="ds" style="fill:var(--muted)">經銷商與客戶關係</text><rect x="20" y="200" width="190" height="60" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="115.0" y="227.0" class="dt" style="fill:var(--ink)">Microsoft 計畫</text><text x="115.0" y="244.0" class="ds" style="fill:var(--muted)">Live Maker・資助</text><rect x="250" y="20" width="460" height="260" rx="12" style="fill:none;stroke:var(--violet);stroke-width:1.3;stroke-dasharray:6 5"/><text x="262" y="40" class="dg-l" style="fill:var(--violet)">展碁 AI CoE 的三個角色</text><rect x="266" y="56" width="428" height="62" rx="9" style="fill:var(--violet);stroke:var(--violet);stroke-width:1.6"/><text x="480.0" y="84.0" class="dt" style="fill:var(--surface)">資料驅動的媒合者</text><text x="480.0" y="101.0" class="ds" style="fill:var(--surface)">告訴每家經銷商：先找哪 10 個客戶、談哪個用例</text><rect x="266" y="132" width="428" height="62" rx="9" style="fill:var(--violet);stroke:var(--violet);stroke-width:1.6"/><text x="480.0" y="160.0" class="dt" style="fill:var(--surface)">能力工廠</text><text x="480.0" y="177.0" class="ds" style="fill:var(--surface)">三個 Workshop + Sandbox + 範本，90 天做出第一個方案</text><rect x="266" y="208" width="428" height="62" rx="9" style="fill:var(--violet);stroke:var(--violet);stroke-width:1.6"/><text x="480.0" y="236.0" class="dt" style="fill:var(--surface)">Offer 加速器</text><text x="480.0" y="253.0" class="ds" style="fill:var(--surface)">包裝固定範圍 Offer，串接資助與激勵</text><line x1="211" y1="70" x2="249" y2="150" class="da" marker-end="url(#ah)"/><line x1="211" y1="150" x2="249" y2="150" class="da" marker-end="url(#ah)"/><line x1="211" y1="230" x2="249" y2="150" class="da" marker-end="url(#ah)"/><rect x="750" y="56" width="190" height="62" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="845.0" y="84.0" class="dt" style="fill:var(--ink)">目標名單</text><text x="845.0" y="101.0" class="ds" style="fill:var(--muted)">優先經銷商與客戶</text><rect x="750" y="132" width="190" height="62" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="845.0" y="160.0" class="dt" style="fill:var(--ink)">可交付能力</text><text x="845.0" y="177.0" class="ds" style="fill:var(--muted)">經銷商能 Demo 能上線</text><rect x="750" y="208" width="190" height="62" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="845.0" y="236.0" class="dt" style="fill:var(--ink)">可上市 Offer</text><text x="845.0" y="253.0" class="ds" style="fill:var(--muted)">PoV → MVP → 代管</text><line x1="695" y1="87" x2="749" y2="87" class="da" marker-end="url(#ah)"/><line x1="695" y1="163" x2="749" y2="163" class="da" marker-end="url(#ah)"/><line x1="695" y1="239" x2="749" y2="239" class="da" marker-end="url(#ah)"/></svg></div></figure><div><h5>講稿</h5><ol><li>展碁不只是授權代理，這次要多扮演三個角色。</li><li>第一，資料媒合：結合 Microsoft 傾向資料與展碁交易資料，告訴經銷商先找誰、談什麼。</li><li>第二，能力工廠：用三個 Workshop 加 Sandbox 與範本，讓經銷商 90 天內做出第一個方案。</li><li>第三，Offer 加速：幫經銷商把方案包裝成可報價的 Offer，並串接資助與激勵。</li><li>差異化在於台灣在地版：繁中教材、台灣產業案例、新台幣定價範本。</li></ol></div></div></details>
+  <div class="phead"><span class="eyebrow">Part 2</span><h2>二、展碁的策略定位</h2></div>
+  <figure class="quote"><p>代理商要送進經銷商手上的，不只是授權，還有做出方案的能力。</p><cite>展碁 AI CoE 規劃觀點</cite></figure>
+  <p>展碁長期扮演 Microsoft 在台灣的授權與雲端代理角色，手上有大量經銷商與其終端客戶的交易資料。Frontier 計畫要求代理商多做一件事：<b>幫經銷商長出「建構與交付 AI 方案」的能力</b>。建議展碁用三個角色定義自己的 AI CoE：</p>
+  <div class="grid3">
+    <div class="card"><span class="tag">角色 1</span><h4 style="margin-top:8px">資料驅動的媒合者</h4><p>把 Microsoft 的 propensity 資料和展碁自己的經銷商交易資料合併，告訴每家經銷商「先找哪 10 個客戶、談哪一個用例」。</p></div>
+    <div class="card"><span class="tag sig">角色 2</span><h4 style="margin-top:8px">能力工廠</h4><p>用三個標準化 Workshop 加上共用的 Sandbox 與範本，讓經銷商在 90 天內完成第一個可交付的 AI 方案。</p></div>
+    <div class="card"><span class="tag vi">角色 3</span><h4 style="margin-top:8px">Offer 加速器</h4><p>幫經銷商把方案包裝成固定範圍的 Offer，並代為申請與串接 Frontier Accelerate、CSP 激勵與 Co-op 資源。</p></div>
+  </div>
+  <div class="callout">展碁的差異化重點：Microsoft 提供的是亞洲通用的流程。展碁可以做出<b>台灣在地版本（選項 C）</b>：繁體中文教材、台灣產業案例（製造、通路零售、專業服務）、在地法規與資料落地考量，以及新台幣定價範本。</div>
+
+  <aside class="view" aria-label="展碁規劃觀點"><div class="vl">Weblink View<b>展碁規劃觀點</b></div><div><p>三個角色的投入與回收速度不同，建議依序推進：</p><ul><li><b>資料媒合</b>最快能做：展碁已有經銷商交易資料，結合 Microsoft 傾向資料即可產出名單</li><li><b>Offer 加速</b>最直接帶動營收：每個案子對到資助方案，就能縮短客戶決策時間</li><li><b>能力工廠</b>最需要投資：人力與 Sandbox 成本較高，以 Workshop 梯次逐步建立</li></ul></div></aside>
+</section>
+
+<!-- ================= 三、業務面 ================= -->
+<section id="biz" class="panel" data-c="amber" role="tabpanel" aria-labelledby="tab-biz">
+<details class="talk"><summary>本頁架構圖與講稿<span>點擊展開・5 點</span></summary><div class="talk-body"><figure class="dg"><figcaption><b>業務規劃・架構圖</b></figcaption><div class="dg-scroll"><svg viewBox="0 0 960 270" role="img" aria-label="業務規劃：經銷商分梯與三段式商業模型" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><text x="200" y="26" class="dg-h">經銷商分梯</text><rect x="120" y="40" width="160" height="60" rx="9" style="fill:var(--ok);stroke:var(--ok);stroke-width:1.6"/><text x="200.0" y="67.0" class="dt" style="fill:var(--surface)">T1 共創</text><text x="200.0" y="84.0" class="ds" style="fill:var(--surface)">5–8 家・白手套陪跑</text><rect x="70" y="110" width="260" height="60" rx="9" style="fill:var(--signal);stroke:var(--signal);stroke-width:1.6"/><text x="200.0" y="137.0" class="dt" style="fill:var(--surface)">T2 示範</text><text x="200.0" y="154.0" class="ds" style="fill:var(--surface)">15–25 家・Workshop 梯次</text><rect x="20" y="180" width="360" height="60" rx="9" style="fill:var(--cyan);stroke:var(--cyan);stroke-width:1.6"/><text x="200.0" y="207.0" class="dt" style="fill:var(--surface)">T3 啟蒙</text><text x="200.0" y="224.0" class="ds" style="fill:var(--surface)">其餘經銷商・Live Maker 與社群</text><text x="660" y="26" class="dg-h">三段式商業模型</text><rect x="430" y="40" width="160" height="70" rx="9" style="fill:var(--rose-soft);stroke:var(--rose);stroke-width:1.6"/><text x="510.0" y="72.0" class="dt" style="fill:var(--ink)">評估 PoV</text><text x="510.0" y="89.0" class="ds" style="fill:var(--muted)">2–4 週固定價格</text><line x1="591" y1="75" x2="607" y2="75" class="da" marker-end="url(#ah)"/><rect x="608" y="40" width="160" height="70" rx="9" style="fill:var(--rose-soft);stroke:var(--rose);stroke-width:1.6"/><text x="688.0" y="72.0" class="dt" style="fill:var(--ink)">MVP 建置</text><text x="688.0" y="89.0" class="ds" style="fill:var(--muted)">6–10 週</text><line x1="769" y1="75" x2="785" y2="75" class="da" marker-end="url(#ah)"/><rect x="786" y="40" width="160" height="70" rx="9" style="fill:var(--rose-soft);stroke:var(--rose);stroke-width:1.6"/><text x="866.0" y="72.0" class="dt" style="fill:var(--ink)">代管營運</text><text x="866.0" y="89.0" class="ds" style="fill:var(--muted)">月費制</text><rect x="430" y="130" width="516" height="50" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="688.0" y="160.0" class="dt" style="fill:var(--ink)">資金地圖：TPM・Co-op・Frontier Spark・Frontier Accelerate・CSP 激勵</text><rect x="430" y="192" width="516" height="50" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="688.0" y="222.0" class="dt" style="fill:var(--ink)">銷售對話：從「授權多少錢」轉成「報價一張要多久」</text><text x="200" y="260" class="dl">T1 的成功案例，用來招募 T2、T3</text></svg></div></figure><div><h5>講稿</h5><ol><li>不要一次推所有經銷商，分三個梯隊：T1 共創 5–8 家、T2 示範 15–25 家、T3 啟蒙其餘。</li><li>T1 的成功案例，就是招募 T2 最有說服力的素材。</li><li>統一三段式商業模型：PoV 2–4 週、MVP 6–10 週、代管月費，讓客戶決策門檻由低到高。</li><li>展碁提供資金地圖單一窗口，幫經銷商判斷每個案子能用哪些資助與激勵。</li><li>銷售對話要換：先問「報價一張要多久」，再談授權多少錢。</li></ol></div></div></details>
+  <div class="phead"><span class="eyebrow">Part 3</span><h2>三、業務面規劃</h2></div>
+  <figure class="quote"><p>先問客戶報價一張要多久，再談授權多少錢。</p><cite>Frontier 銷售對話原則</cite></figure>
+
+  <h3>3.1 經銷商分級與分梯經營</h3>
+  <figure class="quote sm"><p>先讓五家成功，比讓五百家聽過更重要。</p><cite>展碁 AI CoE 規劃觀點</cite></figure>
+  <p>依 Microsoft 的 A/B 分群，再加上展碁自己的觀察，把經銷商分成三個梯隊，每個梯隊有不同的目標與投入方式。</p>
+  <div class="tbl"><table>
+    <thead><tr><th>梯隊</th><th>挑選條件</th><th>展碁投入</th><th>90 天目標</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tag ok">T1 共創</span>5–8 家</td><td>具 Azure Designation 或 Specialization；有開發或 SI 團隊；客戶清單與 propensity 高度重疊</td><td>白手套陪跑、聯合拜訪、提名 Hack to Build、共同申請 Frontier Accelerate</td><td>每家 1 個上線的 Agent 方案、2 個付費客戶</td></tr>
+      <tr><td><span class="tag sig">T2 示範</span>15–25 家</td><td>有穩定 SMB 客戶群、M365 或 Azure 基礎；有 1–2 位技術人員</td><td>三場 Workshop 梯次、範本 Repo、Demo 環境、共同行銷活動</td><td>每家能獨立 Demo 1 個方案、產生 3 個商機</td></tr>
+      <tr><td><span class="tag">T3 啟蒙</span>其餘</td><td>以授權轉售為主，尚無專案能力</td><td>線上 Live Maker、社群、GitHub Copilot 轉售方案與話術包</td><td>完成 Live Maker 第 1 場、成為 Customer Zero</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>3.2 業務點子與做法</h3>
+  <figure class="quote sm"><p>經銷商最怕的不是沒有資源，而是不知道有哪些資源可以用。</p><cite>展碁 AI CoE 規劃觀點</cite></figure>
+  <div class="grid2">
+    <div class="card">
+      <h4><span class="tag">點子</span>產業 Offer 套件</h4>
+      <p>針對台灣 SMB 最大的幾個產業，各準備一個「問題清單 + Demo + 定價範本 + 提案簡報」的套件，經銷商不必從零開始。</p>
+      <ul><li>製造：詢價報價、技術文件問答、品質異常分析</li><li>通路零售：門市營運助理、商品知識問答</li><li>專業服務：文件審閱、合約摘要、工時報告</li></ul>
+    </div>
+    <div class="card">
+      <h4><span class="tag">點子</span>三段式商業模型</h4>
+      <p>參考簡報的生產力路徑，統一經銷商的報價結構，讓客戶的決策門檻由低到高：</p>
+      <ul><li><b>評估 PoV</b>：2–4 週固定價格，可搭配 Frontier Accelerate 售前資助</li><li><b>MVP 建置</b>：6–10 週，對應部署資助 T-shirt 級距</li><li><b>代管營運</b>：月費制，持續帶動 Azure ACR 與 CSP 激勵</li></ul>
+    </div>
+    <div class="card">
+      <h4><span class="tag">點子</span>GitHub Copilot 入門組合</h4>
+      <p>把 Copilot 授權轉售與「導入工作坊 + 首個內部專案陪跑」綁在一起賣。簡報的算式是每客戶 $10.4K ARR、16–25% 毛利、約 5.5 倍服務收入，這是經銷商最容易上手的第一筆 AI 生意。</p>
+    </div>
+    <div class="card">
+      <h4><span class="tag">點子</span>資金地圖服務</h4>
+      <p>展碁設立單一窗口，幫經銷商判斷每個案子可以用哪些資源：TPM、Co-op、Frontier Spark、Frontier Accelerate 售前與售後、CSP 激勵、DB 轉換獎金，並追蹤申請進度。經銷商最怕的是不知道有哪些錢可以用。</p>
+    </div>
+    <div class="card">
+      <h4><span class="tag">點子</span>在地化 AI RACE Day</h4>
+      <p>以產業為主題辦半天活動：上午 AI Envisioning（客戶與經銷商一起），下午現場 Demo 與用例卡排序。活動當天就要產出「待追蹤的用例清單」，直接進入 Pipeline。</p>
+    </div>
+    <div class="card">
+      <h4><span class="tag">點子</span>經銷商 Offer 競賽</h4>
+      <p>呼應 Hack to Build 的半競賽形式，展碁辦台灣版初選：經銷商提案，前幾名獲得展碁陪跑資源、聯合行銷曝光，並推薦進入亞洲 Hack to Build。</p>
+    </div>
+  </div>
+
+  <h3>3.3 銷售對話的轉換</h3>
+  <figure class="quote sm"><p>別只解決重開機和收信的問題，去幫客戶把工作做得更好。</p><cite>Dean，Asia AI CoE（發表會發言，意譯）</cite></figure>
+  <div class="tbl"><table>
+    <thead><tr><th>過去的對話</th><th>Frontier 對話</th><th>經銷商要準備的東西</th></tr></thead>
+    <tbody>
+      <tr><td>「這套授權多少錢、怎麼安裝」</td><td>「你們報價一張要花多久？慢在哪裡？」</td><td>產業 Discovery 問題清單</td></tr>
+      <tr><td>解決電腦、網路、信箱問題</td><td>讓業務、工程師、客服的工作變快</td><td>流程走查範本與工時量化表</td></tr>
+      <tr><td>依 SKU 報價</td><td>依成果與階段報價（PoV → MVP → 代管）</td><td>Offer one-pager 與 ROI 試算表</td></tr>
+      <tr><td>一次性交易</td><td>持續發現下一個用例</td><td>季度價值回顧（QBR）範本</td></tr>
+    </tbody>
+  </table></div>
+
+  <aside class="view" aria-label="展碁規劃觀點"><div class="vl">Weblink View<b>展碁規劃觀點</b></div><div><p>不要一次推動所有經銷商。先集中資源讓少數經銷商成功，再用他們的案例招募下一批。</p><ul><li>T1 的成功案例是招募 T2 最有力的素材，比任何簡報都有說服力</li><li>每個案子都要對到資助方案，降低經銷商與客戶的初期風險</li><li>業務考核從「授權營收」擴充為「商機數、PoV 轉換率與 ACR 成長」</li></ul></div></aside>
+</section>
+
+<!-- ================= 四、技術面 ================= -->
+<section id="tech" class="panel" data-c="green" role="tabpanel" aria-labelledby="tab-tech">
+<details class="talk"><summary>本頁架構圖與講稿<span>點擊展開・6 點</span></summary><div class="talk-body"><figure class="dg"><figcaption><b>技術規劃・架構圖</b></figcaption><div class="dg-scroll"><svg viewBox="0 0 960 300" role="img" aria-label="技術規劃：五層能力，由下而上建立" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><rect x="120" y="20" width="620" height="46" rx="9" style="fill:var(--rose-soft);stroke:var(--rose);stroke-width:1.6"/><text x="430.0" y="48.0" class="dt" style="fill:var(--ink)">治理與安全服務包　Entra ID・內容安全・提示注入防護・RAI 檢核</text><rect x="120" y="74" width="620" height="46" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="430.0" y="102.0" class="dt" style="fill:var(--ink)">技術售前小組 + 技能認證路徑　聯合拜訪・架構審查・上線前檢核</text><rect x="120" y="128" width="620" height="46" rx="9" style="fill:var(--cyan-soft);stroke:var(--cyan);stroke-width:1.6"/><text x="430.0" y="156.0" class="dt" style="fill:var(--ink)">範本與加速器庫　GitHub 範本 Repo・Agent 樣板・AVM Landing Zone</text><rect x="120" y="182" width="620" height="46" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="430.0" y="210.0" class="dt" style="fill:var(--ink)">Weblink AI Lab Sandbox　每家經銷商一個資源群組・預算告警・保留 30 天</text><rect x="120" y="236" width="620" height="46" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="430.0" y="264.0" class="dt" style="fill:var(--ink)">展碁 Customer Zero　內部先用 GitHub Copilot 與 Foundry，做出自己的 Agent</text><line x1="80" y1="286" x2="80" y2="24" class="da" marker-end="url(#ah)"/><text x="60" y="155" class="dg-l" style="fill:var(--muted)" transform="rotate(-90 60 155)">投資順序（由下而上）</text><rect x="780" y="100" width="160" height="90" rx="9" style="fill:var(--violet);stroke:var(--violet);stroke-width:1.6"/><text x="860.0" y="134.0" class="dt" style="fill:var(--surface)">經銷商交付</text><text x="860.0" y="151.0" class="ds" style="fill:var(--surface)">安全上線的</text><text x="860.0" y="166.0" class="ds" style="fill:var(--surface)">Agent 方案</text><line x1="741" y1="145" x2="779" y2="145" class="da" marker-end="url(#ah)"/></svg></div></figure><div><h5>講稿</h5><ol><li>技術投資由下而上，共五層。</li><li>最底層是展碁自己當 Customer Zero，內部先用 GitHub Copilot 與 Foundry，做出能拿去 Demo 的案例。</li><li>第二層是 Weblink AI Lab Sandbox，補上 Microsoft 無法提供給經銷商的建構環境。</li><li>第三、四層是範本庫與技術售前小組，讓經銷商不用從零開始，也有人幫忙審架構。</li><li>最上層是治理與安全服務包，讓 SMB 客戶敢上線，也是經銷商可以轉售的服務。</li><li>技術小組的 KPI 是經銷商上線的方案數，不是展碁自己做了幾個專案。</li></ol></div></div></details>
+  <div class="phead"><span class="eyebrow">Part 4</span><h2>四、技術面規劃</h2></div>
+  <figure class="quote"><p>AI 是力量倍增器，好的會被放大，不好的也會。</p><cite>Dean，Asia AI CoE（發表會發言，意譯）</cite></figure>
+  <div class="grid2">
+    <div class="card">
+      <h4><span class="tag vi">基礎</span>展碁先當 Customer Zero</h4>
+      <p>展碁內部 IT 先導入 GitHub Copilot 與 Foundry，挑一個內部流程做成 Agent（例如經銷商詢問授權方案與計畫資格的問答 Agent）。這個案例同時是對經銷商最有說服力的 Demo。</p>
+    </div>
+    <div class="card">
+      <h4><span class="tag vi">基礎</span>Weblink AI Lab：共用 Sandbox</h4>
+      <p>Microsoft 一般無法提供經銷商建構環境，展碁可以補上：以每家經銷商一個資源群組的方式，預先配置 Foundry 專案、模型部署、Container Apps 與預算告警，Workshop 結束後保留 30 天讓經銷商繼續做。</p>
+    </div>
+    <div class="card">
+      <h4><span class="tag vi">資產</span>範本與加速器庫</h4>
+      <ul>
+        <li>GitHub 範本 Repo：含 <code>copilot-instructions.md</code>、FastAPI 骨架、CI、Dockerfile</li>
+        <li>Agent 樣板：系統指示範本、知識檢索、OpenAPI 工具、評估資料集</li>
+        <li>Landing Zone：以 Azure Verified Modules 打包的 SMB 版 AI Landing Zone</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4><span class="tag vi">人力</span>技術售前小組</h4>
+      <p>建立 2–3 人的 Frontier 架構師小組，負責 T1 經銷商的聯合拜訪、架構審查與上線前檢核。和 Microsoft PSA、Azure Cloud Accelerate Factory 對接，避免每家經銷商各自去找 Microsoft。</p>
+    </div>
+    <div class="card">
+      <h4><span class="tag vi">人力</span>技能與認證路徑</h4>
+      <ul>
+        <li>業務：AI Envisioning、價值銷售、Offer 定價</li>
+        <li>技術：GitHub Copilot、Azure AI Engineer、Foundry Agent 開發</li>
+        <li>夥伴資格：協助經銷商取得 AI Apps、Agentic DevOps Specialization</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4><span class="tag vi">信任</span>治理與安全服務包</h4>
+      <p>講者強調 AI 是「力量倍增器」，好的壞的都會放大。展碁可以提供經銷商可轉售的治理服務：Entra ID 權限、內容安全、提示注入防護、資料落地與 Responsible AI 檢核清單，讓 SMB 客戶敢上線。</p>
+    </div>
+  </div>
+  <h3>參考架構：經銷商交付的標準 Agent 方案</h3>
+  <div class="chain" aria-label="標準 Agent 方案架構">
+    <span>使用者（Web / Teams）</span><i>→</i><span>Agent 應用</span><i>→</i><span>Foundry Agent Service</span><i>→</i><span>模型 + 知識檢索</span><i>→</i><span>OpenAPI 工具（客戶既有系統）</span>
+  </div>
+  <p class="note">周邊元件：Entra ID 與 Managed Identity、Key Vault、Application Insights 追蹤、Content Safety。細節見 Workshop 3 文件。</p>
+
+  <aside class="view" aria-label="展碁規劃觀點"><div class="vl">Weblink View<b>展碁規劃觀點</b></div><div><p>展碁不必自己替客戶交付，但要讓經銷商交付得出來，而且交付得安全。</p><ul><li>投資順序：Customer Zero → Sandbox → 範本庫 → 治理服務包</li><li>技術小組的成功指標是「經銷商上線的方案數」，不是展碁自己做了幾個專案</li><li>所有範本預設內建安全與治理設定，讓 SMB 客戶敢放到正式環境</li></ul></div></aside>
+</section>
+
+<!-- ================= 五、案例 ================= -->
+<section id="cases" class="panel" data-c="rose" role="tabpanel" aria-labelledby="tab-cases">
+<details class="talk"><summary>本頁架構圖與講稿<span>點擊展開・5 點</span></summary><div class="talk-body"><figure class="dg"><figcaption><b>產業案例・架構圖</b></figcaption><div class="dg-scroll"><svg viewBox="0 0 960 280" role="img" aria-label="產業案例：五個產業共用同一套方案模式" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><rect x="20" y="16" width="200" height="44" rx="9" style="fill:var(--rose-soft);stroke:var(--rose);stroke-width:1.6"/><text x="120.0" y="43.0" class="dt" style="fill:var(--ink)">製造：詢價與技術問答</text><line x1="221" y1="38" x2="299" y2="140" class="da" marker-end="url(#ah)"/><rect x="20" y="68" width="200" height="44" rx="9" style="fill:var(--bg);stroke:var(--muted);stroke-width:1.6"/><text x="120.0" y="95.0" class="dt" style="fill:var(--ink)">通路零售：門市營運助理</text><line x1="221" y1="90" x2="299" y2="140" class="da" marker-end="url(#ah)"/><rect x="20" y="120" width="200" height="44" rx="9" style="fill:var(--bg);stroke:var(--muted);stroke-width:1.6"/><text x="120.0" y="147.0" class="dt" style="fill:var(--ink)">專業服務：文件審閱</text><line x1="221" y1="142" x2="299" y2="140" class="da" marker-end="url(#ah)"/><rect x="20" y="172" width="200" height="44" rx="9" style="fill:var(--bg);stroke:var(--muted);stroke-width:1.6"/><text x="120.0" y="199.0" class="dt" style="fill:var(--ink)">物流：異常通知</text><line x1="221" y1="194" x2="299" y2="140" class="da" marker-end="url(#ah)"/><rect x="20" y="224" width="200" height="44" rx="9" style="fill:var(--bg);stroke:var(--muted);stroke-width:1.6"/><text x="120.0" y="251.0" class="dt" style="fill:var(--ink)">教育 / 診所：前台問答</text><line x1="221" y1="246" x2="299" y2="140" class="da" marker-end="url(#ah)"/><rect x="300" y="30" width="380" height="220" rx="12" style="fill:none;stroke:var(--violet);stroke-width:1.3;stroke-dasharray:6 5"/><text x="312" y="50" class="dg-l" style="fill:var(--violet)">共通方案模式</text><rect x="316" y="62" width="348" height="56" rx="9" style="fill:var(--violet);stroke:var(--violet);stroke-width:1.6"/><text x="490.0" y="87.0" class="dt" style="fill:var(--surface)">Foundry Agent</text><text x="490.0" y="104.0" class="ds" style="fill:var(--surface)">系統指示・對話・引用來源</text><rect x="316" y="132" width="168" height="56" rx="9" style="fill:var(--cyan-soft);stroke:var(--cyan);stroke-width:1.6"/><text x="400.0" y="157.0" class="dt" style="fill:var(--ink)">知識檢索</text><text x="400.0" y="174.0" class="ds" style="fill:var(--muted)">規格書・SOP・公告</text><rect x="496" y="132" width="168" height="56" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="580.0" y="157.0" class="dt" style="fill:var(--ink)">工具呼叫</text><text x="580.0" y="174.0" class="ds" style="fill:var(--muted)">報價・ERP・排程系統</text><rect x="316" y="198" width="348" height="40" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="490.0" y="223.0" class="dt" style="fill:var(--ink)">評估・內容安全・權限控管</text><rect x="720" y="62" width="220" height="70" rx="9" style="fill:var(--blue);stroke:var(--blue);stroke-width:1.6"/><text x="830.0" y="86.0" class="dt" style="fill:var(--surface)">選題三原則</text><text x="830.0" y="103.0" class="ds" style="fill:var(--surface)">流程明確・資料已數位化</text><text x="830.0" y="118.0" class="ds" style="fill:var(--surface)">效益可量化</text><rect x="720" y="150" width="220" height="70" rx="9" style="fill:var(--ok);stroke:var(--ok);stroke-width:1.6"/><text x="830.0" y="174.0" class="dt" style="fill:var(--surface)">商業模式</text><text x="830.0" y="191.0" class="ds" style="fill:var(--surface)">PoV → MVP → 月費</text><text x="830.0" y="206.0" class="ds" style="fill:var(--surface)">可複製到同產業</text><line x1="681" y1="140" x2="719" y2="97" class="da" marker-end="url(#ah)"/><line x1="681" y1="160" x2="719" y2="185" class="da" marker-end="url(#ah)"/></svg></div></figure><div><h5>講稿</h5><ol><li>五個產業案例都是示範構想，客戶名稱是虛構的。</li><li>它們共用同一套方案模式：Foundry Agent 加知識檢索，再加上呼叫客戶既有系統的工具。</li><li>製造業的「智慧詢價與技術問答 Agent」是三個 Workshop 的主案例。</li><li>選題三原則：流程明確、資料已數位化、效益可量化，第一案要在 8 週內看到成果。</li><li>商業模式一致：PoV → MVP → 月費，做完一家就能複製到同產業。</li></ol></div></div></details>
+  <div class="phead"><span class="eyebrow">Part 5</span><h2>五、產業案例構想</h2></div>
+  <figure class="quote"><p>做一次，賣很多次。</p><cite>簡報〈For the SMB Partner〉</cite></figure>
+  <p>以下是給經銷商開場用的示範構想，客戶名稱皆為虛構。每個案例都列出第一步要做什麼，方便直接放進 Workshop 1 的用例清單。</p>
+  <div class="tbl"><table>
+    <thead><tr><th>產業 / 示範客戶</th><th>客戶痛點</th><th>AI 方案</th><th>技術組成</th><th>商業模式</th></tr></thead>
+    <tbody>
+      <tr><td><b>製造</b><br>Contoso 精密工業（180 人 CNC）<br><span class="tag ok">三個 Workshop 主案例</span></td><td>詢價要翻 Excel 與舊報價；技術規格回覆要 1–2 天；知識在老師傅腦中</td><td>智慧詢價與技術問答 Agent：自動試算報價、引用規格書回答材質與公差問題</td><td>GitHub Copilot 建報價 API；Foundry Agent + 規格書檢索 + OpenAPI 工具</td><td>PoV 4 週 → MVP 8 週 → 代管月費</td></tr>
+      <tr><td><b>通路零售</b><br>連鎖生活用品（25 家門市）</td><td>店員對新品與促銷不熟；總部公告散在 LINE 群組</td><td>門市營運助理：查商品、查促銷、查 SOP</td><td>Foundry Agent + 商品資料與公告檢索；Teams 管道</td><td>按門市數月費</td></tr>
+      <tr><td><b>專業服務</b><br>中型會計師事務所</td><td>查帳文件多、資深人員審閱時間不足</td><td>文件審閱 Agent：摘要、比對、標出異常</td><td>Foundry + Document Intelligence + 評估流程；嚴格權限控管</td><td>依案件量計價 + 導入費</td></tr>
+      <tr><td><b>物流</b><br>區域物流車隊</td><td>延誤與異常要人工打電話通知</td><td>異常通知 Agent：偵測延誤、草擬通知、建議改派</td><td>Fabric 即時資料 + Foundry Agent 工具呼叫</td><td>評估 → 建置 → 代管（資料 + AI）</td></tr>
+      <tr><td><b>教育 / 醫療診所</b><br>補教機構、連鎖診所</td><td>招生或掛號問答量大，櫃台人力不足</td><td>前台問答 Agent，複雜問題轉人工</td><td>Foundry Agent + 常見問答知識庫 + 內容安全</td><td>標準化套裝，可複製到同業</td></tr>
+    </tbody>
+  </table></div>
+
+  <aside class="view" aria-label="展碁規劃觀點"><div class="vl">Weblink View<b>展碁規劃觀點</b></div><div><p>選用例時，優先挑「流程明確、資料已數位化、效益可量化」的題目，第一個案子要能在 8 週內看到成果。</p><ul><li>詢價報價、文件問答這類用例最適合當第一案，Demo 效果好、效益容易算</li><li>避免一開始就碰需要大量資料整理或改動核心 ERP 的案子</li><li>每個產業至少準備一套可重複使用的 Demo、問題清單與定價範本</li></ul></div></aside>
+</section>
+
+<!-- ================= 六、路線圖 ================= -->
+<section id="roadmap" class="panel" data-c="cyan" role="tabpanel" aria-labelledby="tab-roadmap">
+<details class="talk"><summary>本頁架構圖與講稿<span>點擊展開・5 點</span></summary><div class="talk-body"><figure class="dg"><figcaption><b>路線圖與 KPI・架構圖</b></figcaption><div class="dg-scroll"><svg viewBox="0 0 960 270" role="img" aria-label="路線圖：FY27 Q2 到 Q4 的里程碑" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><line x1="30" y1="140" x2="930" y2="140" style="stroke:var(--line);stroke-width:4"/><rect x="5" y="40" width="110" height="80" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="60.0" y="77.0" class="dt" style="fill:var(--ink)">PDM 會議</text><text x="60.0" y="94.0" class="ds" style="fill:var(--muted)">取得儀表板</text><text x="60" y="32" class="dl" style="font-weight:700">10 月中</text><circle cx="60" cy="140" r="7" style="fill:var(--surface);stroke:var(--signal);stroke-width:3"/><line x1="60" y1="121" x2="60" y2="133" style="stroke:var(--muted);stroke-width:1.4"/><rect x="125" y="160" width="110" height="80" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="180.0" y="197.0" class="dt" style="fill:var(--ink)">Live Maker 1</text><text x="180.0" y="214.0" class="ds" style="fill:var(--muted)">+ 展碁 WS1</text><text x="180" y="258" class="dl" style="font-weight:700">10/21</text><circle cx="180" cy="140" r="7" style="fill:var(--surface);stroke:var(--signal);stroke-width:3"/><line x1="180" y1="147" x2="180" y2="159" style="stroke:var(--muted);stroke-width:1.4"/><rect x="245" y="40" width="110" height="80" rx="9" style="fill:var(--rose-soft);stroke:var(--rose);stroke-width:1.6"/><text x="300.0" y="77.0" class="dt" style="fill:var(--ink)">Hack to Build</text><text x="300.0" y="94.0" class="ds" style="fill:var(--muted)">提名 T1</text><text x="300" y="32" class="dl" style="font-weight:700">11/05</text><circle cx="300" cy="140" r="7" style="fill:var(--surface);stroke:var(--signal);stroke-width:3"/><line x1="300" y1="121" x2="300" y2="133" style="stroke:var(--muted);stroke-width:1.4"/><rect x="365" y="160" width="110" height="80" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="420.0" y="197.0" class="dt" style="fill:var(--ink)">Live Maker 2</text><text x="420.0" y="214.0" class="ds" style="fill:var(--muted)">+ 展碁 WS2</text><text x="420" y="258" class="dl" style="font-weight:700">11/18</text><circle cx="420" cy="140" r="7" style="fill:var(--surface);stroke:var(--signal);stroke-width:3"/><line x1="420" y1="147" x2="420" y2="159" style="stroke:var(--muted);stroke-width:1.4"/><rect x="485" y="40" width="110" height="80" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="540.0" y="77.0" class="dt" style="fill:var(--ink)">Live Maker 3</text><text x="540.0" y="94.0" class="ds" style="fill:var(--muted)">+ 展碁 WS3</text><text x="540" y="32" class="dl" style="font-weight:700">12/16</text><circle cx="540" cy="140" r="7" style="fill:var(--surface);stroke:var(--signal);stroke-width:3"/><line x1="540" y1="121" x2="540" y2="133" style="stroke:var(--muted);stroke-width:1.4"/><rect x="605" y="160" width="110" height="80" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="660.0" y="197.0" class="dt" style="fill:var(--ink)">Hack 建構期</text><text x="660.0" y="214.0" class="ds" style="fill:var(--muted)">T1 PoV 上線</text><text x="660" y="258" class="dl" style="font-weight:700">FY27 Q3・1–2 月</text><circle cx="660" cy="140" r="7" style="fill:var(--surface);stroke:var(--signal);stroke-width:3"/><line x1="660" y1="147" x2="660" y2="159" style="stroke:var(--muted);stroke-width:1.4"/><rect x="725" y="40" width="110" height="80" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="780.0" y="77.0" class="dt" style="fill:var(--ink)">Offer 上市</text><text x="780.0" y="94.0" class="ds" style="fill:var(--muted)">申請部署資助</text><text x="780" y="32" class="dl" style="font-weight:700">FY27 Q3・3 月</text><circle cx="780" cy="140" r="7" style="fill:var(--surface);stroke:var(--signal);stroke-width:3"/><line x1="780" y1="121" x2="780" y2="133" style="stroke:var(--muted);stroke-width:1.4"/><rect x="845" y="160" width="110" height="80" rx="9" style="fill:var(--cyan-soft);stroke:var(--cyan);stroke-width:1.6"/><text x="900.0" y="197.0" class="dt" style="fill:var(--ink)">第二梯次</text><text x="900.0" y="214.0" class="ds" style="fill:var(--muted)">T2 與產業套件</text><text x="900" y="258" class="dl" style="font-weight:700">FY27 Q4・4–6 月</text><circle cx="900" cy="140" r="7" style="fill:var(--surface);stroke:var(--signal);stroke-width:3"/><line x1="900" y1="147" x2="900" y2="159" style="stroke:var(--muted);stroke-width:1.4"/></svg></div></figure><div><h5>講稿</h5><ol><li>時間軸從 10 月中與 PDM 開會開始，拿到傾向資料儀表板。</li><li>10–12 月跟著 Microsoft 三場 Live Maker，每場後面緊接展碁在地版 Workshop。</li><li>11/5 Hack to Build 啟動，提名 T1 經銷商，FY27 Q3 的 1–2 月是建構期。</li><li>3 月（FY27 Q3 結束前）第一批 Offer 上市並申請部署資助，FY27 Q4 開第二梯次。</li><li>KPI 每月與 PDM 對齊：Workshop 完成數、Offer 數、商機數、PoV 轉換率、ACR 成長。</li></ol></div></div></details>
+  <div class="phead"><span class="eyebrow">Part 6</span><h2>六、路線圖與 KPI</h2></div>
+  <figure class="quote"><p>導入 GitHub Copilot，在一個客戶證明價值，再擴展到整個客戶群。</p><cite>簡報〈The Pitch〉</cite></figure>
+  <div class="grid2">
+    <div>
+      <h3 style="margin-top:0">FY27 Q2 – Q4 路線圖</h3>
+      <p class="note" style="margin:4px 0 0">Microsoft FY27：2026/7/1 – 2027/6/30（Q1 7–9 月、Q2 10–12 月、Q3 1–3 月、Q4 4–6 月）</p>
+      <ul class="tl">
+        <li><span class="d">10 月中</span><br>與 PDM 會議，取得 propensity 儀表板；決定 T1/T2 名單</li>
+        <li class="ms"><span class="d">10/21</span><br>Live Maker 第 1 場；隨後辦展碁版 Workshop 1</li>
+        <li class="ms"><span class="d">11/05</span><br>Hack to Build 啟動說明會；提名 T1 經銷商</li>
+        <li class="ms"><span class="d">11/18</span><br>Live Maker 第 2 場；隨後辦展碁版 Workshop 2</li>
+        <li class="ms"><span class="d">12/16</span><br>Live Maker 第 3 場；隨後辦展碁版 Workshop 3</li>
+        <li><span class="d">FY27 Q3・2027/1–2 月</span><br>Hack to Build 建構期；T1 經銷商 PoV 上線</li>
+        <li><span class="d">FY27 Q3・2027/3 月</span><br>第一批 Frontier Offer 上市；申請部署資助</li>
+        <li><span class="d">FY27 Q4・2027/4–6 月</span><br>第二梯次 T2 經銷商；產業套件擴充</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="margin-top:0">KPI 計分卡（建議目標）</h3>
+      <div class="tbl" style="margin-top:0"><table style="min-width:0">
+        <thead><tr><th>指標</th><th>FY27 Q2 末<br>（2026/12）</th><th>FY27 年底<br>（2027/6）</th></tr></thead>
+        <tbody>
+          <tr><td>完成 3 場 Workshop 的經銷商</td><td class="num">8</td><td class="num">30</td></tr>
+          <tr><td>可上市的 Frontier Offer</td><td class="num">3</td><td class="num">12</td></tr>
+          <tr><td>新增 AI 商機數</td><td class="num">20</td><td class="num">80</td></tr>
+          <tr><td>PoV 轉 MVP 比例</td><td class="num">≥ 50%</td><td class="num">≥ 55%</td></tr>
+          <tr><td>GitHub Copilot 新客戶</td><td class="num">10</td><td class="num">50</td></tr>
+          <tr><td>Foundry / GitHub ACR 月增率</td><td class="num">基準</td><td class="num">+30%</td></tr>
+          <tr><td>取得 Specialization 的經銷商</td><td class="num">2</td><td class="num">6</td></tr>
+        </tbody>
+      </table></div>
+      <p class="note">數字為建議起始目標，應在與 PDM 討論後依實際名單調整。</p>
+    </div>
+  </div>
+
+  <aside class="view" aria-label="展碁規劃觀點"><div class="vl">Weblink View<b>展碁規劃觀點</b></div><div><p>10–12 月的三場 Live Maker 是現成的節奏，展碁的在地版 Workshop 緊接在後，可以省下自己設計課程的時間。</p><ul><li>Hack to Build（11/5 起約 3 個月）是 T1 經銷商做出第一個 Offer 的最佳時機</li><li>KPI 每月與 Microsoft PDM 對齊一次，及早調整名單與資源</li><li>FY27 Q3 結束前（2027/3）要有第一批可上市的 Offer，才能接上 FY27 Q4 的第二梯次</li></ul></div></aside>
+</section>
+
+<!-- ================= 七、Workshops ================= -->
+<section id="workshops" class="panel" data-c="amber" role="tabpanel" aria-labelledby="tab-workshops">
+<details class="talk"><summary>本頁架構圖與講稿<span>點擊展開・6 點</span></summary><div class="talk-body"><figure class="dg"><figcaption><b>實作 Workshop・架構圖</b></figcaption><div class="dg-scroll"><svg viewBox="0 0 960 290" role="img" aria-label="實作 Workshop：各角色在三場中的工作" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><text x="250" y="26" class="dg-h">Workshop 1　探索與 Offer</text><text x="510" y="26" class="dg-h">Workshop 2　GitHub Copilot 建構</text><text x="790" y="26" class="dg-h">Workshop 3　Foundry 部署</text><rect x="20" y="40" width="110" height="58" rx="9" style="fill:var(--blue);stroke:var(--blue);stroke-width:1.6"/><text x="75.0" y="74.0" class="dt" style="fill:var(--surface)">展碁</text><rect x="150" y="40" width="250" height="58" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="275.0" y="74.0" class="dt" style="fill:var(--ink)">主持・提供傾向資料</text><rect x="420" y="40" width="250" height="58" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="545.0" y="74.0" class="dt" style="fill:var(--ink)">範本 Repo・Sandbox</text><rect x="690" y="40" width="250" height="58" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="815.0" y="74.0" class="dt" style="fill:var(--ink)">Foundry 環境・架構審查</text><rect x="20" y="110" width="110" height="58" rx="9" style="fill:var(--signal);stroke:var(--signal);stroke-width:1.6"/><text x="75.0" y="144.0" class="dt" style="fill:var(--surface)">經銷商</text><rect x="150" y="110" width="250" height="58" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="275.0" y="144.0" class="dt" style="fill:var(--ink)">帶客戶・引導訪談</text><rect x="420" y="110" width="250" height="58" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="545.0" y="144.0" class="dt" style="fill:var(--ink)">用 Copilot 做出 MVP</text><rect x="690" y="110" width="250" height="58" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="815.0" y="144.0" class="dt" style="fill:var(--ink)">建 Agent・評估・上線</text><rect x="20" y="180" width="110" height="58" rx="9" style="fill:var(--ok);stroke:var(--ok);stroke-width:1.6"/><text x="75.0" y="214.0" class="dt" style="fill:var(--surface)">客戶</text><rect x="150" y="180" width="250" height="58" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="275.0" y="214.0" class="dt" style="fill:var(--ink)">提供流程與痛點</text><rect x="420" y="180" width="250" height="58" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="545.0" y="214.0" class="dt" style="fill:var(--ink)">確認報價規則</text><rect x="690" y="180" width="250" height="58" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="815.0" y="214.0" class="dt" style="fill:var(--ink)">驗收 PoV 成效</text><line x1="401" y1="260" x2="419" y2="260" class="da" marker-end="url(#ah)"/><line x1="671" y1="260" x2="689" y2="260" class="da" marker-end="url(#ah)"/><rect x="150" y="246" width="250" height="30" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="275.0" y="266.0" class="dt" style="fill:var(--ink)">產出：Offer・PoV 計畫</text><rect x="420" y="246" width="250" height="30" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="545.0" y="266.0" class="dt" style="fill:var(--ink)">產出：API・openapi.json</text><rect x="690" y="246" width="250" height="30" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="815.0" y="266.0" class="dt" style="fill:var(--ink)">產出：可 Demo 的 Agent</text></svg></div></figure><div><h5>講稿</h5><ol><li>三個 Workshop 用同一個示範情境串起來：經銷商 Fabrikam 協助客戶 Contoso 精密工業。</li><li>看角色表：展碁負責環境與方法，經銷商動手做，客戶提供流程並驗收。</li><li>Workshop 1 找出值得做的問題，產出 Offer 與 PoV 計畫。</li><li>Workshop 2 用 GitHub Copilot 做出報價 API、前端、測試與 CI，並輸出 openapi.json。</li><li>Workshop 3 在 Foundry 建 Agent，接上知識與報價 API，完成評估、治理、監控與成本估算。</li><li>每場都有 Word 實作教學，可以直接上課，也可以換成經銷商自己的客戶情境。</li></ol></div></div></details>
+  <div class="phead"><span class="eyebrow">Part 7</span><h2>七、三個實作 Workshop</h2></div>
+  <figure class="quote"><p>最好的點子，可能來自一個看見別人沒看見機會的夥伴。</p><cite>Dean，Hack to Build Q&A（意譯）</cite></figure>
+  <p>三個 Workshop 對應 Microsoft 的三場 Live Maker，並用同一個示範情境串起來：經銷商 <b>Fabrikam 資訊</b>（虛構）協助客戶 <b>Contoso 精密工業</b>（虛構）從找問題、做出 MVP，到上線營運。每個 Workshop 都有獨立的 Word 實作教學（含目錄、架構圖、範本與程式碼），放在本頁所在的資料夾。</p>
+  
+    <figure class="dg"><figcaption><b>三個 Workshop 的串接</b>　每一場的產出，就是下一場的輸入</figcaption><div class="dg-scroll"><svg viewBox="0 0 960 214" role="img" aria-label="三個 Workshop 的串接總覽" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><rect x="20" y="20" width="194" height="70" rx="9" style="fill:var(--blue);stroke:var(--blue);stroke-width:1.6"/><text x="117.0" y="52.0" class="dt" style="fill:var(--surface)">Workshop 1</text><text x="117.0" y="69.0" class="ds" style="fill:var(--surface)">AI 商機探索與 Offer 設計</text><rect x="20" y="110" width="194" height="64" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="117.0" y="139.0" class="dt" style="fill:var(--ink)">產出：One-page Offer</text><text x="117.0" y="156.0" class="ds" style="fill:var(--muted)">PoV 計畫・ROI 試算</text><line x1="117" y1="91" x2="117" y2="109" class="da" marker-end="url(#ah)"/><rect x="262" y="20" width="194" height="70" rx="9" style="fill:var(--signal);stroke:var(--signal);stroke-width:1.6"/><text x="359.0" y="52.0" class="dt" style="fill:var(--surface)">Workshop 2</text><text x="359.0" y="69.0" class="ds" style="fill:var(--surface)">以 GitHub Copilot 建構 MVP</text><rect x="262" y="110" width="194" height="64" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="359.0" y="139.0" class="dt" style="fill:var(--ink)">產出：報價 API・前端・CI</text><text x="359.0" y="156.0" class="ds" style="fill:var(--muted)">openapi.json</text><line x1="359" y1="91" x2="359" y2="109" class="da" marker-end="url(#ah)"/><rect x="504" y="20" width="194" height="70" rx="9" style="fill:var(--violet);stroke:var(--violet);stroke-width:1.6"/><text x="601.0" y="52.0" class="dt" style="fill:var(--surface)">Workshop 3</text><text x="601.0" y="69.0" class="ds" style="fill:var(--surface)">在 Foundry 部署 Agent</text><rect x="504" y="110" width="194" height="64" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="601.0" y="139.0" class="dt" style="fill:var(--ink)">產出：可 Demo 的 Agent</text><text x="601.0" y="156.0" class="ds" style="fill:var(--muted)">評估報告・治理設定</text><line x1="601" y1="91" x2="601" y2="109" class="da" marker-end="url(#ah)"/><rect x="746" y="20" width="194" height="70" rx="9" style="fill:var(--ok);stroke:var(--ok);stroke-width:1.6"/><text x="843.0" y="52.0" class="dt" style="fill:var(--surface)">上市與營運</text><text x="843.0" y="69.0" class="ds" style="fill:var(--surface)">代管服務・擴展客戶</text><rect x="746" y="110" width="194" height="64" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="843.0" y="139.0" class="dt" style="fill:var(--ink)">成果：月費收入・ACR 成長</text><text x="843.0" y="156.0" class="ds" style="fill:var(--muted)">複製到同產業客戶</text><line x1="843" y1="91" x2="843" y2="109" class="da" marker-end="url(#ah)"/><line x1="215" y1="55" x2="261" y2="55" class="da" marker-end="url(#ah)"/><line x1="457" y1="55" x2="503" y2="55" class="da" marker-end="url(#ah)"/><line x1="699" y1="55" x2="745" y2="55" class="da" marker-end="url(#ah)"/><text x="480" y="200" class="dl">示範情境：經銷商 Fabrikam 資訊 × 客戶 Contoso 精密工業（虛構）「智慧詢價與技術問答 Agent」</text></svg></div></figure>
+
+  <article class="ws w1">
+    <header><h3>Workshop 1　AI 商機探索與 Offer 設計</h3><span class="tag">半天至 1 天 · 業務 + 售前 + 客戶</span></header>
+  <figure class="quote sm"><p>先找到值得解決的問題，再談技術。</p><cite>展碁 AI CoE 規劃觀點</cite></figure>
+    <p>對應 10/21〈Crafting a Customer Engagement〉。學員帶著真實客戶名單進場，離場時手上有一份 Offer one-pager 與 PoV 計畫。</p>
+    <div class="file">Workshop1_AI商機探索與Offer設計_實作教學.docx</div>
+    <p style="margin:8px 0 0"><a href="#ws1">開啟 Workshop 1 工作表：填寫時程、Offer、PoV 與 ROI →</a></p>
+    <div class="dgs">
+    <figure class="dg"><figcaption><b>Workshop 1 架構</b>　從資料與客戶痛點，收斂成可報價的 Offer</figcaption><div class="dg-scroll"><svg viewBox="0 0 960 360" role="img" aria-label="Workshop 1 方法架構：輸入、工作坊核心、產出" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><text x="125" y="26" class="dg-h">輸入</text><text x="480" y="26" class="dg-h">工作坊核心</text><text x="835" y="26" class="dg-h">產出</text><rect x="20" y="40" width="210" height="66" rx="9" style="fill:var(--cyan-soft);stroke:var(--cyan);stroke-width:1.6"/><text x="125.0" y="70.0" class="dt" style="fill:var(--ink)">Propensity 傾向資料</text><text x="125.0" y="87.0" class="ds" style="fill:var(--muted)">Microsoft 儀表板・Cloud Ascent</text><rect x="20" y="122" width="210" height="66" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="125.0" y="152.0" class="dt" style="fill:var(--ink)">經銷商能力</text><text x="125.0" y="169.0" class="ds" style="fill:var(--muted)">Designation・客戶組合・產業</text><rect x="20" y="204" width="210" height="66" rx="9" style="fill:var(--rose-soft);stroke:var(--rose);stroke-width:1.6"/><text x="125.0" y="234.0" class="dt" style="fill:var(--ink)">客戶痛點</text><text x="125.0" y="251.0" class="ds" style="fill:var(--muted)">訪談・現況流程・工時數據</text><rect x="270" y="40" width="420" height="230" rx="12" style="fill:none;stroke:var(--blue);stroke-width:1.3;stroke-dasharray:6 5"/><text x="282" y="60" class="dg-l" style="fill:var(--blue)">Workshop 1：Discover → Prioritise → Define</text><rect x="286" y="80" width="124" height="110" rx="9" style="fill:var(--blue);stroke:var(--blue);stroke-width:1.6"/><text x="348.0" y="116.0" class="dt" style="fill:var(--surface)">探索</text><text x="348.0" y="133.0" class="ds" style="fill:var(--surface)">AI Envisioning</text><text x="348.0" y="148.0" class="ds" style="fill:var(--surface)">訪談 20 題</text><text x="348.0" y="163.0" class="ds" style="fill:var(--surface)">流程走查</text><rect x="418" y="80" width="124" height="110" rx="9" style="fill:var(--blue);stroke:var(--blue);stroke-width:1.6"/><text x="480.0" y="116.0" class="dt" style="fill:var(--surface)">排序</text><text x="480.0" y="133.0" class="ds" style="fill:var(--surface)">用例卡 8–10 個</text><text x="480.0" y="148.0" class="ds" style="fill:var(--surface)">價值×可行性</text><text x="480.0" y="163.0" class="ds" style="fill:var(--surface)">ROI 試算</text><rect x="550" y="80" width="124" height="110" rx="9" style="fill:var(--blue);stroke:var(--blue);stroke-width:1.6"/><text x="612.0" y="116.0" class="dt" style="fill:var(--surface)">定義</text><text x="612.0" y="133.0" class="ds" style="fill:var(--surface)">Offer 範圍</text><text x="612.0" y="148.0" class="ds" style="fill:var(--surface)">三段式定價</text><text x="612.0" y="163.0" class="ds" style="fill:var(--surface)">成功 KPI</text><line x1="411" y1="135" x2="417" y2="135" class="da" marker-end="url(#ah)"/><line x1="543" y1="135" x2="549" y2="135" class="da" marker-end="url(#ah)"/><text x="480" y="222" class="ds" style="fill:var(--muted)">選出：智慧詢價與技術問答 Agent</text><text x="480" y="244" class="ds" style="fill:var(--muted)">參與：展碁 AI CoE・經銷商業務與售前・客戶主管</text><line x1="231" y1="73" x2="269" y2="155" class="da" marker-end="url(#ah)"/><line x1="231" y1="155" x2="269" y2="155" class="da" marker-end="url(#ah)"/><line x1="231" y1="237" x2="269" y2="155" class="da" marker-end="url(#ah)"/><rect x="730" y="40" width="210" height="50" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="835.0" y="70.0" class="dt" style="fill:var(--ink)">用例清單與評分表</text><rect x="730" y="100" width="210" height="50" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="835.0" y="130.0" class="dt" style="fill:var(--ink)">ROI 試算（三情境）</text><rect x="730" y="160" width="210" height="50" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="835.0" y="190.0" class="dt" style="fill:var(--ink)">One-page Offer</text><rect x="730" y="220" width="210" height="50" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="835.0" y="250.0" class="dt" style="fill:var(--ink)">PoV 計畫與行動清單</text><line x1="691" y1="155" x2="729" y2="65" class="da" marker-end="url(#ah)"/><line x1="691" y1="155" x2="729" y2="125" class="da" marker-end="url(#ah)"/><line x1="691" y1="155" x2="729" y2="185" class="da" marker-end="url(#ah)"/><line x1="691" y1="155" x2="729" y2="245" class="da" marker-end="url(#ah)"/><rect x="270" y="290" width="420" height="56" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="480.0" y="315.0" class="dt" style="fill:var(--ink)">Microsoft 計畫加速</text><text x="480.0" y="332.0" class="ds" style="fill:var(--muted)">Frontier Accelerate 售前・CSP 激勵・Co-op / TPM・AI CoE 支援</text><line x1="480" y1="289" x2="480" y2="271" class="da" marker-end="url(#ah)"/></svg></div></figure>
+    <figure class="dg"><figcaption><b>Workshop 1 流程</b>　9 個步驟，半天至 1 天</figcaption><div class="dg-scroll"><svg viewBox="0 0 960 226" role="img" aria-label="Workshop 1 九個步驟流程" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><rect x="20" y="20" width="170" height="70" rx="9" style="fill:var(--cyan-soft);stroke:var(--cyan);stroke-width:1.6"/><text x="30" y="37" class="dn" style="fill:var(--cyan)">01</text><text x="105.0" y="52.0" class="dt" style="fill:var(--ink)">三重疊選客</text><text x="105.0" y="69.0" class="ds" style="fill:var(--muted)">傾向資料・能力・市場</text><line x1="191" y1="55.0" x2="207" y2="55.0" class="da" marker-end="url(#ah)"/><rect x="208" y="20" width="170" height="70" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="218" y="37" class="dn" style="fill:var(--blue)">02</text><text x="293.0" y="52.0" class="dt" style="fill:var(--ink)">訪談設計</text><text x="293.0" y="69.0" class="ds" style="fill:var(--muted)">五類 Discovery 問題</text><line x1="379" y1="55.0" x2="395" y2="55.0" class="da" marker-end="url(#ah)"/><rect x="396" y="20" width="170" height="70" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="406" y="37" class="dn" style="fill:var(--blue)">03</text><text x="481.0" y="52.0" class="dt" style="fill:var(--ink)">Envisioning</text><text x="481.0" y="69.0" class="ds" style="fill:var(--muted)">現況流程走查</text><line x1="567" y1="55.0" x2="583" y2="55.0" class="da" marker-end="url(#ah)"/><rect x="584" y="20" width="170" height="70" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="594" y="37" class="dn" style="fill:var(--blue)">04</text><text x="669.0" y="52.0" class="dt" style="fill:var(--ink)">用例發想</text><text x="669.0" y="69.0" class="ds" style="fill:var(--muted)">AI Discovery Cards</text><line x1="755" y1="55.0" x2="771" y2="55.0" class="da" marker-end="url(#ah)"/><rect x="772" y="20" width="170" height="70" rx="9" style="fill:var(--rose-soft);stroke:var(--rose);stroke-width:1.6"/><text x="782" y="37" class="dn" style="fill:var(--rose)">05</text><text x="857.0" y="52.0" class="dt" style="fill:var(--ink)">價值×可行性</text><text x="857.0" y="69.0" class="ds" style="fill:var(--muted)">評分與矩陣排序</text><path d="M857.0,91 L857.0,113.0 L105.0,113.0 L105.0,135" class="da" style="fill:none" marker-end="url(#ah)"/><rect x="20" y="136" width="170" height="70" rx="9" style="fill:var(--rose-soft);stroke:var(--rose);stroke-width:1.6"/><text x="30" y="153" class="dn" style="fill:var(--rose)">06</text><text x="105.0" y="168.0" class="dt" style="fill:var(--ink)">ROI 試算</text><text x="105.0" y="185.0" class="ds" style="fill:var(--muted)">工時・轉換率・回收期</text><line x1="191" y1="171.0" x2="207" y2="171.0" class="da" marker-end="url(#ah)"/><rect x="208" y="136" width="170" height="70" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="218" y="153" class="dn" style="fill:var(--ok)">07</text><text x="293.0" y="168.0" class="dt" style="fill:var(--ink)">定義 Offer</text><text x="293.0" y="185.0" class="ds" style="fill:var(--muted)">PoV → MVP → 代管</text><line x1="379" y1="171.0" x2="395" y2="171.0" class="da" marker-end="url(#ah)"/><rect x="396" y="136" width="170" height="70" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="406" y="153" class="dn" style="fill:var(--violet)">08</text><text x="481.0" y="168.0" class="dt" style="fill:var(--ink)">對應計畫</text><text x="481.0" y="185.0" class="ds" style="fill:var(--muted)">GTM 四階段與資助</text><line x1="567" y1="171.0" x2="583" y2="171.0" class="da" marker-end="url(#ah)"/><rect x="584" y="136" width="170" height="70" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="594" y="153" class="dn" style="fill:var(--ok)">09</text><text x="669.0" y="168.0" class="dt" style="fill:var(--ink)">One-page Offer</text><text x="669.0" y="185.0" class="ds" style="fill:var(--muted)">行動計畫與下一步</text></svg></div></figure>
+    </div>
+    <ol class="steps">
+      <li><div><b>用三重疊挑客戶</b>以 propensity 資料、經銷商能力與產業機會評分，選出 Contoso 精密工業。</div></li>
+      <li><div><b>設計訪談</b>依策略、流程、資料、人員、治理準備 Discovery 問題。</div></li>
+      <li><div><b>AI Envisioning 與流程走查</b>畫出「詢價 → 報價 → 技術回覆」現況流程，量化時間與痛點。</div></li>
+      <li><div><b>用例發想</b>以 AI Discovery Cards 方式列出 8–10 個用例。</div></li>
+      <li><div><b>價值 × 可行性排序</b>評分並選出「智慧詢價與技術問答 Agent」。</div></li>
+      <li><div><b>ROI 試算</b>以詢價量、節省工時、轉換率估算效益。</div></li>
+      <li><div><b>定義 Offer</b>PoV 4 週 → MVP 8 週 → 代管營運，含交付物、定價與 KPI。</div></li>
+      <li><div><b>對應 Microsoft 計畫</b>把每個階段對到 GTM 框架與資助方案。</div></li>
+      <li><div><b>產出 One-page Offer 與行動計畫</b>用 Microsoft 365 Copilot 協助撰寫。</div></li>
+    </ol>
+  </article>
+
+  <article class="ws w2">
+    <header><h3>Workshop 2　以 GitHub Copilot 建構解決方案</h3><span class="tag sig">1 天 · 經銷商技術人員</span></header>
+  <figure class="quote sm"><p>開發的門檻已經降低，很多人最近寫出了過去寫不出來的程式。</p><cite>Dean，Asia AI CoE（發表會發言，意譯）</cite></figure>
+    <p>對應 11/18〈Building the solution with GitHub Copilot〉。不是專業開發者也能完成：用 Copilot 的 Agent 模式做出報價 API、前端、測試與 CI，部署到 Azure Container Apps，並輸出 OpenAPI 規格給 Workshop 3 使用。</p>
+    <div class="file">Workshop2_以GitHub_Copilot建構解決方案_實作教學.docx</div>
+    <div class="dgs">
+    <figure class="dg"><figcaption><b>Workshop 2 架構</b>　用 GitHub Copilot 開發，GitHub Actions 驗證，部署到 Azure Container Apps</figcaption><div class="dg-scroll"><svg viewBox="0 0 960 408" role="img" aria-label="Workshop 2 MVP 架構：開發者工作站、GitHub、Azure" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><rect x="20" y="30" width="200" height="300" rx="12" style="fill:none;stroke:var(--signal);stroke-width:1.3;stroke-dasharray:6 5"/><text x="32" y="50" class="dg-l" style="fill:var(--signal)">開發者工作站</text><rect x="36" y="70" width="168" height="96" rx="9" style="fill:var(--signal);stroke:var(--signal);stroke-width:1.6"/><text x="120.0" y="107.0" class="dt" style="fill:var(--surface)">VS Code</text><text x="120.0" y="124.0" class="ds" style="fill:var(--surface)">GitHub Copilot</text><text x="120.0" y="139.0" class="ds" style="fill:var(--surface)">Ask・Agent・Plan</text><rect x="36" y="186" width="168" height="66" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="120.0" y="216.0" class="dt" style="fill:var(--ink)">Codespaces</text><text x="120.0" y="233.0" class="ds" style="fill:var(--muted)">免安裝的雲端環境</text><rect x="36" y="262" width="168" height="52" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="120.0" y="293.0" class="dt" style="fill:var(--ink)">copilot-instructions</text><rect x="250" y="30" width="340" height="300" rx="12" style="fill:none;stroke:var(--blue);stroke-width:1.3;stroke-dasharray:6 5"/><text x="262" y="50" class="dg-l" style="fill:var(--blue)">GitHub</text><rect x="266" y="60" width="308" height="70" rx="9" style="fill:var(--blue);stroke:var(--blue);stroke-width:1.6"/><text x="420.0" y="92.0" class="dt" style="fill:var(--surface)">Repository</text><text x="420.0" y="109.0" class="ds" style="fill:var(--surface)">Issues・Pull Request・Branch 保護</text><rect x="266" y="150" width="148" height="70" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="340.0" y="182.0" class="dt" style="fill:var(--ink)">Coding agent</text><text x="340.0" y="199.0" class="ds" style="fill:var(--muted)">指派 Issue 自動開 PR</text><rect x="426" y="150" width="148" height="70" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="500.0" y="182.0" class="dt" style="fill:var(--ink)">Code review</text><text x="500.0" y="199.0" class="ds" style="fill:var(--muted)">Copilot 審查 PR</text><rect x="266" y="240" width="308" height="74" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="420.0" y="274.0" class="dt" style="fill:var(--ink)">GitHub Actions CI</text><text x="420.0" y="291.0" class="ds" style="fill:var(--muted)">ruff 檢查・pytest 測試・Docker build</text><rect x="620" y="30" width="320" height="300" rx="12" style="fill:none;stroke:var(--cyan);stroke-width:1.3;stroke-dasharray:6 5"/><text x="632" y="50" class="dg-l" style="fill:var(--cyan)">Azure</text><rect x="636" y="60" width="288" height="120" rx="9" style="fill:var(--cyan);stroke:var(--cyan);stroke-width:1.6"/><text x="780.0" y="101.0" class="dt" style="fill:var(--surface)">Azure Container Apps</text><text x="780.0" y="118.0" class="ds" style="fill:var(--surface)">FastAPI 報價服務</text><text x="780.0" y="133.0" class="ds" style="fill:var(--surface)">POST /quote・GET /specs/search</text><text x="780.0" y="148.0" class="ds" style="fill:var(--surface)">GET /health・靜態前端</text><rect x="636" y="240" width="130" height="74" rx="9" style="fill:var(--cyan-soft);stroke:var(--cyan);stroke-width:1.6"/><text x="701.0" y="266.0" class="dt" style="fill:var(--ink)">Container</text><text x="701.0" y="283.0" class="ds" style="fill:var(--muted)">Registry</text><text x="701.0" y="298.0" class="ds" style="fill:var(--muted)">映像檔</text><rect x="794" y="240" width="130" height="74" rx="9" style="fill:var(--bg);stroke:var(--muted);stroke-width:1.6"/><text x="859.0" y="274.0" class="dt" style="fill:var(--ink)">使用者</text><text x="859.0" y="291.0" class="ds" style="fill:var(--muted)">業務・瀏覽器</text><line x1="205" y1="118" x2="265" y2="95" class="da" marker-end="url(#ah)"/><text x="232" y="80" class="dl">push / PR</text><line x1="340" y1="131" x2="340" y2="149" class="da" marker-end="url(#ah)"/><line x1="500" y1="131" x2="500" y2="149" class="da" marker-end="url(#ah)"/><line x1="420" y1="221" x2="420" y2="239" class="da" marker-end="url(#ah)"/><line x1="575" y1="277" x2="635" y2="277" class="da" marker-end="url(#ah)"/><text x="605.0" y="270" class="dl">映像檔</text><line x1="700" y1="239" x2="700" y2="181" class="da" marker-end="url(#ah)"/><text x="722" y="214" class="dl">部署</text><line x1="859" y1="239" x2="859" y2="181" class="da" marker-end="url(#ah)"/><text x="886" y="214" class="dl">HTTPS</text><rect x="620" y="346" width="300" height="50" rx="9" style="fill:var(--rose-soft);stroke:var(--rose);stroke-width:1.6"/><text x="770.0" y="368.0" class="dt" style="fill:var(--ink)">openapi.json</text><text x="770.0" y="385.0" class="ds" style="fill:var(--muted)">提供給 Workshop 3 的 Foundry Agent 工具</text><path d="M924,150 L948,150 L948,371 L922,371" class="da" style="fill:none" stroke-dasharray="5 4" marker-end="url(#ah)"/></svg></div></figure>
+    <figure class="dg"><figcaption><b>Workshop 2 流程</b>　11 個步驟，1 天</figcaption><div class="dg-scroll"><svg viewBox="0 0 960 342" role="img" aria-label="Workshop 2 十一個步驟流程" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><rect x="20" y="20" width="170" height="70" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="30" y="37" class="dn" style="fill:var(--signal)">01</text><text x="105.0" y="52.0" class="dt" style="fill:var(--ink)">環境與 Repo</text><text x="105.0" y="69.0" class="ds" style="fill:var(--muted)">範本 Repo・Codespaces</text><line x1="191" y1="55.0" x2="207" y2="55.0" class="da" marker-end="url(#ah)"/><rect x="208" y="20" width="170" height="70" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="218" y="37" class="dn" style="fill:var(--signal)">02</text><text x="293.0" y="52.0" class="dt" style="fill:var(--ink)">Copilot 指示檔</text><text x="293.0" y="69.0" class="ds" style="fill:var(--muted)">規範・測試・安全</text><line x1="379" y1="55.0" x2="395" y2="55.0" class="da" marker-end="url(#ah)"/><rect x="396" y="20" width="170" height="70" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="406" y="37" class="dn" style="fill:var(--blue)">03</text><text x="481.0" y="52.0" class="dt" style="fill:var(--ink)">產生骨架</text><text x="481.0" y="69.0" class="ds" style="fill:var(--muted)">Plan / Agent 模式</text><line x1="567" y1="55.0" x2="583" y2="55.0" class="da" marker-end="url(#ah)"/><rect x="584" y="20" width="170" height="70" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="594" y="37" class="dn" style="fill:var(--blue)">04</text><text x="669.0" y="52.0" class="dt" style="fill:var(--ink)">報價邏輯</text><text x="669.0" y="69.0" class="ds" style="fill:var(--muted)">材質・加工・折扣</text><line x1="755" y1="55.0" x2="771" y2="55.0" class="da" marker-end="url(#ah)"/><rect x="772" y="20" width="170" height="70" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="782" y="37" class="dn" style="fill:var(--ok)">05</text><text x="857.0" y="52.0" class="dt" style="fill:var(--ink)">產生測試</text><text x="857.0" y="69.0" class="ds" style="fill:var(--muted)">pytest 修正到全綠</text><path d="M857.0,91 L857.0,113.0 L105.0,113.0 L105.0,135" class="da" style="fill:none" marker-end="url(#ah)"/><rect x="20" y="136" width="170" height="70" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="30" y="153" class="dn" style="fill:var(--blue)">06</text><text x="105.0" y="168.0" class="dt" style="fill:var(--ink)">簡易前端</text><text x="105.0" y="185.0" class="ds" style="fill:var(--muted)">單頁 HTML 呼叫 API</text><line x1="191" y1="171.0" x2="207" y2="171.0" class="da" marker-end="url(#ah)"/><rect x="208" y="136" width="170" height="70" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="218" y="153" class="dn" style="fill:var(--violet)">07</text><text x="293.0" y="168.0" class="dt" style="fill:var(--ink)">Code Review</text><text x="293.0" y="185.0" class="ds" style="fill:var(--muted)">機密・輸入驗證</text><line x1="379" y1="171.0" x2="395" y2="171.0" class="da" marker-end="url(#ah)"/><rect x="396" y="136" width="170" height="70" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="406" y="153" class="dn" style="fill:var(--ok)">08</text><text x="481.0" y="168.0" class="dt" style="fill:var(--ink)">GitHub Actions</text><text x="481.0" y="185.0" class="ds" style="fill:var(--muted)">CI 自動 lint 與測試</text><line x1="567" y1="171.0" x2="583" y2="171.0" class="da" marker-end="url(#ah)"/><rect x="584" y="136" width="170" height="70" rx="9" style="fill:var(--cyan-soft);stroke:var(--cyan);stroke-width:1.6"/><text x="594" y="153" class="dn" style="fill:var(--cyan)">09</text><text x="669.0" y="168.0" class="dt" style="fill:var(--ink)">容器化部署</text><text x="669.0" y="185.0" class="ds" style="fill:var(--muted)">Container Apps</text><line x1="755" y1="171.0" x2="771" y2="171.0" class="da" marker-end="url(#ah)"/><rect x="772" y="136" width="170" height="70" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="782" y="153" class="dn" style="fill:var(--violet)">10</text><text x="857.0" y="168.0" class="dt" style="fill:var(--ink)">Coding agent</text><text x="857.0" y="185.0" class="ds" style="fill:var(--muted)">Issue → PR 新增鈦合金</text><path d="M857.0,207 L857.0,229.0 L105.0,229.0 L105.0,251" class="da" style="fill:none" marker-end="url(#ah)"/><rect x="20" y="252" width="170" height="70" rx="9" style="fill:var(--rose-soft);stroke:var(--rose);stroke-width:1.6"/><text x="30" y="269" class="dn" style="fill:var(--rose)">11</text><text x="105.0" y="284.0" class="dt" style="fill:var(--ink)">包裝 Starter</text><text x="105.0" y="301.0" class="ds" style="fill:var(--muted)">工時・報價・交付清單</text></svg></div></figure>
+    </div>
+    <ol class="steps">
+      <li><div><b>建立環境與 Repo</b>使用範本 Repo 或 Codespaces。</div></li>
+      <li><div><b>撰寫 copilot-instructions.md</b>定義專案規範、繁中註解、測試與安全要求。</div></li>
+      <li><div><b>用 Plan / Agent 模式產生骨架</b>以提示詞建立 FastAPI 專案結構。</div></li>
+      <li><div><b>實作報價邏輯</b>材質單價、加工費、表面處理、數量折扣、急件加價。</div></li>
+      <li><div><b>產生並修正測試</b>用 Copilot 產生 pytest 測試。</div></li>
+      <li><div><b>簡易前端</b>單頁 HTML 呼叫 API。</div></li>
+      <li><div><b>Code Review 與安全</b>Copilot 程式碼審查、機密不入 Repo、輸入驗證。</div></li>
+      <li><div><b>GitHub Actions CI</b>自動執行 lint 與測試。</div></li>
+      <li><div><b>容器化並部署</b>部署到 Azure Container Apps，驗證 <code>/docs</code> 與 <code>openapi.json</code>。</div></li>
+      <li><div><b>指派 Issue 給 Copilot coding agent</b>新增鈦合金材質，審核 PR。</div></li>
+      <li><div><b>包裝成 Starter 服務</b>工時估算、報價與交付清單。</div></li>
+    </ol>
+  </article>
+
+  <article class="ws w3">
+    <header><h3>Workshop 3　在 Microsoft Foundry 部署 AI Agent 並營運化</h3><span class="tag vi">1 天 · 技術 + 售前</span></header>
+  <figure class="quote sm"><p>選對的工具做對的事：Foundry 讓更多樣的 Agent 點子得以實現。</p><cite>Dean，Hack to Build Q&A（意譯）</cite></figure>
+    <p>對應 12/16〈Deploying on the foundation with Foundry〉。把 Workshop 2 的報價 API 變成 Agent 的工具，加上規格書知識檢索，完成評估、安全治理、監控與成本估算，最後包裝成代管服務。</p>
+    <div class="file">Workshop3_在Microsoft_Foundry部署AI_Agent_實作教學.docx</div>
+    <div class="dgs">
+    <figure class="dg"><figcaption><b>Workshop 3 架構</b>　Agent 結合知識檢索與報價 API 工具，周邊有身分、機密、監控與內容安全</figcaption><div class="dg-scroll"><svg viewBox="0 0 960 452" role="img" aria-label="Workshop 3 Agent 目標架構" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><rect x="20" y="150" width="130" height="76" rx="9" style="fill:var(--bg);stroke:var(--muted);stroke-width:1.6"/><text x="85.0" y="177.0" class="dt" style="fill:var(--ink)">使用者</text><text x="85.0" y="194.0" class="ds" style="fill:var(--muted)">業務・採購</text><text x="85.0" y="209.0" class="ds" style="fill:var(--muted)">Web 或 Teams</text><rect x="176" y="150" width="150" height="76" rx="9" style="fill:var(--cyan-soft);stroke:var(--cyan);stroke-width:1.6"/><text x="251.0" y="177.0" class="dt" style="fill:var(--ink)">Agent 應用</text><text x="251.0" y="194.0" class="ds" style="fill:var(--muted)">Web 前端</text><text x="251.0" y="209.0" class="ds" style="fill:var(--muted)">或 Teams 管道</text><line x1="151" y1="188" x2="175" y2="188" class="da" marker-end="url(#ah)"/><rect x="352" y="30" width="420" height="330" rx="12" style="fill:none;stroke:var(--violet);stroke-width:1.3;stroke-dasharray:6 5"/><text x="364" y="50" class="dg-l" style="fill:var(--violet)">Microsoft Foundry Project</text><rect x="368" y="52" width="388" height="44" rx="9" style="fill:var(--rose-soft);stroke:var(--rose);stroke-width:1.6"/><text x="562.0" y="79.0" class="dt" style="fill:var(--ink)">Content Safety・Prompt Shields</text><rect x="368" y="112" width="388" height="90" rx="9" style="fill:var(--violet);stroke:var(--violet);stroke-width:1.6"/><text x="562.0" y="154.0" class="dt" style="fill:var(--surface)">Foundry Agent Service</text><text x="562.0" y="171.0" class="ds" style="fill:var(--surface)">系統指示・對話狀態・工具編排・引用來源</text><rect x="368" y="238" width="120" height="100" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="428.0" y="277.0" class="dt" style="fill:var(--ink)">模型部署</text><text x="428.0" y="294.0" class="ds" style="fill:var(--muted)">GPT 系列</text><text x="428.0" y="309.0" class="ds" style="fill:var(--muted)">依成本與品質選擇</text><rect x="502" y="238" width="120" height="100" rx="9" style="fill:var(--cyan-soft);stroke:var(--cyan);stroke-width:1.6"/><text x="562.0" y="277.0" class="dt" style="fill:var(--ink)">知識檢索</text><text x="562.0" y="294.0" class="ds" style="fill:var(--muted)">File search</text><text x="562.0" y="309.0" class="ds" style="fill:var(--muted)">或 AI Search</text><rect x="636" y="238" width="120" height="100" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="696.0" y="277.0" class="dt" style="fill:var(--ink)">OpenAPI 工具</text><text x="696.0" y="294.0" class="ds" style="fill:var(--muted)">報價 API</text><text x="696.0" y="309.0" class="ds" style="fill:var(--muted)">規格定義</text><line x1="327" y1="170" x2="367" y2="160" class="da" marker-end="url(#ah)"/><line x1="428" y1="203" x2="428" y2="237" class="da" marker-end="url(#ah)"/><line x1="562" y1="203" x2="562" y2="237" class="da" marker-end="url(#ah)"/><line x1="696" y1="203" x2="696" y2="237" class="da" marker-end="url(#ah)"/><line x1="562" y1="97" x2="562" y2="111" class="da" marker-end="url(#ah)"/><rect x="800" y="112" width="140" height="76" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="870.0" y="139.0" class="dt" style="fill:var(--ink)">評估</text><text x="870.0" y="156.0" class="ds" style="fill:var(--muted)">品質・工具正確率</text><text x="870.0" y="171.0" class="ds" style="fill:var(--muted)">安全性</text><line x1="799" y1="150" x2="757" y2="150" class="da" marker-end="url(#ah)"/><rect x="800" y="250" width="140" height="76" rx="9" style="fill:var(--signal);stroke:var(--signal);stroke-width:1.6"/><text x="870.0" y="277.0" class="dt" style="fill:var(--surface)">報價 API</text><text x="870.0" y="294.0" class="ds" style="fill:var(--surface)">Container Apps</text><text x="870.0" y="309.0" class="ds" style="fill:var(--surface)">（Workshop 2）</text><line x1="757" y1="288" x2="799" y2="288" class="da" marker-end="url(#ah)"/><rect x="502" y="384" width="120" height="56" rx="9" style="fill:var(--bg);stroke:var(--muted);stroke-width:1.6"/><text x="562.0" y="409.0" class="dt" style="fill:var(--ink)">Blob 儲存體</text><text x="562.0" y="426.0" class="ds" style="fill:var(--muted)">規格書 PDF</text><line x1="562" y1="383" x2="562" y2="339" class="da" marker-end="url(#ah)"/><text x="600" y="366" class="dl">建立索引</text><rect x="20" y="262" width="306" height="178" rx="12" style="fill:none;stroke:var(--muted);stroke-width:1.3;stroke-dasharray:6 5"/><text x="32" y="282" class="dg-l" style="fill:var(--muted)">身分・機密・可觀測性</text><rect x="34" y="292" width="278" height="40" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="173.0" y="317.0" class="dt" style="fill:var(--ink)">Entra ID・RBAC・Managed Identity</text><rect x="34" y="340" width="278" height="40" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="173.0" y="365.0" class="dt" style="fill:var(--ink)">Azure Key Vault：API 金鑰與機密</text><rect x="34" y="388" width="278" height="40" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="173.0" y="413.0" class="dt" style="fill:var(--ink)">Application Insights：追蹤與告警</text></svg></div></figure>
+    <figure class="dg"><figcaption><b>Workshop 3 流程</b>　13 個步驟，1 天</figcaption><div class="dg-scroll"><svg viewBox="0 0 960 342" role="img" aria-label="Workshop 3 十三個步驟流程" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><rect x="20" y="20" width="170" height="70" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="30" y="37" class="dn" style="fill:var(--violet)">01</text><text x="105.0" y="52.0" class="dt" style="fill:var(--ink)">建立 Project</text><text x="105.0" y="69.0" class="ds" style="fill:var(--muted)">入口網站或 CLI</text><line x1="191" y1="55.0" x2="207" y2="55.0" class="da" marker-end="url(#ah)"/><rect x="208" y="20" width="170" height="70" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="218" y="37" class="dn" style="fill:var(--blue)">02</text><text x="293.0" y="52.0" class="dt" style="fill:var(--ink)">部署模型</text><text x="293.0" y="69.0" class="ds" style="fill:var(--muted)">成本・延遲・配額</text><line x1="379" y1="55.0" x2="395" y2="55.0" class="da" marker-end="url(#ah)"/><rect x="396" y="20" width="170" height="70" rx="9" style="fill:var(--cyan-soft);stroke:var(--cyan);stroke-width:1.6"/><text x="406" y="37" class="dn" style="fill:var(--cyan)">03</text><text x="481.0" y="52.0" class="dt" style="fill:var(--ink)">準備知識</text><text x="481.0" y="69.0" class="ds" style="fill:var(--muted)">規格書與索引</text><line x1="567" y1="55.0" x2="583" y2="55.0" class="da" marker-end="url(#ah)"/><rect x="584" y="20" width="170" height="70" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="594" y="37" class="dn" style="fill:var(--violet)">04</text><text x="669.0" y="52.0" class="dt" style="fill:var(--ink)">Agent 指示</text><text x="669.0" y="69.0" class="ds" style="fill:var(--muted)">角色・邊界・引用</text><line x1="755" y1="55.0" x2="771" y2="55.0" class="da" marker-end="url(#ah)"/><rect x="772" y="20" width="170" height="70" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="782" y="37" class="dn" style="fill:var(--ok)">05</text><text x="857.0" y="52.0" class="dt" style="fill:var(--ink)">OpenAPI 工具</text><text x="857.0" y="69.0" class="ds" style="fill:var(--muted)">連接報價 API</text><path d="M857.0,91 L857.0,113.0 L105.0,113.0 L105.0,135" class="da" style="fill:none" marker-end="url(#ah)"/><rect x="20" y="136" width="170" height="70" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="30" y="153" class="dn" style="fill:var(--violet)">06</text><text x="105.0" y="168.0" class="dt" style="fill:var(--ink)">Playground 測試</text><text x="105.0" y="185.0" class="ds" style="fill:var(--muted)">8 組測試問句</text><line x1="191" y1="171.0" x2="207" y2="171.0" class="da" marker-end="url(#ah)"/><rect x="208" y="136" width="170" height="70" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="218" y="153" class="dn" style="fill:var(--blue)">07</text><text x="293.0" y="168.0" class="dt" style="fill:var(--ink)">SDK 呼叫</text><text x="293.0" y="185.0" class="ds" style="fill:var(--muted)">azure-ai-projects</text><line x1="379" y1="171.0" x2="395" y2="171.0" class="da" marker-end="url(#ah)"/><rect x="396" y="136" width="170" height="70" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="406" y="153" class="dn" style="fill:var(--signal)">08</text><text x="481.0" y="168.0" class="dt" style="fill:var(--ink)">評估</text><text x="481.0" y="185.0" class="ds" style="fill:var(--muted)">Groundedness 等指標</text><line x1="567" y1="171.0" x2="583" y2="171.0" class="da" marker-end="url(#ah)"/><rect x="584" y="136" width="170" height="70" rx="9" style="fill:var(--rose-soft);stroke:var(--rose);stroke-width:1.6"/><text x="594" y="153" class="dn" style="fill:var(--rose)">09</text><text x="669.0" y="168.0" class="dt" style="fill:var(--ink)">安全治理</text><text x="669.0" y="185.0" class="ds" style="fill:var(--muted)">RBAC・內容安全</text><line x1="755" y1="171.0" x2="771" y2="171.0" class="da" marker-end="url(#ah)"/><rect x="772" y="136" width="170" height="70" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="782" y="153" class="dn" style="fill:var(--signal)">10</text><text x="857.0" y="168.0" class="dt" style="fill:var(--ink)">可觀測性</text><text x="857.0" y="185.0" class="ds" style="fill:var(--muted)">追蹤・成本告警</text><path d="M857.0,207 L857.0,229.0 L105.0,229.0 L105.0,251" class="da" style="fill:none" marker-end="url(#ah)"/><rect x="20" y="252" width="170" height="70" rx="9" style="fill:var(--cyan-soft);stroke:var(--cyan);stroke-width:1.6"/><text x="30" y="269" class="dn" style="fill:var(--cyan)">11</text><text x="105.0" y="284.0" class="dt" style="fill:var(--ink)">發佈整合</text><text x="105.0" y="301.0" class="ds" style="fill:var(--muted)">Web 或 Teams</text><line x1="191" y1="287.0" x2="207" y2="287.0" class="da" marker-end="url(#ah)"/><rect x="208" y="252" width="170" height="70" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="218" y="269" class="dn" style="fill:var(--signal)">12</text><text x="293.0" y="284.0" class="dt" style="fill:var(--ink)">成本估算</text><text x="293.0" y="301.0" class="ds" style="fill:var(--muted)">月成本試算</text><line x1="379" y1="287.0" x2="395" y2="287.0" class="da" marker-end="url(#ah)"/><rect x="396" y="252" width="170" height="70" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="406" y="269" class="dn" style="fill:var(--ok)">13</text><text x="481.0" y="284.0" class="dt" style="fill:var(--ink)">代管服務</text><text x="481.0" y="301.0" class="ds" style="fill:var(--muted)">SLA・月費・資助</text></svg></div></figure>
+    </div>
+    <ol class="steps">
+      <li><div><b>建立 Foundry 資源與 Project</b>入口網站與 CLI 兩種方式。</div></li>
+      <li><div><b>部署模型</b>依成本、延遲、品質與配額選擇模型。</div></li>
+      <li><div><b>準備知識</b>上傳材質、公差、表面處理規格書並建立索引。</div></li>
+      <li><div><b>建立 Agent 與系統指示</b>定義角色、能力邊界、引用來源與轉人工條件。</div></li>
+      <li><div><b>加入 OpenAPI 工具</b>連接 Workshop 2 的報價 API。</div></li>
+      <li><div><b>Playground 測試</b>以測試問句驗證行為。</div></li>
+      <li><div><b>以 SDK 程式化呼叫</b>使用 azure-ai-projects 與 azure-identity。</div></li>
+      <li><div><b>評估</b>Groundedness、Relevance、工具呼叫正確率與安全性。</div></li>
+      <li><div><b>安全與治理</b>Content Safety、提示注入防護、RBAC、Managed Identity。</div></li>
+      <li><div><b>可觀測性</b>Application Insights 追蹤、用量與成本告警。</div></li>
+      <li><div><b>發佈與整合</b>Web 前端或 Teams 管道。</div></li>
+      <li><div><b>成本估算</b>模型、搜尋、運算與監控的月成本試算方法。</div></li>
+      <li><div><b>包裝成代管服務</b>SLA、月費結構、部署資助對應。</div></li>
+    </ol>
+  </article>
+
+  <aside class="view" aria-label="展碁規劃觀點"><div class="vl">Weblink View<b>展碁規劃觀點</b></div><div><p>三份教材設計成可以直接上課，也可以換成經銷商自己的客戶情境。建議的使用方式：</p><ul><li>第一梯次由展碁技術小組主講，經銷商帶真實客戶參加 Workshop 1</li><li>Workshop 2、3 讓經銷商把 Contoso 範例換成自己的客戶資料與流程</li><li>三場結束後，每家經銷商至少帶走一份 Offer 與一個可以 Demo 的 Agent</li></ul></div></aside>
+</section>
+
+<!-- ================= Workshop 1 工作表 ================= -->
+<section id="ws1" class="panel" data-c="blue" role="tabpanel" aria-labelledby="tab-ws1">
+<details class="talk"><summary>本頁架構圖與講稿<span>點擊展開・6 點</span></summary><div class="talk-body"><figure class="dg"><figcaption><b>Workshop 1・架構圖</b></figcaption><div class="dg-scroll"><svg viewBox="0 0 960 162" role="img" aria-label="Workshop 1 分頁架構" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><rect x="20" y="26" width="210" height="92" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="125.0" y="61.0" class="dt" style="fill:var(--ink)">事前準備</text><text x="125.0" y="78.0" class="ds" style="fill:var(--muted)">Step 1–2</text><text x="125.0" y="93.0" class="ds" style="fill:var(--muted)">選客・訪談設計</text><line x1="231" y1="72" x2="255" y2="72" class="da" marker-end="url(#ah)"/><rect x="256" y="26" width="210" height="92" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="361.0" y="61.0" class="dt" style="fill:var(--ink)">工作坊當天</text><text x="361.0" y="78.0" class="ds" style="fill:var(--muted)">Step 3–5</text><text x="361.0" y="93.0" class="ds" style="fill:var(--muted)">走查・用例・排序</text><line x1="467" y1="72" x2="491" y2="72" class="da" marker-end="url(#ah)"/><rect x="492" y="26" width="210" height="92" rx="9" style="fill:var(--violet-soft);stroke:var(--violet);stroke-width:1.6"/><text x="597.0" y="61.0" class="dt" style="fill:var(--ink)">會後產出</text><text x="597.0" y="78.0" class="ds" style="fill:var(--muted)">Step 6–9</text><text x="597.0" y="93.0" class="ds" style="fill:var(--muted)">ROI・Offer・資助</text><line x1="703" y1="72" x2="727" y2="72" class="da" marker-end="url(#ah)"/><rect x="728" y="26" width="210" height="92" rx="9" style="fill:var(--ok);stroke:var(--ok);stroke-width:1.6"/><text x="833.0" y="61.0" class="dt" style="fill:var(--surface)">三項產出</text><text x="833.0" y="78.0" class="ds" style="fill:var(--surface)">One-page Offer</text><text x="833.0" y="93.0" class="ds" style="fill:var(--surface)">PoV 計畫・ROI 試算</text><text x="480" y="148" class="dl">第一區塊：任務時程與填寫（甘特圖連動）　第二區塊：三項產出（可填寫、即時預覽與計算）</text></svg></div></figure><div><h5>講稿</h5><ol><li>這一頁把 Workshop 1 變成可以實際執行的工作表，以 Fabrikam × Contoso 為示範。</li><li>第一區塊是 9 個步驟的時程：事前準備、工作坊當天（10/29）、會後產出，甘特圖會跟著卡片的日期與狀態更新。</li><li>每個步驟都可以填寫重點與上傳附件，例如評分表、白板照片、流程圖。</li><li>第二區塊是三項產出：One-page Offer、PoV 計畫、ROI 試算，都可以直接填，也可以按「載入 Contoso 範例」先看示範。</li><li>ROI 試算會即時算出保守、基準、樂觀三種情境，基準情境的結果也會自動帶進 One-page Offer。</li><li>填好後按「儲存」，團隊都看得到；正式寄給客戶前，請把所有數字與客戶再確認一次。</li></ol></div></div></details>
+  <div class="phead"><span class="eyebrow">Workshop 1 工作表</span><h2>Workshop 1　AI 商機探索與 Offer 設計</h2></div>
+
+  <h3 class="blk"><span>第一區塊</span>任務時程與填寫</h3>
+  <figure class="gantt trk">
+    <figcaption><b>Workshop 1 任務時程表</b><span>2026/10/20 – 11/6・事前準備 → 工作坊當天（10/29）→ 會後產出・點任一列可跳到該步驟</span></figcaption>
+    <div class="gantt-scroll" id="ws1Gantt"></div>
+    <div class="glegend"><span><i class="gl-todo"></i>未開始</span><span><i class="gl-doing"></i>進行中</span><span><i class="gl-done"></i>完成</span><span><i class="gl-hold"></i>延後</span><span><i class="gl-late"></i>已逾期</span><span><i class="gl-today"></i>今天</span></div>
+  </figure>
+  <figure class="quote"><p>先找到值得解決的問題，再談技術。</p><cite>展碁 AI CoE 規劃觀點</cite></figure>
+  <div class="trk" id="ws1Body"></div>
+
+  <h3 class="blk"><span>第二區塊</span>產出：One-page Offer・PoV 計畫・ROI 試算</h3>
+  <div class="wo-nav chips"><a href="#wo-offer">One-page Offer</a><a href="#wo-pov">PoV 計畫</a><a href="#wo-roi">ROI 試算</a></div>
+  <div class="wo" id="wo-offer"></div>
+  <div class="wo" id="wo-pov"></div>
+  <div class="wo" id="wo-roi"></div>
+  <p class="note">範例內容與數字皆為教學示範（虛構客戶），定價非正式報價；資助金額依 Microsoft 資格審核，以最新公告為準。上傳格式：PDF、圖片、CSV、Markdown、JSON、TXT，單檔 20 MB 以內。</p>
+</section>
+
+
+<!-- ================= 八、下一步 ================= -->
+<section id="next" class="panel" data-c="teal" role="tabpanel" aria-labelledby="tab-next">
+<details class="talk"><summary>本頁架構圖與講稿<span>點擊展開・5 點</span></summary><div class="talk-body"><figure class="dg"><figcaption><b>下一步・架構圖</b></figcaption><div class="dg-scroll"><svg viewBox="0 0 960 230" role="img" aria-label="下一步：本週、本月、主管決定、推進" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--muted)"/></marker></defs><rect x="20" y="40" width="210" height="170" rx="9" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:1.6"/><text x="125.0" y="98.0" class="dt" style="fill:var(--ink)">本週</text><text x="125.0" y="115.0" class="ds" style="fill:var(--muted)">回覆 PDM 約時間</text><text x="125.0" y="130.0" class="ds" style="fill:var(--muted)">指定 AI CoE 負責人</text><text x="125.0" y="145.0" class="ds" style="fill:var(--muted)">列 T1 候選 10 家</text><text x="125.0" y="160.0" class="ds" style="fill:var(--muted)">邀請報名 10/21</text><rect x="270" y="40" width="210" height="170" rx="9" style="fill:var(--signal-soft);stroke:var(--signal);stroke-width:1.6"/><text x="375.0" y="98.0" class="dt" style="fill:var(--ink)">本月</text><text x="375.0" y="115.0" class="ds" style="fill:var(--muted)">開 Sandbox 與預算控管</text><text x="375.0" y="130.0" class="ds" style="fill:var(--muted)">辦第一梯 Workshop 1</text><text x="375.0" y="145.0" class="ds" style="fill:var(--muted)">製造業 Offer 套件 v1</text><text x="375.0" y="160.0" class="ds" style="fill:var(--muted)">確認資助申請資格</text><rect x="520" y="40" width="210" height="170" rx="9" style="fill:var(--rose);stroke:var(--rose);stroke-width:1.6"/><text x="625.0" y="106.0" class="dt" style="fill:var(--surface)">主管三個決定</text><text x="625.0" y="123.0" class="ds" style="fill:var(--surface)">AI CoE 負責人與預算</text><text x="625.0" y="138.0" class="ds" style="fill:var(--surface)">Sandbox 費用上限</text><text x="625.0" y="153.0" class="ds" style="fill:var(--surface)">T1 名單與 Hack 提名</text><rect x="770" y="40" width="170" height="170" rx="9" style="fill:var(--ok-soft);stroke:var(--ok);stroke-width:1.6"/><text x="855.0" y="114.0" class="dt" style="fill:var(--ink)">照路線圖推進</text><text x="855.0" y="131.0" class="ds" style="fill:var(--muted)">10/21 → 11/05</text><text x="855.0" y="146.0" class="ds" style="fill:var(--muted)">→ 11/18 → 12/16</text><line x1="231" y1="125" x2="269" y2="125" class="da" marker-end="url(#ah)"/><line x1="481" y1="125" x2="519" y2="125" class="da" marker-end="url(#ah)"/><line x1="731" y1="125" x2="769" y2="125" class="da" marker-end="url(#ah)"/></svg></div></figure><div><h5>講稿</h5><ol><li>最後談下一步，分成本週、本月，以及需要主管做的決定。</li><li>本週：回覆 PDM、指定 AI CoE 負責人、列出 T1 候選、邀請經銷商報名 10/21。</li><li>本月：開 Sandbox、辦第一梯 Workshop 1、完成製造業 Offer 套件、確認資助資格。</li><li>需要主管決定三件事：AI CoE 負責人與預算、Sandbox 費用上限、T1 名單與 Hack 提名。</li><li>這三件事定了，其餘都可以照路線圖推進。請大家提問。</li></ol></div></div></details>
+  <div class="phead"><span class="eyebrow">Part 8</span><h2>八、本週與本月行動</h2></div>
+  <figure class="quote"><p>每一個好的轉型，都從自己開始。</p><cite>簡報〈Start with themselves〉</cite></figure>
+  <div class="grid2">
+    <div class="card">
+      <h4>本週</h4>
+      <ul>
+        <li>回覆 PDM，約定 propensity 資料與儀表板的討論時間</li>
+        <li>指定展碁 AI CoE 負責人（業務 1 位、技術 1 位）</li>
+        <li>列出 T1 候選經銷商 10 家，準備 Hack to Build 提名</li>
+        <li>邀請經銷商報名 10/21 Live Maker</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>本月</h4>
+      <ul>
+        <li>開出 Weblink AI Lab Sandbox 訂閱與預算控管</li>
+        <li>以本頁三份 Word 教材辦第一梯次 Workshop 1</li>
+        <li>完成製造業 Offer 套件第一版</li>
+        <li>確認 Frontier Distributor Designation 與各項資助的申請資格</li>
+      </ul>
+    </div>
+  </div>
+
+  <aside class="view" aria-label="展碁規劃觀點"><div class="vl">Weblink View<b>展碁規劃觀點</b></div><div><p>本月需要主管做三個決定，定了之後其餘行動都可以照路線圖推進：</p><ul><li>展碁 AI CoE 的負責人與年度預算</li><li>Weblink AI Lab Sandbox 的費用上限與管理方式</li><li>第一批 T1 經銷商名單與 Hack to Build 提名</li></ul></div></aside>
+  <footer>
+    公開展示版。本頁內容整理自 Microsoft Asia AI CoE「Frontier Distributor Launch」簡報與 2026-10-06 會議逐字稿，並加入展碁觀點的規劃建議。案例客戶與經銷商名稱為虛構示範；建議目標為規劃起點。所有 Microsoft 激勵、資助與計畫條件依夥伴資格而定，以官方最新公告為準。
+  </footer>
+</section>
+
+
+</main>
+</div>
+
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var panels=[].slice.call(document.querySelectorAll('section.panel'));
+  var ids=panels.map(function(p){return p.id});
+  function label(id){var t=document.getElementById('tab-'+id);return t?t.textContent:id}
+  panels.forEach(function(p,i){
+    var pg=document.createElement('div');pg.className='pager';
+    if(i>0){var prev=document.createElement('button');prev.textContent='← '+label(ids[i-1]);prev.onclick=function(){show(ids[i-1],true)};pg.appendChild(prev)}else{pg.appendChild(document.createElement('span'))}
+    if(i<ids.length-1){var next=document.createElement('button');next.className='next';next.textContent='下一頁：'+label(ids[i+1])+' →';next.onclick=function(){show(ids[i+1],true)};pg.appendChild(next)}
+    p.appendChild(pg);
+  });
+  function show(id,top,anchor){
+    if(ids.indexOf(id)<0)id='top';
+    panels.forEach(function(p){p.hidden=p.id!==id});
+    tabs.forEach(function(t){var on=t.dataset.t===id;t.setAttribute('aria-selected',on?'true':'false');t.tabIndex=on?0:-1});
+    try{localStorage.setItem('wl-tab',id)}catch(e){}
+    try{history.replaceState(null,'','#'+(anchor||id))}catch(e){}
+    if(anchor){var el=document.getElementById(anchor);if(el)el.scrollIntoView()}else if(top){window.scrollTo(0,0)}
+  }
+  function route(h){
+    if(!h)return false;
+    if(ids.indexOf(h)>=0){show(h,true);return true}
+    var el=document.getElementById(h);if(!el)return false;
+    var p=el.closest('section.panel');if(p){show(p.id,false,h);return true}
+    return false;
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){show(t.dataset.t,true)});
+    t.addEventListener('keydown',function(e){
+      var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(!k)return;
+      var n=tabs[(i+k+tabs.length)%tabs.length];n.focus();show(n.dataset.t,true);e.preventDefault();
+    });
+  });
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;
+    if(route(a.getAttribute('href').slice(1)))e.preventDefault();
+  });
+  var saved=null;try{saved=localStorage.getItem('wl-tab')}catch(e){}
+  if(!route((location.hash||'').slice(1)))show(saved&&ids.indexOf(saved)>=0?saved:'top',false);
+})();
+</script>
+
+<script>
+(function(){
+  // ================= 共用工具 =================
+  var OK_TYPES={pdf:'application/pdf',png:'image/png',jpg:'image/jpeg',jpeg:'image/jpeg',gif:'image/gif',webp:'image/webp',csv:'text/csv',md:'text/markdown',json:'application/json',txt:'text/plain'};
+  var STATUS=['未開始','進行中','完成','延後'];
+  function today(){var d=new Date();return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)}
+  function el(t,c,txt){var e=document.createElement(t);if(c)e.className=c;if(txt!=null)e.textContent=txt;return e}
+  function fmtSize(n){return n>1048576?(n/1048576).toFixed(1)+' MB':Math.max(1,Math.round(n/1024))+' KB'}
+  function fmtTime(iso){try{return new Date(iso).toLocaleString('zh-TW',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})}catch(e){return ''}}
+  function dn(str){var p=String(str).split('-');return Date.UTC(+p[0],+p[1]-1,+p[2])/864e5}
+  function nd(n){var d=new Date(n*864e5);return d.getUTCFullYear()+'-'+('0'+(d.getUTCMonth()+1)).slice(-2)+'-'+('0'+d.getUTCDate()).slice(-2)}
+  function escx(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+  function errText(e){var c=e&&e.code;
+    if(c==='invalid_argument')return '沒有寫入權限，請向擁有者申請「參與者」以上權限';
+    if(c==='quota_exceeded')return '資料空間已滿';
+    if(c==='resource_exhausted'||c==='rate_limited')return '操作太頻繁，請稍後再試';
+    if(c==='too_large')return '檔案超過 20 MB';
+    if(c==='unsupported_type')return '不支援此檔案類型';
+    if(c==='quota_or_state')return '附件空間已滿或網頁暫停服務';
+    return '儲存失敗，請稍後再試';}
+  var CONN=null;
+  function connect(){
+    if(CONN)return CONN;
+    if(!window.claude||!window.claude.use){CONN=Promise.resolve({db:null,reason:'local'});return CONN}
+    CONN=Promise.all([claude.use('db'),claude.use('assets'),claude.use('user')]).then(function(r){
+      var db=r[0],assets=r[1],user=r[2];
+      if(!db)return {db:null,reason:'nodb',user:user};
+      return Promise.all([user?user.id().catch(function(){return null}):null,user&&user.can?user.can('data.write').catch(function(){return null}):null])
+        .then(function(v){return {db:db,assets:assets,user:user,uid:v[0],readOnly:v[1]===false}});
+    }).catch(function(){return {db:null,reason:'err'}});
+    return CONN;
+  }
+  function noticeText(c){
+    if(!c.db)return c.reason==='local'?'公開展示版：可以試填與試算，但內容不會儲存。':'目前無法連接共用資料（可能尚未登入或沒有權限），填寫內容無法儲存。';
+    if(c.readOnly)return '你目前只有檢視權限，可以看到內容但無法填寫或上傳。';
+    if(!c.assets)return '目前無法上傳附件（需要編輯權限），仍可填寫文字欄位。';
+    return '';
+  }
+  function whoText(c,x,names){
+    if(!x||!x.updatedAt)return c.db?'尚未填寫':'目前無法儲存';
+    var n=x.updatedBy&&names?(names[x.updatedBy]||'團隊成員'):'';
+    return '最後更新：'+fmtTime(x.updatedAt)+(n?'・'+n:'');
+  }
+  function resolveNames(c,docs,cb){
+    if(!c.user||!c.user.profiles)return;
+    var ids=[];Object.keys(docs).forEach(function(k){var u=docs[k]&&docs[k].updatedBy;if(u&&ids.indexOf(u)<0)ids.push(u)});
+    if(!ids.length)return;
+    c.user.profiles(ids).then(function(ps){var m={};ids.forEach(function(i){m[i]=ps[i]&&ps[i].name||''});cb(m)}).catch(function(){});
+  }
+
+  // ---------- 附件 ----------
+  function Files(host,label){
+    var box=el('div','files'), h=el('h6',null,label), ul=el('ul'), upl=el('div','upl');
+    var fin=el('input');fin.type='file';fin.multiple=true;fin.id='u-'+Math.random().toString(36).slice(2);fin.accept='.pdf,.png,.jpg,.jpeg,.gif,.webp,.csv,.md,.json,.txt';
+    var lab=el('label','btn','上傳檔案');lab.htmlFor=fin.id;lab.tabIndex=0;
+    lab.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();fin.click()}});
+    upl.append(fin,lab);box.append(h,ul,upl);host.appendChild(box);
+    var api={onUpload:null,onDelete:null,
+      render:function(files,canUpload){
+        ul.textContent='';lab.style.display=canUpload?'':'none';
+        if(!files.length){ul.appendChild(el('li','empty','尚無附件'));return}
+        files.forEach(function(f){
+          var li=el('li'),a=el('a',null,f.name);a.href='/_blob/'+f.id;a.target='_blank';a.rel='noopener';
+          var meta=el('small',null,fmtSize(f.size||0)+(f.at?'・'+fmtTime(f.at):''));
+          var del=el('button','btn dng','刪除');del.type='button';del.disabled=!canUpload;
+          del.addEventListener('click',function(){
+            if(del.dataset.armed!=='1'){del.dataset.armed='1';del.textContent='確定刪除？';setTimeout(function(){del.dataset.armed='';del.textContent='刪除'},4000);return}
+            api.onDelete&&api.onDelete(f);
+          });
+          var left=el('div');left.style.cssText='min-width:0;display:flex;gap:10px;align-items:center';left.append(a,meta);
+          li.append(left,del);ul.appendChild(li);
+        });
+      }};
+    fin.addEventListener('change',function(){var fl=[].slice.call(fin.files);fin.value='';api.onUpload&&api.onUpload(fl)});
+    return api;
+  }
+  function uploadAll(c,fl,existing,setMsg){
+    var files=existing.slice(),i=0,failed=[];
+    return new Promise(function(done){
+      (function next(){
+        if(i>=fl.length)return done({files:files,failed:failed});
+        var f=fl[i++],ext=(f.name.split('.').pop()||'').toLowerCase(),t=OK_TYPES[ext];
+        if(!t){failed.push(f.name+'（請轉成 PDF 或 CSV）');return next()}
+        if(f.size>20*1048576){failed.push(f.name+'（超過 20 MB）');return next()}
+        setMsg('上傳中 '+i+'/'+fl.length+'…','');
+        c.assets.upload(f,{type:t}).then(function(r){files.push({id:r.id,name:f.name,size:r.sizeBytes,type:r.contentType,at:new Date().toISOString(),by:c.uid||null})})
+          .catch(function(e){failed.push(f.name+'（'+errText(e)+'）')}).then(next);
+      })();
+    });
+  }
+  function field(grid,id,label,type,opts,wide,onInput){
+    var f=el('div','fld'+(wide?' wide':'')),lb=el('label',null,label),inp;lb.htmlFor=id;
+    if(type==='textarea')inp=el('textarea');
+    else if(type==='select'){inp=el('select');opts.forEach(function(o){var op=el('option',null,o);op.value=o;inp.appendChild(op)})}
+    else{inp=el('input');inp.type=type==='number'?'number':type==='date'?'date':'text';if(type==='number')inp.step='any'}
+    inp.id=id;inp.addEventListener('input',onInput);f.append(lb,inp);grid.appendChild(f);return inp;
+  }
+
+  // ================= 任務追蹤（甘特圖 + 卡片）=================
+  function Tracker(cfg){
+    var MS=cfg.items,docs={},cards={},filter='all',C={db:null};
+    var body=document.getElementById(cfg.body),gHost=document.getElementById(cfg.gantt),key=cfg.key;
+    var notice=el('div','fnotice');notice.hidden=true;
+    var sum=el('div','fsum');sum.setAttribute('aria-live','polite');
+    function tile(cls,lab){var d=el('div',cls),b=el('b',null,'0'),sp=el('span',null,lab);d.append(b,sp);sum.appendChild(d);return b}
+    var sDone=tile('','已完成'),sDoing=tile('','進行中'),sLate=tile('bad','已逾期'),sNext=tile('nx','下一個時間點');
+    var bar=el('div','fbar'),barIn=el('div','fbar-in');bar.appendChild(barIn);
+    var ff=el('div','ffilter');ff.setAttribute('role','group');ff.setAttribute('aria-label','篩選');
+    [['all','全部'],['todo','未完成'],['late','已逾期'],['done','已完成']].forEach(function(p,i){
+      var b=el('button',null,p[1]);b.type='button';b.dataset.f=p[0];b.setAttribute('aria-pressed',i===0?'true':'false');
+      b.addEventListener('click',function(){filter=p[0];[].forEach.call(ff.children,function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});renderAll()});
+      ff.appendChild(b);
+    });
+    var list=el('div','mslist');
+    body.append(notice,sum,bar,ff,list);
+
+    function data(id){return docs[id]||{}}
+    function dueOf(m){return data(m.id).due||m.due}
+    function startOf(m){var a=data(m.id).start||m.start,b=dueOf(m);return a>b?b:a}
+    function stOf(m){return data(m.id).status||'未開始'}
+    function isLate(m){return stOf(m)!=='完成'&&dueOf(m)<today()}
+
+    MS.forEach(function(m){
+      var d=el('details','ms');d.dataset.id=m.id;d.id=key+'-'+m.id;
+      var sm=el('summary'),md=el('div','md');md.appendChild(document.createTextNode(m.due));var ph=el('small',null,m.phase);md.appendChild(ph);
+      var mt=el('div','mt',m.title),mi=el('div','mi'),chipSt=el('span','chip','未開始'),chipLate=el('span','chip lt','已逾期'),fillInfo=el('span'),fileInfo=el('span');
+      chipLate.hidden=true;mi.append(chipLate,chipSt,fillInfo,fileInfo);sm.append(md,mt,mi);d.appendChild(sm);
+      var bd=el('div','ms-body');
+      if(m.hint){var h=el('div','hint');h.appendChild(document.createTextNode(m.hint[0]+'　'));var a=el('a',null,'前往 →');a.href='#'+m.hint[1];h.appendChild(a);bd.appendChild(h)}
+      var grid=el('div','fgrid'),inputs={},card;
+      function mark(){card.dirty=true;card.setMsg('尚未儲存','')}
+      var pre='f-'+key+'-'+m.id+'-';
+      inputs._status=field(grid,pre+'st','狀態','select',STATUS,false,mark);
+      inputs._owner=field(grid,pre+'ow','負責人','text',null,false,mark);
+      inputs._start=field(grid,pre+'sd','開始日','date',null,false,mark);
+      inputs._due=field(grid,pre+'dd','到期日','date',null,false,mark);
+      m.fields.forEach(function(f){inputs[f[0]]=field(grid,pre+f[0],f[1],f[2],f[3],f[2]==='textarea',mark)});
+      bd.appendChild(grid);
+      var files=Files(bd,'附件（建議：'+m.upload+'）');
+      var foot=el('div','mfoot'),who=el('span','who','尚未填寫'),right=el('div','upl'),msg=el('span','msg'),save=el('button','btn pri','儲存');
+      save.type='button';right.append(msg,save);foot.append(who,right);bd.appendChild(foot);d.appendChild(bd);list.appendChild(d);
+      card={m:m,d:d,inputs:inputs,chipSt:chipSt,chipLate:chipLate,fillInfo:fillInfo,fileInfo:fileInfo,files:files,who:who,save:save,ph:ph,dirty:false,busy:false};
+      card.setMsg=function(t,cls){msg.textContent=t;msg.className='msg'+(cls?' '+cls:'')};
+      cards[m.id]=card;
+      save.addEventListener('click',function(){doSave(card)});
+      files.onUpload=function(fl){doUpload(card,fl)};
+      files.onDelete=function(f){doDeleteFile(card,f)};
+    });
+
+    function fillInputs(c){
+      var x=data(c.m.id),v=x.values||{};
+      c.inputs._status.value=x.status||'未開始';c.inputs._owner.value=x.owner||'';
+      c.inputs._start.value=x.start||c.m.start;c.inputs._due.value=x.due||c.m.due;
+      c.m.fields.forEach(function(f){var val=v[f[0]];c.inputs[f[0]].value=val==null?(f[2]==='select'?f[3][0]:''):val});
+    }
+    var names={};
+    function renderCard(c){
+      var m=c.m,x=data(m.id),st=stOf(m),late=isLate(m);
+      c.d.dataset.st=st;c.d.classList.toggle('late',late);
+      c.d.querySelector('.md').firstChild.nodeValue=dueOf(m);
+      c.ph.textContent=m.phase+'・'+startOf(m).slice(5).replace('-','/')+' 起';
+      c.chipSt.textContent=st;c.chipSt.className='chip st-'+st;c.chipLate.hidden=!late;
+      var v=x.values||{},n=m.fields.filter(function(f){var a=v[f[0]];return a!=null&&String(a).trim()!==''&&!(f[2]==='select'&&a===f[3][0])}).length;
+      c.fillInfo.textContent='已填 '+n+'/'+m.fields.length;
+      var fl=x.files||[];c.fileInfo.textContent=fl.length?('附件 '+fl.length):'';
+      if(!c.dirty)fillInputs(c);
+      c.files.render(fl,!!(C.db&&C.assets&&!C.readOnly&&!c.busy));
+      c.save.disabled=!C.db||C.readOnly||c.busy;
+      c.who.textContent=whoText(C,x,names);
+    }
+    function renderAll(){
+      var done=0,doing=0,late=0,next=null;
+      MS.forEach(function(m){var st=stOf(m);if(st==='完成')done++;else if(st==='進行中')doing++;if(isLate(m))late++;
+        if(st!=='完成'&&dueOf(m)>=today()&&(!next||dueOf(m)<dueOf(next)))next=m;
+        renderCard(cards[m.id]);
+        cards[m.id].d.hidden=!(filter==='all'||(filter==='done'&&st==='完成')||(filter==='todo'&&st!=='完成')||(filter==='late'&&isLate(m)));
+      });
+      sDone.textContent=done+' / '+MS.length;sDoing.textContent=doing;sLate.textContent=late;
+      sNext.textContent=next?(dueOf(next)+'　'+next.title):'全部完成';
+      barIn.style.width=Math.round(done/MS.length*100)+'%';
+      renderGantt();
+    }
+    function renderGantt(){
+      var ax=cfg.axis,G0=dn(ax.start),G1=dn(ax.end),LW=350,W=1140,R=W-12,RH=30,TOP=56,H=TOP+MS.length*RH+14;
+      function X(n){return LW+(Math.min(Math.max(n,G0),G1)-G0)/(G1-G0)*(R-LW)}
+      var o=[];
+      ax.bands.forEach(function(q,i){var a=X(dn(q[1])),b=X(dn(q[2]));
+        o.push('<rect x="'+a+'" y="2" width="'+(b-a)+'" height="'+(H-4)+'" class="gt-q'+(i%3)+'" opacity=".55"/>');
+        o.push('<text x="'+((a+b)/2)+'" y="20" class="gt-ql">'+escx(q[0])+'</text>');});
+      if(ax.tick==='month'){
+        for(var y=+ax.start.slice(0,4),mo=+ax.start.slice(5,7);dn(y+'-'+mo+'-1')<G1;){
+          var a=X(dn(y+'-'+mo+'-1')),b=X(mo===12?dn((y+1)+'-1-1'):dn(y+'-'+(mo+1)+'-1'));
+          o.push('<line x1="'+a+'" y1="28" x2="'+a+'" y2="'+(H-6)+'" class="gt-mline"/>');
+          o.push('<text x="'+((a+b)/2)+'" y="44" class="gt-ml">'+(mo===1?(y+'/'):'')+mo+' 月</text>');
+          mo++;if(mo===13){mo=1;y++}
+        }
+      }else{
+        for(var k=G0;k<G1;k++){var x=X(k),dd=nd(k),wd=new Date(k*864e5).getUTCDay();
+          o.push('<line x1="'+x+'" y1="'+(wd===1?28:48)+'" x2="'+x+'" y2="'+(H-6)+'" class="gt-mline"'+(wd===1?'':' opacity=".45"')+'/>');
+          if(wd===1||k===G0)o.push('<text x="'+(x+3)+'" y="44" class="gt-ml" text-anchor="start">'+(+dd.slice(5,7))+'/'+(+dd.slice(8))+'</text>');}
+      }
+      o.push('<line x1="'+LW+'" y1="50" x2="'+R+'" y2="50" class="gt-mline"/>');
+      MS.forEach(function(m,i){
+        var yy=TOP+i*RH,st=stOf(m),late=isLate(m),sd=startOf(m),dd=dueOf(m),x1=X(dn(sd)),x2=Math.max(X(dn(dd)+1),x1+6);
+        var title=m.title.length>21?m.title.slice(0,21)+'…':m.title;
+        o.push('<g class="gt-r" data-id="'+m.id+'" tabindex="0" role="button" aria-label="'+escx(m.title+'，'+sd+' 至 '+dd+'，'+st+(late?'，已逾期':''))+'">');
+        o.push('<rect x="2" y="'+(yy-2)+'" width="'+(W-4)+'" height="'+RH+'" class="gt-row" rx="4"/>');
+        o.push('<text x="10" y="'+(yy+17)+'" class="gt-dt">'+dd.slice(5).replace('-','/')+'</text>');
+        o.push('<text x="56" y="'+(yy+17)+'" class="gt-lab">'+escx(title)+'</text>');
+        o.push('<rect x="'+x1+'" y="'+(yy+5)+'" width="'+(x2-x1)+'" height="'+(RH-14)+'" class="gt-bar gt-'+st+(late?' gt-late':'')+'"><title>'+escx(m.title+'｜'+sd+' → '+dd+'｜'+st)+'</title></rect>');
+        var lx=x2+6,anc='start';if(lx>R-60){lx=x1-6;anc='end'}
+        o.push('<text x="'+lx+'" y="'+(yy+17)+'" class="gt-end" text-anchor="'+anc+'">'+st+(late?'・逾期':'')+'</text></g>');
+      });
+      var tn=dn(today());
+      if(tn>=G0&&tn<G1){var tx=X(tn);o.push('<line x1="'+tx+'" y1="30" x2="'+tx+'" y2="'+(H-4)+'" class="gt-today"/><text x="'+tx+'" y="'+H+'" class="gt-todayl">今天</text>')}
+      gHost.innerHTML='<svg viewBox="0 0 '+W+' '+(H+6)+'" xmlns="http://www.w3.org/2000/svg">'+o.join('')+'</svg>';
+    }
+    function jumpTo(id){var c=cards[id];if(!c)return;
+      if(c.d.hidden){filter='all';[].forEach.call(ff.children,function(x){x.setAttribute('aria-pressed',x.dataset.f==='all'?'true':'false')});renderAll()}
+      c.d.open=true;c.d.scrollIntoView({behavior:'smooth',block:'start'});}
+    gHost.addEventListener('click',function(e){var g=e.target.closest&&e.target.closest('.gt-r');if(g)jumpTo(g.getAttribute('data-id'))});
+    gHost.addEventListener('keydown',function(e){if(e.key!=='Enter'&&e.key!==' ')return;var g=e.target.closest&&e.target.closest('.gt-r');if(g){e.preventDefault();jumpTo(g.getAttribute('data-id'))}});
+
+    function ref(id){return C.db.doc(cfg.collection+'/'+id)}
+    function doSave(c){
+      if(!C.db||c.busy)return;c.busy=true;c.save.disabled=true;c.setMsg('儲存中…','');
+      var v={};c.m.fields.forEach(function(f){var val=c.inputs[f[0]].value;v[f[0]]=f[2]==='number'&&val!==''?Number(val):val});
+      var body={status:c.inputs._status.value,owner:c.inputs._owner.value.trim(),start:c.inputs._start.value||c.m.start,due:c.inputs._due.value||c.m.due,
+        values:v,files:(data(c.m.id).files||[]).slice(),updatedAt:new Date().toISOString(),updatedBy:C.uid||null};
+      ref(c.m.id).set(body).then(function(){c.dirty=false;c.setMsg('已儲存','ok')})
+        .catch(function(e){c.setMsg(errText(e),'err');if(e&&e.code==='invalid_argument'){C.readOnly=true;renderAll()}})
+        .then(function(){c.busy=false;renderCard(c)});
+    }
+    function writeFiles(c,files){
+      var stamp={files:files,updatedAt:new Date().toISOString(),updatedBy:C.uid||null};
+      if(docs[c.m.id])return ref(c.m.id).update(stamp);
+      var base={status:'未開始',owner:'',start:c.m.start,due:c.m.due,values:{}};Object.keys(stamp).forEach(function(k){base[k]=stamp[k]});
+      return ref(c.m.id).set(base);
+    }
+    function doUpload(c,fl){
+      if(!C.assets||!C.db||!fl.length)return;c.busy=true;renderCard(c);
+      uploadAll(C,fl,data(c.m.id).files||[],c.setMsg).then(function(r){
+        return writeFiles(c,r.files).then(function(){c.setMsg(r.failed.length?('部分檔案未上傳：'+r.failed.join('；')):'檔案已上傳',r.failed.length?'err':'ok')});
+      }).catch(function(e){c.setMsg(errText(e),'err')}).then(function(){c.busy=false;renderCard(c)});
+    }
+    function doDeleteFile(c,f){
+      if(!C.db)return;c.busy=true;c.setMsg('刪除中…','');
+      writeFiles(c,(data(c.m.id).files||[]).filter(function(x){return x.id!==f.id}))
+        .then(function(){return C.assets?C.assets.delete(f.id).catch(function(){}):null})
+        .then(function(){c.setMsg('已刪除附件','ok')}).catch(function(e){c.setMsg(errText(e),'err')})
+        .then(function(){c.busy=false;renderCard(c)});
+    }
+
+    renderAll();
+    MS.filter(function(m){return stOf(m)!=='完成'}).slice(0,2).forEach(function(m){cards[m.id].d.open=true});
+    connect().then(function(c){
+      C=c;var t=noticeText(c);notice.textContent=t;notice.hidden=!t;renderAll();
+      if(!c.db)return;
+      c.db.collection(cfg.collection).onSnapshot(function(snap){
+        var n={};snap.docs.forEach(function(d){if(d.exists)n[d.id]=d.data()});docs=n;renderAll();
+        resolveNames(C,docs,function(m){names=m;renderAll()});
+      },function(){notice.textContent='與共用資料的連線中斷，請重新整理頁面。';notice.hidden=false});
+    });
+  }
+
+  // ================= 產出表單（單一文件）=================
+  function OutputForm(cfg){
+    var host=document.getElementById(cfg.host),C={db:null},doc=null,dirty=false,busy=false,names={};
+    var hd=el('div','wo-h'),h4=el('h4',null,cfg.title),acts=el('div','acts');
+    var ex=el('button','btn','載入 Contoso 範例');ex.type='button';
+    var clr=el('button','btn','清空');clr.type='button';
+    acts.append(ex,clr);hd.append(h4,acts);host.appendChild(hd);
+    if(cfg.intro){host.appendChild(el('p','note',cfg.intro))}
+    var wrap=el('div','wo-grid'),left=el('div'),grid=el('div','fgrid'),pv=el('div','pv');
+    left.appendChild(grid);wrap.append(left,pv);host.appendChild(wrap);
+    var inputs={};
+    function mark(){dirty=true;setMsg('尚未儲存','');changed()}
+    cfg.fields.forEach(function(f){inputs[f[0]]=field(grid,'o-'+cfg.doc+'-'+f[0],f[1],f[2],f[3],f[4],mark)});
+    var files=Files(left,'附件（例如正式版 PDF）');files.render([],false);
+    var foot=el('div','mfoot'),who=el('span','who','尚未填寫'),right=el('div','upl'),msg=el('span','msg'),save=el('button','btn pri','儲存');
+    save.type='button';right.append(msg,save);foot.append(who,right);left.appendChild(foot);
+    function setMsg(t,cls){msg.textContent=t;msg.className='msg'+(cls?' '+cls:'')}
+    function values(){var v={};cfg.fields.forEach(function(f){var x=inputs[f[0]].value;v[f[0]]=f[2]==='number'?(x===''?'':Number(x)):x});return v}
+    function setValues(v){cfg.fields.forEach(function(f){var x=v&&v[f[0]];inputs[f[0]].value=x==null?(f[2]==='select'?f[3][0]:''):x})}
+    function changed(){cfg.render(pv,values());(cfg.onChange||function(){})(values())}
+    ex.addEventListener('click',function(){setValues(cfg.example);dirty=true;setMsg('已載入範例，按「儲存」才會保存','');changed()});
+    clr.addEventListener('click',function(){
+      if(clr.dataset.armed!=='1'){clr.dataset.armed='1';clr.textContent='確定清空？';setTimeout(function(){clr.dataset.armed='';clr.textContent='清空'},4000);return}
+      clr.dataset.armed='';clr.textContent='清空';setValues({});dirty=true;setMsg('已清空，按「儲存」才會保存','');changed();});
+    function render(){
+      save.disabled=!C.db||C.readOnly||busy;
+      files.render(doc&&doc.files||[],!!(C.db&&C.assets&&!C.readOnly&&!busy));
+      who.textContent=whoText(C,doc,names);
+    }
+    function ref(){return C.db.doc(cfg.collection+'/'+cfg.doc)}
+    save.addEventListener('click',function(){
+      if(!C.db||busy)return;busy=true;render();setMsg('儲存中…','');
+      ref().set({values:values(),files:(doc&&doc.files||[]).slice(),updatedAt:new Date().toISOString(),updatedBy:C.uid||null})
+        .then(function(){dirty=false;setMsg('已儲存','ok')}).catch(function(e){setMsg(errText(e),'err')}).then(function(){busy=false;render()});
+    });
+    function writeFiles(fl){
+      var stamp={files:fl,updatedAt:new Date().toISOString(),updatedBy:C.uid||null};
+      if(doc)return ref().update(stamp);
+      return ref().set({values:{},files:fl,updatedAt:stamp.updatedAt,updatedBy:stamp.updatedBy});
+    }
+    files.onUpload=function(fl){
+      if(!C.assets||!C.db||!fl.length)return;busy=true;render();
+      uploadAll(C,fl,doc&&doc.files||[],setMsg).then(function(r){return writeFiles(r.files).then(function(){setMsg(r.failed.length?('部分檔案未上傳：'+r.failed.join('；')):'檔案已上傳',r.failed.length?'err':'ok')})})
+        .catch(function(e){setMsg(errText(e),'err')}).then(function(){busy=false;render()});
+    };
+    files.onDelete=function(f){
+      busy=true;setMsg('刪除中…','');
+      writeFiles((doc&&doc.files||[]).filter(function(x){return x.id!==f.id})).then(function(){return C.assets?C.assets.delete(f.id).catch(function(){}):null})
+        .then(function(){setMsg('已刪除附件','ok')}).catch(function(e){setMsg(errText(e),'err')}).then(function(){busy=false;render()});
+    };
+    setValues({});changed();render();
+    connect().then(function(c){
+      C=c;render();if(!c.db)return;
+      ref().onSnapshot(function(snap){
+        doc=snap.exists?snap.data():null;
+        if(!dirty){setValues(doc&&doc.values||{});changed()}
+        render();
+        if(doc&&doc.updatedBy&&c.user&&c.user.profiles)c.user.profiles([doc.updatedBy]).then(function(ps){names={};names[doc.updatedBy]=ps[doc.updatedBy]&&ps[doc.updatedBy].name||'';render()}).catch(function(){});
+      },function(){setMsg('與共用資料的連線中斷，請重新整理頁面。','err')});
+    });
+    return {values:values,refresh:changed};
+  }
+
+  // ================= 初始化 =================
+  window.__WL={Tracker:Tracker,OutputForm:OutputForm,el:el,dn:dn,nd:nd};
+  if(document.getElementById('fillBody'))Tracker({key:'fill',collection:'milestones',body:'fillBody',gantt:'fillGantt',items:[{"id": "m01", "start": "2026-10-08", "due": "2026-10-14", "phase": "本週", "title": "指定展碁 AI CoE 負責人與預算", "fields": [["bizOwner", "業務負責人", "text"], ["techOwner", "技術負責人", "text"], ["budget", "年度預算（NT$）", "number"], ["note", "備註", "textarea"]], "upload": "組織圖、預算簽呈"}, {"id": "m02", "start": "2026-10-08", "due": "2026-10-16", "phase": "本週", "title": "與 Microsoft PDM 會議，取得傾向資料", "fields": [["meetDate", "會議日期", "date"], ["pdm", "Microsoft PDM / 窗口", "text"], ["data", "取得的資料或儀表板", "textarea"], ["decision", "會議結論與待辦", "textarea"]], "upload": "儀表板匯出、會議紀錄"}, {"id": "m03", "start": "2026-10-09", "due": "2026-10-17", "phase": "本週", "title": "列出 T1 候選經銷商 10 家", "fields": [["list", "候選經銷商名單（一行一家）", "textarea"], ["criteria", "挑選依據", "textarea"], ["count", "候選家數", "number"]], "upload": "評分表"}, {"id": "m04", "start": "2026-10-15", "due": "2026-10-21", "phase": "10/21", "title": "Live Maker 第 1 場：Crafting a Customer Engagement", "fields": [["regCount", "報名經銷商數", "number"], ["regList", "報名經銷商名單", "textarea"], ["takeaway", "會後重點", "textarea"]], "upload": "報名清單、簡報"}, {"id": "m05", "start": "2026-10-12", "due": "2026-10-31", "phase": "本月", "title": "開通 Weblink AI Lab Sandbox 與預算控管", "fields": [["subName", "訂閱名稱（勿填金鑰或密碼）", "text"], ["cap", "每月費用上限（NT$）", "number"], ["admin", "管理者", "text"], ["openDate", "開通日期", "date"]], "upload": "架構或權限設定說明"}, {"id": "m06", "start": "2026-10-12", "due": "2026-10-31", "phase": "本月", "title": "確認 Frontier Distributor Designation 與資助資格", "fields": [["designation", "Designation 狀態", "select", ["未確認", "申請中", "已取得", "不符資格"]], ["programs", "可申請的資助方案", "textarea"], ["gap", "尚缺條件", "textarea"]], "upload": "資格確認信或截圖"}, {"id": "m07", "start": "2026-10-22", "due": "2026-11-05", "phase": "11/05", "title": "Hack to Build 啟動與 T1 提名", "fields": [["nominees", "提名經銷商與點子（一行一家）", "textarea"], ["nomStatus", "提名狀態", "select", ["未提交", "已提交", "已錄取", "未錄取"]], ["count", "提名家數", "number"]], "upload": "提名資料"}, {"id": "m08", "start": "2026-10-27", "due": "2026-11-07", "phase": "10/27–11/07", "title": "展碁 Workshop 1：AI 商機探索與 Offer 設計", "fields": [["date", "舉辦日期", "date"], ["venue", "地點或形式", "text"], ["partners", "參與經銷商", "textarea"], ["customers", "帶來的客戶", "textarea"], ["offers", "產出 Offer 數", "number"]], "upload": "Offer one-pager、簽到表、照片"}, {"id": "m09", "start": "2026-11-09", "due": "2026-11-18", "phase": "11/18", "title": "Live Maker 第 2 場 + 展碁 Workshop 2（GitHub Copilot）", "fields": [["date", "Workshop 2 日期", "date"], ["people", "參加人數", "number"], ["mvp", "完成 MVP 的經銷商數", "number"], ["repo", "範本 Repo 位置", "text"]], "upload": "成果截圖、課後問卷"}, {"id": "m10", "start": "2026-12-01", "due": "2026-12-16", "phase": "12/16", "title": "Live Maker 第 3 場 + 展碁 Workshop 3（Foundry）", "fields": [["date", "Workshop 3 日期", "date"], ["people", "參加人數", "number"], ["agents", "可 Demo 的 Agent 數", "number"], ["eval", "評估結果摘要", "textarea"]], "upload": "評估報告、Demo 錄影"}, {"id": "m11", "start": "2027-01-04", "due": "2027-02-28", "phase": "FY27 Q3・1–2 月", "title": "Hack 建構期與 T1 PoV 上線", "fields": [["pov", "PoV 客戶與方案（一行一案）", "textarea"], ["progress", "進度", "select", ["規劃中", "建置中", "已上線", "暫停"]], ["issues", "遇到的問題與需要的支援", "textarea"]], "upload": "PoV 報告"}, {"id": "m12", "start": "2027-03-01", "due": "2027-03-31", "phase": "FY27 Q3・3 月", "title": "第一批 Frontier Offer 上市與申請部署資助", "fields": [["offers", "上市 Offer 名稱", "textarea"], ["price", "定價", "textarea"], ["funding", "申請的資助方案與狀態", "textarea"]], "upload": "Offer 文件、申請證明"}, {"id": "m13", "start": "2027-04-01", "due": "2027-06-30", "phase": "FY27 Q4・4–6 月", "title": "第二梯次 T2 經銷商與產業套件", "fields": [["t2", "T2 經銷商名單", "textarea"], ["kits", "產業套件", "textarea"], ["dates", "梯次日期", "text"]], "upload": "梯次計畫"}],
+    axis:{start:'2026-10-01',end:'2027-07-01',tick:'month',bands:[['FY27 Q2','2026-10-01','2027-01-01'],['FY27 Q3','2027-01-01','2027-04-01'],['FY27 Q4','2027-04-01','2027-07-01']]}});
+  Tracker({key:'ws1',collection:'ws1_tasks',body:'ws1Body',gantt:'ws1Gantt',items:[{"id": "w01", "start": "2026-10-20", "due": "2026-10-23", "phase": "事前準備", "title": "Step 1　三重疊挑選目標客戶", "fields": [["cands", "候選客戶與評分（一行一家）", "textarea"], ["chosen", "選定客戶", "text"], ["why", "選定理由", "textarea"]], "upload": "評分表"}, {"id": "w02", "start": "2026-10-22", "due": "2026-10-27", "phase": "事前準備", "title": "Step 2　設計訪談與預訪", "fields": [["who", "訪談對象", "textarea"], ["qs", "重點問題", "textarea"], ["pre", "預訪結果摘要", "textarea"]], "upload": "訪談題目、預訪紀錄"}, {"id": "w03", "start": "2026-10-29", "due": "2026-10-29", "phase": "工作坊當天", "title": "Step 3　AI Envisioning 與現況流程走查", "fields": [["flow", "現況流程", "textarea"], ["pain", "主要痛點", "textarea"], ["vol", "每月詢價量", "number"], ["days", "平均報價回覆天數", "number"]], "upload": "流程圖、白板照片"}, {"id": "w04", "start": "2026-10-29", "due": "2026-10-29", "phase": "工作坊當天", "title": "Step 4　用例發想（AI Discovery Cards）", "fields": [["uses", "用例清單（一行一個）", "textarea"], ["count", "用例數", "number"]], "upload": "用例卡照片"}, {"id": "w05", "start": "2026-10-29", "due": "2026-10-30", "phase": "工作坊當天", "title": "Step 5　價值 × 可行性排序", "fields": [["top3", "前三名用例", "textarea"], ["pick", "選定用例", "text"], ["note", "評分說明", "textarea"]], "upload": "評分矩陣"}, {"id": "w06", "start": "2026-10-30", "due": "2026-11-02", "phase": "會後產出", "title": "Step 6　ROI 試算", "fields": [["assume", "關鍵假設與資料來源", "textarea"], ["confirm", "客戶確認人", "text"]], "upload": "ROI 試算表（PDF 或 CSV）", "hint": ["在下方「ROI 試算」填入數字，即時計算三情境結果", "wo-roi"]}, {"id": "w07", "start": "2026-11-02", "due": "2026-11-04", "phase": "會後產出", "title": "Step 7　定義 Offer（PoV → MVP → 代管）", "fields": [["name", "Offer 名稱", "text"], ["scope", "範圍摘要", "textarea"]], "upload": "Offer 定義文件", "hint": ["在下方「PoV 計畫」填寫範圍、週程與驗收標準", "wo-pov"]}, {"id": "w08", "start": "2026-11-03", "due": "2026-11-05", "phase": "會後產出", "title": "Step 8　對應 Microsoft 計畫與資助", "fields": [["prog", "可申請的方案", "textarea"], ["amount", "預估資助（US$）", "number"], ["status", "申請狀態", "select", ["未申請", "準備中", "已提交", "已核准", "不符資格"]]], "upload": "資格確認、申請文件"}, {"id": "w09", "start": "2026-11-04", "due": "2026-11-06", "phase": "會後產出", "title": "Step 9　寄出 One-page Offer 與約定決策會議", "fields": [["sent", "寄出日期", "date"], ["meet", "決策會議日期", "date"], ["feedback", "客戶回饋", "textarea"]], "upload": "One-page Offer PDF", "hint": ["在下方「One-page Offer」填寫，右側即時預覽", "wo-offer"]}],
+    axis:{start:'2026-10-19',end:'2026-11-09',tick:'day',bands:[['事前準備','2026-10-19','2026-10-29'],['工作坊當天','2026-10-29','2026-10-30'],['會後產出','2026-10-30','2026-11-09']]}});
+})();
+</script>
+<script>
+(function(){
+  var W=window.__WL;if(!W||!document.getElementById('wo-roi'))return;
+  var el=W.el;
+  function n(v,d){v=Number(v);return isFinite(v)?v:(d||0)}
+  function money(v){var a=Math.round(v);return (a<0?'−':'')+'NT$'+Math.abs(a).toLocaleString('en-US')}
+  function wan(v){return (v<0?'−':'')+(Math.abs(v)/10000).toLocaleString('en-US',{maximumFractionDigits:1})+' 萬'}
+  function sec(pv,title,text){var d=el('div','op-sec'),b=el('b',null,title),p=el('p',null,text||'（尚未填寫）');d.append(b,p);pv.appendChild(d);return d}
+
+  // ---------- ROI ----------
+  var ROI_F=[
+    ['A','每月詢價件數','number'],['C','需技術回覆比例（%）','number'],
+    ['Bnow','業務每件報價工時・現況（分鐘）','number'],['Bnew','業務每件報價工時・導入後（分鐘）','number'],
+    ['Dnow','工程師每件回覆工時・現況（分鐘）','number'],['Dnew','工程師每件回覆工時・導入後（分鐘）','number'],
+    ['E','業務人時成本（NT$/小時）','number'],['F','工程人時成本（NT$/小時）','number'],
+    ['G','成交率提升（百分點）','number'],['H','平均訂單金額（NT$）','number'],
+    ['M','毛利率（%）','number'],['live','首年上線月數','number'],
+    ['pov','PoV 費用（NT$）','number'],['mvp','MVP 費用（NT$）','number'],
+    ['ops','代管營運月費（NT$）','number'],['azure','Azure 雲端月費（NT$）','number']];
+  var ROI_EX={A:400,C:35,Bnow:45,Bnew:15,Dnow:40,Dnew:15,E:600,F:800,G:2,H:180000,M:25,live:9,pov:200000,mvp:1200000,ops:80000,azure:40000};
+  function calc(v){
+    var A=n(v.A),eff=(n(v.Bnow)-n(v.Bnew))/60*A*n(v.E)+(n(v.Dnow)-n(v.Dnew))/60*(A*n(v.C)/100)*n(v.F);
+    var up=A*n(v.G)/100*n(v.H)*n(v.M)/100,live=n(v.live,9),one=n(v.pov)+n(v.mvp),run=n(v.ops)+n(v.azure);
+    return [['保守',0],['基準',.5],['樂觀',1]].map(function(s){
+      var u=up*s[1],mon=eff+u,ben=mon*live,cost=one+run*live,net=mon-run;
+      return {name:s[0],rec:s[1],eff:eff,up:u,mon:mon,ben:ben,cost:cost,roi:cost>0?(ben-cost)/cost*100:0,payback:net>0?one/net:null,net:net};
+    });
+  }
+  var latestROI=calc(ROI_EX);
+  function renderROI(pv,v){
+    pv.textContent='';var r=calc(v);latestROI=r;var b=r[1];
+    pv.appendChild(el('h5',null,'基準情境（成交率提升認列 50%）'));
+    var k=el('div','roi-kpi');
+    [['月效益合計',money(b.mon)],['首年 ROI',(b.roi>=0?'+':'')+b.roi.toFixed(0)+'%'],['上線後回收期',b.payback?b.payback.toFixed(1)+' 個月':'無法回收'],['每月淨效益',money(b.net)]].forEach(function(x){var d=el('div');d.append(el('b',null,x[1]),el('span',null,x[0]));k.appendChild(d)});
+    pv.appendChild(k);
+    pv.appendChild(el('h5',null,'三情境首年 ROI'));
+    var bars=el('div','roi-bars'),mx=Math.max(50,Math.max.apply(null,r.map(function(x){return Math.abs(x.roi)})));
+    r.forEach(function(x){var row=el('div','rb'),tr=el('div','tr'),fi=el('div','fi'+(x.roi<0?' neg':'')),ax=el('div','ax');
+      var w=Math.abs(x.roi)/mx*50;fi.style.width=w+'%';if(x.roi<0){fi.style.left=(50-w)+'%'}
+      tr.append(fi,ax);row.append(el('span',null,x.name),tr,el('span','v',(x.roi>=0?'+':'')+x.roi.toFixed(0)+'%'));bars.appendChild(row)});
+    pv.appendChild(bars);
+    var tb=el('div','tbl'),t=el('table'),th=el('thead'),tr=el('tr');
+    ['情境','月效率節省','月增量毛利','月效益','首年效益','首年成本','首年 ROI','回收期'].forEach(function(h){tr.appendChild(el('th',null,h))});th.appendChild(tr);t.appendChild(th);
+    var tbody=el('tbody');r.forEach(function(x){var row=el('tr');
+      [x.name,wan(x.eff),wan(x.up),wan(x.mon),wan(x.ben),wan(x.cost),(x.roi>=0?'+':'')+x.roi.toFixed(0)+'%',x.payback?x.payback.toFixed(1)+' 個月':'—'].forEach(function(c,i){row.appendChild(el('td',i?'num':null,c))});tbody.appendChild(row)});
+    t.appendChild(tbody);tb.appendChild(t);pv.appendChild(tb);
+    pv.appendChild(el('p','note','月效率節省 =（業務工時差 × 詢價量 × 業務人時成本）+（工程工時差 × 技術詢價量 × 工程人時成本）；月增量毛利 = 詢價量 × 成交率提升 × 平均訂單 × 毛利率 × 認列比例（保守 0%、基準 50%、樂觀 100%）；首年成本 = PoV + MVP +（代管 + Azure）× 上線月數。'));
+  }
+
+  // ---------- PoV ----------
+  var POV_F=[['goal','PoV 目標','textarea',null,true],['start','開始日','date'],['weeks','週數','number'],
+    ['w1','第 1 週','textarea'],['w2','第 2 週','textarea'],['w3','第 3 週','textarea'],['w4','第 4 週','textarea'],
+    ['inScope','範圍內（一行一項）','textarea'],['outScope','範圍外（一行一項）','textarea'],
+    ['exit','驗收標準（Exit criteria）','textarea'],['need','客戶需提供','textarea'],
+    ['roles','雙方角色','textarea'],['risks','風險與對策','textarea'],['decision','決策會議日期','date'],['price','PoV 費用','text']];
+  var POV_EX={goal:'驗證 AI Agent 能縮短報價與技術回覆時間，並以實際數據確認 ROI 假設。',start:'2026-11-16',weeks:4,
+    w1:'啟動會議、資料盤點（價目表、200 份規格書）、報價規則訪談',w2:'建立知識索引與 Agent 雛型、建立 100 題測試題庫',
+    w3:'5 位業務試用、收集回饋、調整系統指示',w4:'評估結果、ROI 驗證報告、決策會議',
+    inScope:'價目表與規格書盤點清理\n報價規則梳理\nFoundry Agent 雛型（知識問答）\n5 位業務試用\nROI 驗證報告',
+    outScope:'ERP 寫入整合\n正式上線與單一登入\n多語系',
+    exit:'技術問答正確率 ≥ 80%\n業務試用滿意度 ≥ 4/5\n決策者同意進入 MVP',
+    need:'價目表、規格書樣本、業務與工程窗口各 1 位、每週 1 小時檢討會',
+    roles:'Fabrikam：專案經理、售前架構師\n展碁 AI CoE：架構審查、資助申請\nContoso：業務主管、工程課長',
+    risks:'規格書掃描品質不一 → 先挑 50 份高頻文件\n成交率假設難驗證 → PoV 期間記錄報價時間與回覆率',
+    decision:'2026-12-14',price:'NT$15–25 萬（固定價格，示範）'};
+  function renderPOV(pv,v){
+    pv.textContent='';pv.appendChild(el('h5',null,'PoV 計畫預覽'));
+    pv.appendChild(el('p','op-title',(n(v.weeks,4)||4)+' 週 AI 價值驗證（PoV）'));
+    var sd=v.start?W.dn(v.start):null,wk=Math.max(1,Math.min(4,n(v.weeks,4)||4));
+    pv.appendChild(el('p','op-cust',(v.start?('期間：'+v.start+' → '+W.nd(sd+wk*7-3)):'期間：尚未設定開始日')+(v.decision?'　決策會議：'+v.decision:'')));
+    sec(pv,'目標',v.goal);
+    var d=el('div','op-sec');d.appendChild(el('b',null,'週程'));var pw=el('div','pw');
+    for(var i=1;i<=wk;i++){var row=el('div');var lab=sd!=null?('W'+i+'・'+W.nd(sd+(i-1)*7).slice(5).replace('-','/')):'W'+i;row.append(el('i',null,lab),el('span',null,v['w'+i]||'（尚未填寫）'));pw.appendChild(row)}
+    d.appendChild(pw);pv.appendChild(d);
+    sec(pv,'範圍內',v.inScope);sec(pv,'範圍外',v.outScope);sec(pv,'驗收標準',v.exit);sec(pv,'客戶需提供',v.need);sec(pv,'風險與對策',v.risks);sec(pv,'費用',v.price);
+  }
+
+  // ---------- One-page Offer ----------
+  var OFF_F=[['name','Offer 名稱','text',null,true],['customer','客戶與背景','text',null,true],
+    ['problem','現況挑戰','textarea',null,true],['solution','方案說明','textarea',null,true],
+    ['povT','PoV：期間與費用','text'],['povS','PoV：範圍','textarea'],['mvpT','MVP：期間與費用','text'],['mvpS','MVP：範圍','textarea'],
+    ['opsT','代管營運：費用','text'],['opsS','代管營運：內容','textarea'],
+    ['kpi','成功指標（一行一項）','textarea'],['funding','Microsoft 資助（依資格）','textarea'],
+    ['next','下一步（一行一項）','textarea'],['contact','聯絡窗口','text']];
+  var OFF_EX={name:'智慧詢價與技術問答 Agent｜報價當日回覆方案',customer:'Contoso 精密工業（台中，約 180 人 CNC 精密零件製造）',
+    problem:'每月約 400 件詢價，報價回覆平均 2.5 天；約 35% 詢價需工程師確認材質、公差或表面處理，每件約 40 分鐘；知識散在 PDF 規格書與資深人員經驗中。',
+    solution:'以 Microsoft Foundry 建立 AI Agent：自動依報價規則試算報價，並引用規格書回答技術問題。業務在 Web 或 Teams 直接使用，複雜問題轉給工程師。',
+    povT:'4 週｜NT$15–25 萬',povS:'資料盤點、報價規則梳理、Agent 雛型、ROI 驗證報告',
+    mvpT:'8 週｜NT$90–150 萬',mvpS:'報價 API 與 Web 前端、Agent 整合、權限與評估、教育訓練',
+    opsT:'月費 NT$6–10 萬（不含 Azure 用量）',opsS:'監控、每月評估報告、知識庫更新、季度價值回顧',
+    kpi:'報價回覆週期 2.5 天 → ≤ 1 天\n業務查價工時 45 → 15 分鐘\n技術問答正確率 ≥ 90%\n報價成交率 22% → ≥ 24%',
+    funding:'評估 Frontier Accelerate 售前（Assessment + PoV）與 SMB 部署資助（預估 XS 級距），依資格審核。',
+    next:'兩週內召開 PoV 決策會議\n提供價目表與 200 份規格書樣本\n指定業務與工程窗口各 1 位',contact:'Fabrikam 資訊 業務經理（示範）'};
+  var offerForm;
+  function renderOFF(pv,v){
+    pv.textContent='';pv.appendChild(el('h5',null,'One-page Offer 預覽'));
+    pv.appendChild(el('p','op-title',v.name||'（Offer 名稱）'));pv.appendChild(el('p','op-cust',v.customer||'（客戶與背景）'));
+    sec(pv,'現況挑戰',v.problem);sec(pv,'方案說明',v.solution);
+    var d=el('div','op-sec');d.appendChild(el('b',null,'三階段範圍與投資'));var ph=el('div','op-ph');
+    [['① PoV',v.povT,v.povS],['② MVP',v.mvpT,v.mvpS],['③ 代管營運',v.opsT,v.opsS]].forEach(function(x){var c=el('div');c.append(el('b',null,x[0]),el('div',null,x[1]||'—'),el('div',null,x[2]||''));ph.appendChild(c)});
+    d.appendChild(ph);pv.appendChild(d);
+    var b=latestROI[1],r=el('div','op-sec');r.appendChild(el('b',null,'預期效益（由 ROI 試算基準情境自動帶入）'));var g=el('div','op-roi');
+    [[money(b.mon),'月效益'],[(b.roi>=0?'+':'')+b.roi.toFixed(0)+'%','首年 ROI'],[b.payback?b.payback.toFixed(1)+' 個月':'—','上線後回收期']].forEach(function(x){var c=el('div');c.append(el('b',null,x[0]),el('span',null,x[1]));g.appendChild(c)});
+    r.appendChild(g);pv.appendChild(r);
+    sec(pv,'成功指標',v.kpi);sec(pv,'Microsoft 資助',v.funding);sec(pv,'下一步',v.next);sec(pv,'聯絡窗口',v.contact);
+  }
+
+  offerForm=W.OutputForm({host:'wo-offer',collection:'ws1_outputs',doc:'offer',title:'One-page Offer',fields:OFF_F,example:OFF_EX,render:renderOFF,
+    intro:'左邊填寫，右邊即時預覽。「預期效益」會自動帶入下方 ROI 試算的基準情境。'});
+  W.OutputForm({host:'wo-pov',collection:'ws1_outputs',doc:'pov',title:'PoV 計畫',fields:POV_F,example:POV_EX,render:renderPOV,
+    intro:'定義 PoV 的目標、週程、範圍與驗收標準；預覽會依開始日自動排出每週日期。'});
+  W.OutputForm({host:'wo-roi',collection:'ws1_outputs',doc:'roi',title:'ROI 試算',fields:ROI_F,example:ROI_EX,render:renderROI,
+    intro:'輸入參數後即時計算保守、基準、樂觀三種情境。範例數字與 Workshop 1 Word 教材一致。',
+    onChange:function(){offerForm&&offerForm.refresh()}});
+})();
+</script>
+
+<div id="termTip" role="tooltip" aria-hidden="true"></div>
+<script>
+(function(){
+  var G = {"Frontier Distributor": "Microsoft 的代理商計畫與 Designation，給能帶領經銷商建構與銷售 AI 方案的代理商。", "Frontier Accelerate": "Microsoft 對合格夥伴的專案資助：售前評估與 PoV、售後部署，金額依專案規模（首年 ACR）分級。", "Frontier Spark": "Microsoft 支援夥伴辦理需求開發活動的計畫，可搭配 Co-op 資金。", "Frontier Agentic Offer": "經銷商以 AI Agent 為核心、可重複販售的服務方案。", "Frontier Transformation": "Microsoft 對以 AI 推動企業轉型的說法，也是一項夥伴 Specialization 名稱。", "Asia AI CoE": "Microsoft 亞洲 AI 卓越中心（Center of Excellence），負責帶領夥伴發展 AI 能力。", "AI CoE": "AI 卓越中心（Center of Excellence）：集中 AI 專業、方法與資產的團隊。", "Live Maker": "Asia AI CoE 舉辦的線上實作工作坊，CY26 共三場：10/21、11/18、12/16。", "Hack to Build": "Asia AI CoE 約 3 個月的邀請制建構計畫，提供 GitHub Copilot、Foundry、Fabric 環境，讓夥伴做出可上市的 Offer。", "Disti Plan": "Microsoft 與代理商（Distributor）共同制定的經銷商培育與商機計畫。", "Propensity": "傾向資料：Microsoft 依訊號與用量推估客戶購買或擴大使用某工作負載的可能性。", "propensity": "傾向資料：Microsoft 依訊號與用量推估客戶購買或擴大使用某工作負載的可能性。", "White Glove": "白手套式服務：高度陪跑、客製化的協助方式。", "Cloud Ascent": "Microsoft 提供夥伴的客戶傾向名單工具，分為 Act Now、Evaluate 等優先等級。", "Customer Zero": "先在自己公司內部導入並使用，再拿實際經驗與成果去說服客戶。", "Designation": "Microsoft Solutions Partner Designation：依技術能力、客戶成果與人員認證取得的夥伴資格。", "Specialization": "Microsoft 夥伴進階專業認可，需通過特定工作負載的技術與客戶成功要求。", "TAM": "Total Addressable Market：可觸及的市場總規模。", "ACR": "Azure Consumed Revenue：客戶實際使用 Azure 產生的營收。", "ARR": "Annual Recurring Revenue：年度經常性收入。", "PDM": "Partner Development Manager：Microsoft 負責經營特定夥伴的窗口。", "PSA": "Partner Solution Architect：Microsoft 的夥伴解決方案架構師。", "Co-op": "合作行銷基金：Microsoft 提供夥伴用於行銷活動的資金。", "PMC Pro": "Partner Marketing Center Pro：Microsoft 提供夥伴的行銷活動素材與工具。", "CSP": "Cloud Solution Provider：Microsoft 雲端轉售計畫，夥伴可轉售並管理客戶的訂閱。", "PAYG": "Pay-as-you-go：依用量計費。", "RI/SP": "Reserved Instances / Savings Plan：預留執行個體與節省方案，以承諾用量換取折扣。", "MQL": "Marketing Qualified Lead：行銷判斷有意向的潛在客戶。", "GTM": "Go-to-Market：上市與銷售的整體做法。", "RACE Day": "Azure AI RACE Day：Microsoft 支援的經銷商啟動活動，可向 PDM 申請資金。", "AI Envisioning": "AI 願景工作坊：與客戶一起找出 AI 可以改善的業務流程。", "AI Discovery Cards": "Asia AI CoE 的用例發想卡，用來引導客戶列出 AI 用例。", "Solution Accelerators": "Microsoft 提供的方案範本與程式碼，用來加快原型與部署。", "Cloud Accelerate Factory": "Azure Cloud Accelerate Factory：Microsoft 提供的銷售與技術支援資源。", "Well-Architected": "Azure Well-Architected Framework：設計可靠、安全、具成本效益架構的指引。", "Azure Verified Modules": "AVM：Microsoft 驗證過的基礎架構即程式碼（IaC）模組。", "AVM": "Azure Verified Modules：Microsoft 驗證過的基礎架構即程式碼（IaC）模組。", "Landing Zone": "登陸區：預先設定好網路、身分、治理與安全的 Azure 基礎環境。", "Sandbox": "沙箱環境：可以自由實驗、與正式環境隔離的測試環境。", "GitHub Copilot": "GitHub 的 AI 開發助理，可在編輯器中產生、解釋、修改程式碼與測試。", "Copilot Studio": "Microsoft 的低程式碼 Agent 建構工具，主要整合 Microsoft 365。", "Coding agent": "GitHub Copilot coding agent：可指派 Issue，由 AI 自動修改程式並開 Pull Request。", "Code review": "GitHub Copilot code review：由 AI 審查 Pull Request 並提出修改建議。", "Agentic DevOps": "GitHub 提出的 AI 參與開發流程框架：從 Issue、開發、測試到部署都有 AI Agent 協作，並保有治理與審查。", "Codespaces": "GitHub Codespaces：瀏覽器即可使用的雲端開發環境，免安裝。", "GitHub Actions": "GitHub 內建的自動化流程，用來執行測試、建置與部署（CI/CD）。", "Microsoft Foundry": "Microsoft 的 AI 應用與 Agent 開發平台，整合模型、工具、知識、評估與治理。", "Foundry Agent Service": "Microsoft Foundry 中建立、執行與管理 AI Agent 的服務。", "Foundry": "Microsoft Foundry：Microsoft 的 AI 應用與 Agent 開發平台。", "Fabric": "Microsoft Fabric：整合資料工程、資料倉儲與分析的資料平台。", "Azure Container Apps": "Azure 的無伺服器容器服務，可直接部署 API 或網站。", "Container Apps": "Azure Container Apps：Azure 的無伺服器容器服務。", "OpenAPI": "描述 API 端點與參數的標準格式，Agent 可依此呼叫 API。", "openapi.json": "API 的 OpenAPI 規格檔，Workshop 3 用它把報價 API 接成 Agent 工具。", "FastAPI": "Python 的 Web API 框架，會自動產生 OpenAPI 文件。", "SDK": "Software Development Kit：程式開發套件。", "Groundedness": "評估指標：回答內容是否有依據提供的資料，而不是憑空捏造。", "Content Safety": "Azure AI Content Safety：偵測並過濾仇恨、暴力等有害內容。", "Prompt Shields": "防護提示注入攻擊的功能，避免使用者或文件內容操控 Agent。", "Entra ID": "Microsoft Entra ID：Microsoft 的身分與存取管理服務（前身 Azure AD）。", "Managed Identity": "受控識別：讓 Azure 服務不用存放密碼也能安全存取其他資源。", "Key Vault": "Azure Key Vault：集中保管金鑰、密碼與憑證。", "Application Insights": "Azure 的應用程式監控服務，可追蹤請求、錯誤與效能。", "RBAC": "Role-Based Access Control：依角色授予權限。", "Playground": "Foundry 入口網站中的互動測試介面。", "PoV": "Proof of Value：價值驗證，用小範圍實作證明商業效益。", "PoC": "Proof of Concept：概念驗證，確認技術可行。", "MVP": "Minimum Viable Product：最小可行產品。", "SLA": "Service Level Agreement：服務等級協議，約定可用性與回應時間。", "KPI": "Key Performance Indicator：關鍵績效指標。", "ROI": "Return on Investment：投資報酬率。", "QBR": "Quarterly Business Review：季度業務檢討會議。", "FY27": "Microsoft 會計年度 2027：2026/7/1 – 2027/6/30。", "SMB": "Small and Medium Business：中小企業。", "GCR": "Greater China Region：Microsoft 大中華區，含台灣。", "Reseller": "經銷商：向終端客戶銷售與交付的夥伴。", "Distributor": "代理商：向經銷商供貨並提供培育與支援，例如展碁。", "T1": "展碁建議的經銷商第一梯隊（共創）：5–8 家，白手套陪跑。", "T2": "展碁建議的經銷商第二梯隊（示範）：15–25 家，參加 Workshop 梯次。", "T3": "展碁建議的經銷商第三梯隊（啟蒙）：以 Live Maker 與社群為主。", "Show": "經銷商旅程第一步：用 AI 為客戶展示業務上的新可能。", "Develop": "經銷商旅程第二步：依客戶需求快速開發，對齊價值。", "Deploy": "經銷商旅程第三步：上線到正式環境並實現價值。", "Discover": "經銷商旅程第四步：與客戶找出下一個商機，複製到其他客戶。"};
+  var keys = Object.keys(G).sort(function(a,b){return b.length-a.length});
+  function esc(k){return k.replace(/[.*+?^${}()|[\]\\\/]/g,'\\$&')}
+  var re = new RegExp(keys.map(function(k){return /^[A-Za-z0-9]/.test(k)?'(?<![A-Za-z0-9_.-])'+esc(k)+'(?![A-Za-z0-9_-])':esc(k)}).join('|'),'g');
+  var SKIP = 'svg,script,style,textarea,select,input,button,code,.term,.trk,.wo,.tabs,.pager,#termTip,.ws .file,h1,h2';
+  var n = 0;
+  function markPanel(panel){
+    var seen = {}, w = document.createTreeWalker(panel, NodeFilter.SHOW_TEXT, {acceptNode:function(t){
+      if(!t.nodeValue.trim())return NodeFilter.FILTER_REJECT;
+      var p=t.parentElement; if(!p||p.closest(SKIP))return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;}});
+    var nodes=[]; while(w.nextNode())nodes.push(w.currentNode);
+    nodes.forEach(function(t){
+      var txt=t.nodeValue, m, last=0, frag=null; re.lastIndex=0;
+      while((m=re.exec(txt))){
+        var k=m[0]; if(seen[k]||!G[k])continue; seen[k]=1;
+        frag=frag||document.createDocumentFragment();
+        frag.appendChild(document.createTextNode(txt.slice(last,m.index)));
+        var sp=document.createElement('abbr'); sp.className='term'; sp.tabIndex=0; sp.textContent=k; sp.setAttribute('data-term',k);
+        sp.id='term-'+(++n); sp.setAttribute('aria-describedby','termTip');
+        frag.appendChild(sp); last=m.index+k.length;
+      }
+      if(frag){frag.appendChild(document.createTextNode(txt.slice(last))); t.parentNode.replaceChild(frag,t)}
+    });
+  }
+  [].forEach.call(document.querySelectorAll('section.panel'),markPanel);
+
+  var tip=document.getElementById('termTip'), cur=null;
+  function show(el){
+    var k=el.getAttribute('data-term'); cur=el;
+    tip.textContent=''; var b=document.createElement('b'); b.textContent=k; tip.appendChild(b); tip.appendChild(document.createTextNode(G[k]));
+    tip.classList.add('on'); tip.setAttribute('aria-hidden','false');
+    var r=el.getBoundingClientRect(), tw=tip.offsetWidth, th=tip.offsetHeight, vw=document.documentElement.clientWidth;
+    var x=Math.min(Math.max(8,r.left+r.width/2-tw/2),vw-tw-8), y=r.top-th-8; if(y<8)y=r.bottom+8;
+    tip.style.left=x+'px'; tip.style.top=y+'px';
+  }
+  function hide(){cur=null;tip.classList.remove('on');tip.setAttribute('aria-hidden','true')}
+  document.addEventListener('mouseover',function(e){var t=e.target.closest&&e.target.closest('.term');if(t)show(t)});
+  document.addEventListener('mouseout',function(e){var t=e.target.closest&&e.target.closest('.term');if(t&&!t.contains(e.relatedTarget))hide()});
+  document.addEventListener('focusin',function(e){if(e.target.classList&&e.target.classList.contains('term'))show(e.target)});
+  document.addEventListener('focusout',function(e){if(e.target.classList&&e.target.classList.contains('term'))hide()});
+  document.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('.term');if(t){show(t)}else if(cur){hide()}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')hide()});
+  window.addEventListener('scroll',function(){if(cur)hide()},{passive:true});
+})();
+</script>
+
+</body>
+</html>
